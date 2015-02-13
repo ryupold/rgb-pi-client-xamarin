@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rgb-pi-client-xamarin", "rgb-pi-client-xamarin.csproj", "{17ED7BF2-9070-4CD4-BD2A-30969C9AA05A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGBPi.Core", "RGBPi.Core.csproj", "{17ED7BF2-9070-4CD4-BD2A-30969C9AA05A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
