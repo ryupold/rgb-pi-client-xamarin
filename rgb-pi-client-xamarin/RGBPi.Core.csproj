@@ -37,6 +37,9 @@
     <Compile Include="ViewModels\RemoteControlViewModel.cs" />
     <Compile Include="Services\ISocket.cs" />
     <Compile Include="Services\Abstract\AbstractSocket.cs" />
+    <Compile Include="Resources\CoreResources.Designer.cs">
+      <DependentUpon>CoreResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -58,5 +61,12 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Model\" />
     <Folder Include="Services\Abstract\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CoreResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CoreResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

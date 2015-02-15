@@ -1,33 +1,19 @@
-﻿<Properties StartupItem="RGBPi.Core.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ViewModels\RemoteControlViewModel.cs">
+﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Views\HoloColorPicker\ColorPicker.cs">
     <Files>
-      <File FileName="ViewModels\ColorChooserViewModel.cs" Line="4" Column="4" />
-      <File FileName="Model\Color.cs" Line="5" Column="5" />
-      <File FileName="ViewModels\RemoteControlViewModel.cs" Line="63" Column="63" />
+      <File FileName="ViewModels\ColorChooserViewModel.cs" Line="3" Column="3" />
+      <File FileName="d:\Stuff\Proggen\rgb-pi-client-xamarin\rgb-pi-client-xamarin\RGBPi.Android\Views\ColorChooserView.cs" Line="26" Column="26" />
+      <File FileName="RGBPi.Android\Views\HoloColorPicker\ColorPicker.cs" Line="28" Column="28" />
+      <File FileName="RGBPi.Android\Views\HoloColorPicker\OpacityBar.cs" Line="61" Column="61" />
+      <File FileName="RGBPi.Android\Views\HoloColorPicker\SaturationBar.cs" Line="61" Column="61" />
+      <File FileName="RGBPi.Android\Views\HoloColorPicker\SVBar.cs" Line="61" Column="61" />
+      <File FileName="RGBPi.Android\Views\HoloColorPicker\ValueBar.cs" Line="61" Column="61" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="RGBPi.Android" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="Resources" expanded="True" />
-          </Node>
-          <Node name="RGBPi.Core" expanded="True">
-            <Node name="Packages" expanded="True" selected="True" />
-            <Node name="Model" expanded="True" />
-            <Node name="Properties" expanded="True" />
-            <Node name="Services" expanded="True">
-              <Node name="Abstract" expanded="True" />
-            </Node>
-            <Node name="ViewModels" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.RGBPi.Android MonoForAntroid.PreferredDevice="Nexus 4" />
 </Properties>
