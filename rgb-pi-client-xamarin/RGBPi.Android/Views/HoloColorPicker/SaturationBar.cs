@@ -19,6 +19,8 @@ using Android.Content;
 using Android.Util;
 using Android.OS;
 using Android.Content.Res;
+using RGBPi.Android;
+using Java.Lang;
 
 
 
@@ -171,7 +173,7 @@ public class SaturationBar : View {
 	}
 
 		private void init(IAttributeSet attrs, int defStyle) {
-		TypedArray a = getContext().obtainStyledAttributes(attrs,
+			TypedArray a = Context.ObtainStyledAttributes(attrs,
 				Resource.Styleable.ColorBars, defStyle, 0);
 			Resources b = Context.Resources;
 
@@ -179,7 +181,7 @@ public class SaturationBar : View {
 				Resource.Styleable.ColorBars_bar_thickness,
 				b.GetDimensionPixelSize(Resource.Dimension.bar_thickness));
 			mBarLength = a.GetDimensionPixelSize(Resource.Styleable.ColorBars_bar_length,
-				b.GetDimensionPixelSize(R.dimen.bar_length));
+				b.GetDimensionPixelSize(Resource.Dimension.bar_length));
 		mPreferredBarLength = mBarLength;
 		mBarPointerRadius = a.GetDimensionPixelSize(
 				Resource.Styleable.ColorBars_bar_pointer_radius,
@@ -198,11 +200,11 @@ public class SaturationBar : View {
 		mBarPointerPosition = mBarLength + mBarPointerHaloRadius;
 
 			mBarPointerHaloPaint = new Paint(PaintFlags.AntiAlias);
-		mBarPointerHaloPaint.Color = (Color.BLACK);
+			mBarPointerHaloPaint.Color = (Color.Black);
 		mBarPointerHaloPaint.Alpha = (0x50);
 
 			mBarPointerPaint = new Paint(PaintFlags.AntiAlias);
-		mBarPointerPaint.Color = (0xff81ff00);
+			mBarPointerPaint.Color = new Android.Graphics.Color(unchecked((int)0xff81ff00));
 
 		mPosToSatFactor = 1 / ((float) mBarLength);
 		mSatToPosFactor = ((float) mBarLength) / 1;
@@ -221,14 +223,14 @@ public class SaturationBar : View {
 		else {
 			measureSpec = heightMeasureSpec;
 		}
-		int lengthMode = MeasureSpec.GetMode(measureSpec);
-		int lengthSize = MeasureSpec.GetSize(measureSpec);
+			int lengthMode = (int)MeasureSpec.GetMode(measureSpec);
+			int lengthSize = MeasureSpec.GetSize(measureSpec);
 
 		int length;
-			if (lengthMode == MeasureSpecMode.Exactly) {
+			if (lengthMode == (int)MeasureSpecMode.Exactly) {
 			length = lengthSize;
 		}
-			else if (lengthMode == MeasureSpecMode.AtMost) {
+			else if (lengthMode == (int)MeasureSpecMode.AtMost) {
 			length = Math.Min(intrinsicSize, lengthSize);
 		}
 		else {
@@ -273,7 +275,7 @@ public class SaturationBar : View {
 		}
 
 		// Update variables that depend of mBarLength.
-		if (!isInEditMode()){
+		if (!IsInEditMode){
 			shader = new LinearGradient(mBarPointerHaloRadius, 0,
 					x1, y1, new int[] {
 						Color.White,
@@ -282,8 +284,8 @@ public class SaturationBar : View {
 		} else {
 			shader = new LinearGradient(mBarPointerHaloRadius, 0,
 					x1, y1, new int[] {
-						Color.White, 0xff81ff00 }, null, Shader.TileMode.CLAMP);
-			Color.colorToHSV(0xff81ff00, mHSVColor);
+						Color.White, unchecked((int)0xff81ff00) }, null, Shader.TileMode.Clamp);
+				Color.ColorToHSV(new Android.Graphics.Color(unchecked((int)0xff81ff00)), mHSVColor);
 		}
 		
 		mBarPaint.SetShader(shader);
@@ -291,10 +293,10 @@ public class SaturationBar : View {
 		mSatToPosFactor = ((float) mBarLength) / 1;
 		
 		float[] hsvColor = new float[3];
-		Color.colorToHSV(mColor, hsvColor);
+			Color.ColorToHSV(new Android.Graphics.Color(mColor), hsvColor);
 		
-		if (!isInEditMode()){
-			mBarPointerPosition = Math.round((mSatToPosFactor * hsvColor[1])
+		if (!IsInEditMode){
+			mBarPointerPosition = Math.Round((mSatToPosFactor * hsvColor[1])
 					+ mBarPointerHaloRadius);
 		} else {
 			mBarPointerPosition = mBarLength + mBarPointerHaloRadius;
@@ -343,7 +345,7 @@ public class SaturationBar : View {
 					&& dimen <= (mBarPointerHaloRadius + mBarLength)) {
 				mBarPointerPosition = Math.Round(dimen);
 				calculateColor(Math.Round(dimen));
-				mBarPointerPaint.SetColor(mColor);
+					mBarPointerPaint.Color = new Android.Graphics.Color(mColor);
 				Invalidate();
 			}
 			break;
@@ -354,7 +356,7 @@ public class SaturationBar : View {
 						&& dimen <= (mBarPointerHaloRadius + mBarLength)) {
 					mBarPointerPosition = Math.Round(dimen);
 					calculateColor(Math.Round(dimen));
-					mBarPointerPaint.Color = (mColor);
+						mBarPointerPaint.Color = new Android.Graphics.Color(mColor);
 					if (mPicker != null) {
 						mPicker.setNewCenterColor(mColor);
 						mPicker.changeValueBarColor(mColor);
@@ -364,7 +366,7 @@ public class SaturationBar : View {
 				} else if (dimen < mBarPointerHaloRadius) {
 					mBarPointerPosition = mBarPointerHaloRadius;
 						mColor = Color.White;
-					mBarPointerPaint.SetColor(mColor);
+						mBarPointerPaint.Color = new Android.Graphics.Color(mColor);
 					if (mPicker != null) {
 						mPicker.setNewCenterColor(mColor);
 						mPicker.changeValueBarColor(mColor);
@@ -374,7 +376,7 @@ public class SaturationBar : View {
 				} else if (dimen > (mBarPointerHaloRadius + mBarLength)) {
 					mBarPointerPosition = mBarPointerHaloRadius + mBarLength;
 					mColor = Color.HSVToColor(mHSVColor);
-					mBarPointerPaint.SetColor(mColor);
+						mBarPointerPaint.Color =new Android.Graphics.Color(mColor);
 					if (mPicker != null) {
 						mPicker.setNewCenterColor(mColor);
 						mPicker.changeValueBarColor(mColor);
@@ -413,14 +415,14 @@ public class SaturationBar : View {
 			y1 = (mBarLength + mBarPointerHaloRadius);
 		}
 		
-		Color.colorToHSV(color, mHSVColor);
+			Color.ColorToHSV(new Android.Graphics.Color(color), mHSVColor);
 		shader = new LinearGradient(mBarPointerHaloRadius, 0,
 				x1, y1, new int[] {
 					Color.White, color }, null,
 				Shader.TileMode.Clamp);
 		mBarPaint.SetShader(shader);
 		calculateColor(mBarPointerPosition);
-		mBarPointerPaint.SetColor(mColor);
+			mBarPointerPaint.Color= new Android.Graphics.Color(mColor);
 		if (mPicker != null) {
 			mPicker.setNewCenterColor(mColor);
 			if(mPicker.hasValueBar())
@@ -441,7 +443,7 @@ public class SaturationBar : View {
 		mBarPointerPosition = Math.Round((mSatToPosFactor * saturation))
 				+ mBarPointerHaloRadius;
 		calculateColor(mBarPointerPosition);
-		mBarPointerPaint.SetColor(mColor);
+			mBarPointerPaint.Color =new Android.Graphics.Color(mColor);
 		if (mPicker != null) {
 			mPicker.setNewCenterColor(mColor);
 			mPicker.changeValueBarColor(mColor);
@@ -491,14 +493,14 @@ public class SaturationBar : View {
 
 	
 		protected override IParcelable OnSaveInstanceState() {
-		Parcelable superState = base.OnSaveInstanceState();
+		IParcelable superState = base.OnSaveInstanceState();
 
 		Bundle state = new Bundle();
 		state.PutParcelable(STATE_PARENT, superState);
 		state.PutFloatArray(STATE_COLOR, mHSVColor);
 		
 		float[] hsvColor = new float[3];
-		Color.colorToHSV(mColor, hsvColor);
+			Color.ColorToHSV(new Android.Graphics.Color(mColor), hsvColor);
 		state.PutFloat(STATE_SATURATION, hsvColor[1]);
 
 		return state;
@@ -508,7 +510,7 @@ public class SaturationBar : View {
 		protected override void OnRestoreInstanceState(IParcelable state) {
 		Bundle savedState = (Bundle) state;
 
-		Parcelable superState = savedState.GetParcelable(STATE_PARENT);
+			IParcelable superState = (IParcelable)savedState.GetParcelable(STATE_PARENT);
 		base.OnRestoreInstanceState(superState);
 
 		setColor(Color.HSVToColor(savedState.GetFloatArray(STATE_COLOR)));

@@ -4,7 +4,7 @@ using RGBPi.Core.Model;
 
 namespace RGBPi.Core.ViewModels
 {
-	public class ColorChooserViewModel : RemoteControlViewModel
+	public class ColorChooserViewModel : MvxViewModel
 	{
 		private Color _currentColor;
 		public Color CurrentColor{ get{ return _currentColor; } set{ 

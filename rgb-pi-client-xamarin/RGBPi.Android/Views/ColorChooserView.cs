@@ -21,7 +21,7 @@ namespace RGBPi.Android
 
 		protected override void OnViewModelSet()
 		{
-			base.OnViewModelSet();
+			base.OnViewModelSet(); 
 			SetContentView(Resource.Layout.ColorChooserView);
 		}
     }

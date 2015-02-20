@@ -76,13 +76,13 @@
     <Compile Include="Views\HoloColorPicker\SaturationBar.cs" />
     <Compile Include="Views\HoloColorPicker\SVBar.cs" />
     <Compile Include="Views\HoloColorPicker\ValueBar.cs" />
+    <Compile Include="Services\Socket.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="packages.config" />
-    <None Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -103,6 +103,7 @@
     <Folder Include="Resources\layout\" />
     <Folder Include="Views\" />
     <Folder Include="Views\HoloColorPicker\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RGBPi.Core.csproj">

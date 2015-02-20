@@ -46,8 +46,8 @@ public class ColorPicker : View {
 	/**
 	 * Colors to construct the color wheel using {@link android.graphics.SweepGradient}.
 	 */
-		private static readonly int[] COLORS = new int[] { 0xFFFF0000, 0xFFFF00FF,
-			0xFF0000FF, 0xFF00FFFF, 0xFF00FF00, 0xFFFFFF00, 0xFFFF0000 };
+		private static readonly int[] COLORS = new int[] { unchecked((int)0xFFFF0000), unchecked((int)0xFFFF00FF),
+			unchecked((int)0xFF0000FF), unchecked((int)0xFF00FFFF), unchecked((int)0xFF00FF00), unchecked((int)0xFFFFFF00), unchecked((int)0xFFFF0000)};
 
 	/**
 	 * {@code Paint} instance used to draw the color wheel.
@@ -156,7 +156,7 @@ public class ColorPicker : View {
 	/**
 	 * Distance between pointer and user touch in X-direction.
 	 */
-    	private float mSlopX;
+	private float mSlopX;
     
 	/**
 	 * Distance between pointer and user touch in Y-direction.
@@ -354,11 +354,11 @@ public class ColorPicker : View {
 
 			mCenterNewPaint = new Paint(PaintFlags.AntiAlias);
 			mCenterNewPaint.Color = new Color(calculateColor(mAngle));
-			mCenterNewPaint.Style = new Paint.Style(Paint.Style.Fill);
+			mCenterNewPaint.SetStyle(Paint.Style.Fill);
 
 			mCenterOldPaint = new Paint(PaintFlags.AntiAlias);
 			mCenterOldPaint.Color = new Color(calculateColor(mAngle));
-		mCenterOldPaint.Style = (Paint.Style.Fill);
+			mCenterOldPaint.SetStyle(Paint.Style.Fill);
 
 			mCenterHaloPaint = new Paint(PaintFlags.AntiAlias);
 			mCenterHaloPaint.Color = (Color.Black);
@@ -410,47 +410,47 @@ public class ColorPicker : View {
 		protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 			int intrinsicSize = 2 * (mPreferredColorWheelRadius + mColorPointerHaloRadius);
 
-		int widthMode = MeasureSpec.GetMode(widthMeasureSpec);
-		int widthSize = MeasureSpec.GetSize(widthMeasureSpec);
-		int heightMode = MeasureSpec.GetMode(heightMeasureSpec);
-		int heightSize = MeasureSpec.GetSize(heightMeasureSpec);
+			int widthMode = (int)MeasureSpec.GetMode(widthMeasureSpec);
+			int widthSize = (int)MeasureSpec.GetSize(widthMeasureSpec);
+			int heightMode = (int)MeasureSpec.GetMode(heightMeasureSpec);
+			int heightSize = (int)MeasureSpec.GetSize(heightMeasureSpec);
 
 		int width;
 		int height;
 
-		if (widthMode == MeasureSpecMode.Exactly) {
+			if (widthMode == (int)MeasureSpecMode.Exactly) {
 			width = widthSize;
-			} else if (widthMode == MeasureSpecMode.AtMost) {
-			width = Math.min(intrinsicSize, widthSize);
+			} else if (widthMode == (int)MeasureSpecMode.AtMost) {
+			width = Math.Min(intrinsicSize, widthSize);
 		} else {
 			width = intrinsicSize;
 		}
 
-			if (heightMode == MeasureSpecMode.Exactly) {
+			if (heightMode == (int)MeasureSpecMode.Exactly) {
 			height = heightSize;
-			} else if (heightMode == MeasureSpecMode.AtMost) {
-			height = Math.min(intrinsicSize, heightSize);
+			} else if (heightMode == (int)MeasureSpecMode.AtMost) {
+			height = Math.Min(intrinsicSize, heightSize);
 		} else {
 			height = intrinsicSize;
 		}
 
 		int min = Math.Min(width, height);
-		setMeasuredDimension(min, min);
+		SetMeasuredDimension(min, min);
 		mTranslationOffset = min * 0.5f;
 
 		// fill the rectangle instances.
 		mColorWheelRadius = min / 2 - mColorWheelThickness - mColorPointerHaloRadius;
-		mColorWheelRectangle.set(-mColorWheelRadius, -mColorWheelRadius,
+		mColorWheelRectangle.Set(-mColorWheelRadius, -mColorWheelRadius,
 				mColorWheelRadius, mColorWheelRadius);
 
 		mColorCenterRadius = (int) ((float) mPreferredColorCenterRadius * ((float) mColorWheelRadius / (float) mPreferredColorWheelRadius));
 		mColorCenterHaloRadius = (int) ((float) mPreferredColorCenterHaloRadius * ((float) mColorWheelRadius / (float) mPreferredColorWheelRadius));
-		mCenterRectangle.set(-mColorCenterRadius, -mColorCenterRadius,
+		mCenterRectangle.Set(-mColorCenterRadius, -mColorCenterRadius,
 				mColorCenterRadius, mColorCenterRadius);
 	}
 
 	private int ave(int s, int d, float p) {
-		return s + Math.round(p * (d - s));
+			return (int)(s + Math.Round(p * (d - s)));
 	}
 
 	/**
@@ -473,23 +473,23 @@ public class ColorPicker : View {
 			return COLORS[0];
 		}
 		if (unit >= 1) {
-			mColor = COLORS[COLORS.length - 1];
-			return COLORS[COLORS.length - 1];
+			mColor = COLORS[COLORS.Length - 1];
+			return COLORS[COLORS.Length - 1];
 		}
 
-		float p = unit * (COLORS.length - 1);
+		float p = unit * (COLORS.Length - 1);
 		int i = (int) p;
 		p -= i;
 
 		int c0 = COLORS[i];
 		int c1 = COLORS[i + 1];
-		int a = ave(Color.alpha(c0), Color.alpha(c1), p);
-		int r = ave(Color.red(c0), Color.red(c1), p);
-		int g = ave(Color.green(c0), Color.green(c1), p);
-		int b = ave(Color.blue(c0), Color.blue(c1), p);
+			int a = ave(Color.GetAlphaComponent(c0), Color.GetAlphaComponent(c1), p);
+			int r = ave(Color.GetRedComponent(c0), Color.GetRedComponent(c1), p);
+		int g = ave(Color.GetGreenComponent(c0), Color.GetGreenComponent(c1), p);
+		int b = ave(Color.GetBlueComponent(c0), Color.GetBlueComponent(c1), p);
 
-		mColor = Color.argb(a, r, g, b);
-		return Color.argb(a, r, g, b);
+		mColor = Color.Argb(a, r, g, b);
+			return Color.Argb(a, r, g, b);
 	}
 
 	/**
@@ -515,19 +515,19 @@ public class ColorPicker : View {
 	 */
 	public void setColor(int color) {
 		mAngle = colorToAngle(color);
-		mPointerColor.setColor(calculateColor(mAngle));
+			mPointerColor.Color = new Android.Graphics.Color(calculateColor(mAngle));
 
 		// check of the instance isn't null
 		if (mOpacityBar != null) {
 			// set the value of the opacity
 			mOpacityBar.setColor(mColor);
-			mOpacityBar.setOpacity(Color.alpha(color));
+				mOpacityBar.setOpacity(Color.GetAlphaComponent(color));
 		}
 
 		// check if the instance isn't null
 		if (mSVbar != null) {
 			// the array mHSV will be filled with the HSV values of the color.
-			Color.colorToHSV(color, mHSV);
+				Color.ColorToHSV(new Android.Graphics.Color(color), mHSV);
 			mSVbar.setColor(mColor);
 
 			// because of the design of the Saturation/Value bar,
@@ -541,17 +541,17 @@ public class ColorPicker : View {
 		}
 
 		if (mSaturationBar != null) {
-			Color.colorToHSV(color, mHSV);
+				Color.ColorToHSV(new Android.Graphics.Color(color), mHSV);
 			mSaturationBar.setColor(mColor);
 			mSaturationBar.setSaturation(mHSV[1]);
 		}
 
 		if (mValueBar != null && mSaturationBar == null) {
-			Color.colorToHSV(color, mHSV);
+						Color.ColorToHSV(new Android.Graphics.Color(color), mHSV);
 			mValueBar.setColor(mColor);
 			mValueBar.setValue(mHSV[2]);
 		} else if (mValueBar != null) {
-			Color.colorToHSV(color, mHSV);
+								Color.ColorToHSV(new Android.Graphics.Color(color), mHSV);
 			mValueBar.setValue(mHSV[2]);
 		}
         setNewCenterColor(color);
@@ -568,7 +568,7 @@ public class ColorPicker : View {
 	 */
 	private float colorToAngle(int color) {
 		float[] colors = new float[3];
-		Color.colorToHSV(color, colors);
+			Color.ColorToHSV(new Android.Graphics.Color(color), colors);
 		
 			return (float) Math.PI * (-colors[0]) / 360f;
 	}
@@ -603,22 +603,22 @@ public class ColorPicker : View {
 				Invalidate();
 			}
                         // Check whether the user pressed anywhere on the wheel.
-                        else if (Math.sqrt(x*x + y*y)  <= mColorWheelRadius + mColorPointerHaloRadius
-                                        && Math.sqrt(x*x + y*y) >= mColorWheelRadius - mColorPointerHaloRadius
+                        else if (Math.Sqrt(x*x + y*y)  <= mColorWheelRadius + mColorPointerHaloRadius
+                                        && Math.Sqrt(x*x + y*y) >= mColorWheelRadius - mColorPointerHaloRadius
                                         && mTouchAnywhereOnColorWheelEnabled) {
                                 mUserIsMovingPointer = true;
-                                invalidate();
+                                Invalidate();
                         }
 			// If user did not press pointer or center, report event not handled
 			else{
-				Parent.requestDisallowInterceptTouchEvent(false);
+				Parent.RequestDisallowInterceptTouchEvent(false);
 				return false;
 			}
 			break;
 			case MotionEventActions.Move:
 			if (mUserIsMovingPointer) {
-				mAngle = (float) Math.atan2(y - mSlopY, x - mSlopX);
-				mPointerColor.setColor(calculateColor(mAngle));
+				mAngle = (float) Math.Atan2(y - mSlopY, x - mSlopX);
+					mPointerColor.Color = new Android.Graphics.Color(calculateColor(mAngle));
 
 				setNewCenterColor(mCenterNewColor = calculateColor(mAngle));
 				
@@ -642,13 +642,13 @@ public class ColorPicker : View {
 			}
 			// If user did not press pointer or center, report event not handled
 			else{
-					Parent.requestDisallowInterceptTouchEvent(false);
+					Parent.RequestDisallowInterceptTouchEvent(false);
 				return false;
 			}
 			break;
 		case MotionEventActions.Up:
 			mUserIsMovingPointer = false;
-			mCenterHaloPaint.setAlpha(0x00);
+			mCenterHaloPaint.Alpha = (0x00);
 			
 			if (onColorSelectedListener != null && mCenterNewColor != oldSelectedListenerColor) {
 				onColorSelectedListener.onColorSelected(mCenterNewColor);
@@ -730,10 +730,10 @@ public class ColorPicker : View {
 	 */
 	public void setNewCenterColor(int color) {
 		mCenterNewColor = color;
-		mCenterNewPaint.setColor(color);
+			mCenterNewPaint.Color = new Android.Graphics.Color(color);
 		if (mCenterOldColor == 0) {
 			mCenterOldColor = color;
-			mCenterOldPaint.setColor(color);
+				mCenterOldPaint.Color = new Android.Graphics.Color(color);
 		}
 		if (onColorChangedListener != null && color != oldChangedListenerColor ) {
 			onColorChangedListener.onColorChanged(color);
@@ -750,7 +750,7 @@ public class ColorPicker : View {
 	 */
 	public void setOldCenterColor(int color) {
 		mCenterOldColor = color;
-		mCenterOldPaint.setColor(color);
+			mCenterOldPaint.Color = new Android.Graphics.Color(color);
 		Invalidate();
 	}
 
@@ -847,7 +847,7 @@ public class ColorPicker : View {
 
 	
 		protected override IParcelable OnSaveInstanceState() {
-		Parcelable superState = base.OnSaveInstanceState();
+		IParcelable superState = base.OnSaveInstanceState();
 
 		Bundle state = new Bundle();
 		state.PutParcelable(STATE_PARENT, superState);
@@ -862,14 +862,14 @@ public class ColorPicker : View {
 		protected override void OnRestoreInstanceState(IParcelable state) {
 		Bundle savedState = (Bundle) state;
 
-		Parcelable superState = savedState.GetParcelable(STATE_PARENT);
+			IParcelable superState = (IParcelable)savedState.GetParcelable(STATE_PARENT);
 		base.OnRestoreInstanceState(superState);
 
 		mAngle = savedState.GetFloat(STATE_ANGLE);
 		setOldCenterColor(savedState.GetInt(STATE_OLD_COLOR));
 		mShowCenterOldColor = savedState.GetBoolean(STATE_SHOW_OLD_COLOR);
 		int currentColor = calculateColor(mAngle);
-		mPointerColor.Color = (currentColor);
+			mPointerColor.Color = new Android.Graphics.Color(currentColor);
 		setNewCenterColor(currentColor);
 	}
 
