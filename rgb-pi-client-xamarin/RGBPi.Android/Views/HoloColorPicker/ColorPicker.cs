@@ -334,6 +334,8 @@ public class ColorPicker : View {
 				Resource.Styleable.ColorPicker_color_pointer_halo_radius,
 				b.GetDimensionPixelSize(Resource.Dimension.color_pointer_halo_radius));
 
+			mShowCenterOldColor = a.GetBoolean(Resource.Styleable.ColorPicker_color_center_show_old_color, false);
+
 		a.Recycle();
 
 		mAngle = (float) (-Math.PI / 2);
@@ -366,7 +368,7 @@ public class ColorPicker : View {
 		
 		mCenterNewColor = calculateColor(mAngle);
 		mCenterOldColor = calculateColor(mAngle);
-		mShowCenterOldColor = true;
+//		mShowCenterOldColor = true;
 	}
 
 	

@@ -12,10 +12,10 @@ namespace RGBPi.Android
 		private bool stop = false;
 		private Task task;
 		private Action worker = () => {
-			bool connected = false;
-			while(!stop){
-				//really?
-			}
+//			bool connected = false;
+//			while(!stop){
+//				//really?
+//			}
 		};
 
 

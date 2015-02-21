@@ -2,6 +2,7 @@ using Android.App;
 using Android.Content.PM;
 using Cirrious.MvvmCross.Droid.Views;
 using RGBPi.Core.ViewModels;
+using Com.Larswerkman.HolorColorPicker;
 
 namespace RGBPi.Android
 {
@@ -21,8 +22,11 @@ namespace RGBPi.Android
 
 		protected override void OnViewModelSet()
 		{
-			base.OnViewModelSet(); 
+			base.OnViewModelSet();
 			SetContentView(Resource.Layout.ColorChooserView);
+			ColorPicker cp = (ColorPicker)FindViewById (Resource.Id.colorPicker);
+			SVBar sv = (SVBar)FindViewById (Resource.Id.svBar);
+			cp.addSVBar (sv);
 		}
     }
 }

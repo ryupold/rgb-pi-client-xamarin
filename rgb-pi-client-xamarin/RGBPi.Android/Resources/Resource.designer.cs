@@ -31,50 +31,53 @@ namespace RGBPi.Android
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f01000b
-			public const int MvxBind = 2130771979;
-			
-			// aapt resource value: 0x7f01000f
-			public const int MvxDropDownItemTemplate = 2130771983;
-			
-			// aapt resource value: 0x7f01000e
-			public const int MvxItemTemplate = 2130771982;
-			
 			// aapt resource value: 0x7f01000c
-			public const int MvxLang = 2130771980;
+			public const int MvxBind = 2130771980;
 			
 			// aapt resource value: 0x7f010010
-			public const int MvxSource = 2130771984;
+			public const int MvxDropDownItemTemplate = 2130771984;
+			
+			// aapt resource value: 0x7f01000f
+			public const int MvxItemTemplate = 2130771983;
 			
 			// aapt resource value: 0x7f01000d
-			public const int MvxTemplate = 2130771981;
+			public const int MvxLang = 2130771981;
 			
-			// aapt resource value: 0x7f010007
-			public const int bar_length = 2130771975;
+			// aapt resource value: 0x7f010011
+			public const int MvxSource = 2130771985;
 			
-			// aapt resource value: 0x7f01000a
-			public const int bar_orientation_horizontal = 2130771978;
-			
-			// aapt resource value: 0x7f010009
-			public const int bar_pointer_halo_radius = 2130771977;
+			// aapt resource value: 0x7f01000e
+			public const int MvxTemplate = 2130771982;
 			
 			// aapt resource value: 0x7f010008
-			public const int bar_pointer_radius = 2130771976;
+			public const int bar_length = 2130771976;
 			
-			// aapt resource value: 0x7f010006
-			public const int bar_thickness = 2130771974;
+			// aapt resource value: 0x7f01000b
+			public const int bar_orientation_horizontal = 2130771979;
 			
-			// aapt resource value: 0x7f010003
-			public const int color_center_halo_radius = 2130771971;
+			// aapt resource value: 0x7f01000a
+			public const int bar_pointer_halo_radius = 2130771978;
 			
-			// aapt resource value: 0x7f010002
-			public const int color_center_radius = 2130771970;
+			// aapt resource value: 0x7f010009
+			public const int bar_pointer_radius = 2130771977;
 			
-			// aapt resource value: 0x7f010005
-			public const int color_pointer_halo_radius = 2130771973;
+			// aapt resource value: 0x7f010007
+			public const int bar_thickness = 2130771975;
 			
 			// aapt resource value: 0x7f010004
-			public const int color_pointer_radius = 2130771972;
+			public const int color_center_halo_radius = 2130771972;
+			
+			// aapt resource value: 0x7f010003
+			public const int color_center_radius = 2130771971;
+			
+			// aapt resource value: 0x7f010002
+			public const int color_center_show_old_color = 2130771970;
+			
+			// aapt resource value: 0x7f010006
+			public const int color_pointer_halo_radius = 2130771974;
+			
+			// aapt resource value: 0x7f010005
+			public const int color_pointer_radius = 2130771973;
 			
 			// aapt resource value: 0x7f010000
 			public const int color_wheel_radius = 2130771968;
@@ -160,6 +163,12 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f050000
 			public const int MvxBindingTagUnique = 2131034112;
 			
+			// aapt resource value: 0x7f050001
+			public const int colorPicker = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int svBar = 2131034114;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -225,11 +234,11 @@ namespace RGBPi.Android
 		{
 			
 			public static int[] ColorBars = new int[] {
-					2130771974,
 					2130771975,
 					2130771976,
 					2130771977,
-					2130771978};
+					2130771978,
+					2130771979};
 			
 			// aapt resource value: 1
 			public const int ColorBars_bar_length = 1;
@@ -252,19 +261,23 @@ namespace RGBPi.Android
 					2130771970,
 					2130771971,
 					2130771972,
-					2130771973};
-			
-			// aapt resource value: 3
-			public const int ColorPicker_color_center_halo_radius = 3;
-			
-			// aapt resource value: 2
-			public const int ColorPicker_color_center_radius = 2;
-			
-			// aapt resource value: 5
-			public const int ColorPicker_color_pointer_halo_radius = 5;
+					2130771973,
+					2130771974};
 			
 			// aapt resource value: 4
-			public const int ColorPicker_color_pointer_radius = 4;
+			public const int ColorPicker_color_center_halo_radius = 4;
+			
+			// aapt resource value: 3
+			public const int ColorPicker_color_center_radius = 3;
+			
+			// aapt resource value: 2
+			public const int ColorPicker_color_center_show_old_color = 2;
+			
+			// aapt resource value: 6
+			public const int ColorPicker_color_pointer_halo_radius = 6;
+			
+			// aapt resource value: 5
+			public const int ColorPicker_color_pointer_radius = 5;
 			
 			// aapt resource value: 0
 			public const int ColorPicker_color_wheel_radius = 0;
@@ -273,8 +286,8 @@ namespace RGBPi.Android
 			public const int ColorPicker_color_wheel_thickness = 1;
 			
 			public static int[] MvxBinding = new int[] {
-					2130771979,
-					2130771980};
+					2130771980,
+					2130771981};
 			
 			// aapt resource value: 0
 			public const int MvxBinding_MvxBind = 0;
@@ -283,20 +296,20 @@ namespace RGBPi.Android
 			public const int MvxBinding_MvxLang = 1;
 			
 			public static int[] MvxControl = new int[] {
-					2130771981};
+					2130771982};
 			
 			// aapt resource value: 0
 			public const int MvxControl_MvxTemplate = 0;
 			
 			public static int[] MvxImageView = new int[] {
-					2130771984};
+					2130771985};
 			
 			// aapt resource value: 0
 			public const int MvxImageView_MvxSource = 0;
 			
 			public static int[] MvxListView = new int[] {
-					2130771982,
-					2130771983};
+					2130771983,
+					2130771984};
 			
 			// aapt resource value: 1
 			public const int MvxListView_MvxDropDownItemTemplate = 1;

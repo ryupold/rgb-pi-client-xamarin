@@ -2,6 +2,8 @@ using Android.Content;
 using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
+using Cirrious.CrossCore;
+using RGBPi.Core;
 
 namespace RGBPi.Android
 {
@@ -13,6 +15,8 @@ namespace RGBPi.Android
 
         protected override IMvxApplication CreateApp()
         {
+
+			Mvx.RegisterSingleton<ISocket>(new Socket());
             return new Core.App();
         }
 		

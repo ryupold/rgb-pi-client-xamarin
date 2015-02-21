@@ -11,7 +11,7 @@ namespace RGBPi.Core
 
 		public RemoteControlViewModel ()
 		{
-
+			socket = Mvx.Resolve<ISocket> ();
 		}
 
 		public async Task<string> SendCommandString(string command){
