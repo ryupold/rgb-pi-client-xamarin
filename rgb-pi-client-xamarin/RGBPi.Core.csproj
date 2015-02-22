@@ -33,14 +33,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App.cs" />
     <Compile Include="ViewModels\ColorChooserViewModel.cs" />
-    <Compile Include="Model\Color.cs" />
     <Compile Include="ViewModels\RemoteControlViewModel.cs" />
     <Compile Include="Services\ISocket.cs" />
-    <Compile Include="Services\Abstract\AbstractSocket.cs" />
     <Compile Include="Resources\CoreResources.Designer.cs">
       <DependentUpon>CoreResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Model\Message.cs" />
+    <Compile Include="Model\Commands\Command.cs" />
+    <Compile Include="Model\Commands\CC.cs" />
+    <Compile Include="Model\DataTypes\Color.cs" />
+    <Compile Include="Model\Filters\Filter.cs" />
+    <Compile Include="Model\Requests\Request.cs" />
+    <Compile Include="Model\Triggers\Trigger.cs" />
+    <Compile Include="Model\Answer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -59,6 +65,9 @@
     <Reference Include="Refractored.MvxPlugins.Settings">
       <HintPath>packages\Mvx.Plugins.Settings.1.4.1\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS10\Refractored.MvxPlugins.Settings.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
@@ -66,6 +75,11 @@
     <Folder Include="Model\" />
     <Folder Include="Services\Abstract\" />
     <Folder Include="Resources\" />
+    <Folder Include="Model\Commands\" />
+    <Folder Include="Model\Triggers\" />
+    <Folder Include="Model\Requests\" />
+    <Folder Include="Model\Filters\" />
+    <Folder Include="Model\DataTypes\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\CoreResources.resx">

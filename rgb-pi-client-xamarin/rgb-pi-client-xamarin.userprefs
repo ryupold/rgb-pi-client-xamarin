@@ -1,21 +1,22 @@
 ﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Services\Socket.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services\ISocket.cs">
     <Files>
-      <File FileName="ViewModels\ColorChooserViewModel.cs" Line="51" Column="51" />
-      <File FileName="d:\Stuff\Proggen\rgb-pi-client-xamarin\rgb-pi-client-xamarin\RGBPi.Android\Views\ColorChooserView.cs" Line="4" Column="4" />
-      <File FileName="RGBPi.Android\Views\HoloColorPicker\ColorPicker.cs" Line="142" Column="142" />
-      <File FileName="RGBPi.Android\Views\HoloColorPicker\OpacityBar.cs" Line="51" Column="51" />
-      <File FileName="RGBPi.Android\Views\HoloColorPicker\SaturationBar.cs" Line="3" Column="3" />
-      <File FileName="RGBPi.Android\Views\HoloColorPicker\SVBar.cs" Line="4" Column="4" />
-      <File FileName="RGBPi.Android\Views\HoloColorPicker\ValueBar.cs" Line="41" Column="41" />
-      <File FileName="ViewModels\RemoteControlViewModel.cs" Line="2" Column="2" />
-      <File FileName="RGBPi.Android\Services\Socket.cs" Line="58" Column="58" />
+      <File FileName="RGBPi.Android\Services\Socket.cs" Line="62" Column="62" />
+      <File FileName="ViewModels\ColorChooserViewModel.cs" Line="14" Column="14" />
+      <File FileName="RGBPi.Android\Views\ColorChooserView.cs" Line="62" Column="62" />
+      <File FileName="Services\ISocket.cs" Line="10" Column="10" />
+      <File FileName="Model\Commands\CC.cs" Line="13" Column="13" />
+      <File FileName="Model\Commands\Command.cs" Line="8" Column="8" />
+      <File FileName="Model\Answer.cs" Line="23" Column="23" />
+      <File FileName="Model\Message.cs" Line="22" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Services\ISocket.cs" line="44" offsetX="935" offsetY="688" expression="answer" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.RGBPi.Android MonoForAntroid.PreferredDevice="Nexus 4" />
 </Properties>

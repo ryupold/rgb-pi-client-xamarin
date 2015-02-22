@@ -22,7 +22,7 @@ using Android.Content.Res;
 using Android.OS;
 using Java.Lang;
 
-namespace Com.Larswerkman.HolorColorPicker{
+namespace RGBPi.Android.Views.HolorColorPicker{
 
 public class ValueBar : View {
 
@@ -32,7 +32,7 @@ public class ValueBar : View {
 		private static readonly string STATE_PARENT = "parent";
 		private static readonly string STATE_COLOR = "color";
 		private static readonly string STATE_VALUE = "value";
-		private static readonly string STATE_ORIENTATION = "orientation";
+//		private static readonly string STATE_ORIENTATION = "orientation";
 	
 	/**
 	 * Constants used to identify orientation.
@@ -202,7 +202,7 @@ public class ValueBar : View {
 		mBarPointerHaloPaint.Alpha = (0x50);
 
 		mBarPointerPaint = new Paint(PaintFlags.AntiAlias);
-			mBarPointerPaint.Color = new Android.Graphics.Color(unchecked((int)0xff81ff00));
+			mBarPointerPaint.Color = new Color(unchecked((int)0xff81ff00));
 
 		mPosToSatFactor = 1 / ((float) mBarLength);
 		mSatToPosFactor = ((float) mBarLength) / 1;
@@ -281,9 +281,9 @@ public class ValueBar : View {
 		} else {
 			shader = new LinearGradient(mBarPointerHaloRadius, 0,
 					x1, y1,
-					new int[] { new Android.Graphics.Color(unchecked((int)0xff81ff00)), Color.Black }, null,
+					new int[] { new Color(unchecked((int)0xff81ff00)), Color.Black }, null,
 					Shader.TileMode.Clamp);
-				Color.ColorToHSV(new Android.Graphics.Color(unchecked((int)0xff81ff00)), mHSVColor);
+				Color.ColorToHSV(new Color(unchecked((int)0xff81ff00)), mHSVColor);
 		}
 
 		mBarPaint.SetShader(shader);
@@ -291,7 +291,7 @@ public class ValueBar : View {
 		mSatToPosFactor = ((float) mBarLength) / 1;
 
 		float[] hsvColor = new float[3];
-			Color.ColorToHSV(new Android.Graphics.Color(mColor), hsvColor);
+			Color.ColorToHSV(new Color(mColor), hsvColor);
 
 		if (!IsInEditMode) {
 			mBarPointerPosition = Math
@@ -345,7 +345,7 @@ public class ValueBar : View {
 					&& dimen <= (mBarPointerHaloRadius + mBarLength)) {
 				mBarPointerPosition = Math.Round(dimen);
 				calculateColor(Math.Round(dimen));
-					mBarPointerPaint.Color = new Android.Graphics.Color(mColor);
+					mBarPointerPaint.Color = new Color(mColor);
 				Invalidate();
 			}
 			break;
@@ -356,7 +356,7 @@ public class ValueBar : View {
 						&& dimen <= (mBarPointerHaloRadius + mBarLength)) {
 					mBarPointerPosition = Math.Round(dimen);
 					calculateColor(Math.Round(dimen));
-						mBarPointerPaint.Color = new Android.Graphics.Color(mColor);
+						mBarPointerPaint.Color = new Color(mColor);
 					if (mPicker != null) {
 						mPicker.setNewCenterColor(mColor);
 						mPicker.changeOpacityBarColor(mColor);
@@ -365,7 +365,7 @@ public class ValueBar : View {
 				} else if (dimen < mBarPointerHaloRadius) {
 					mBarPointerPosition = mBarPointerHaloRadius;
 					mColor = Color.HSVToColor(mHSVColor);
-						mBarPointerPaint.Color = new Android.Graphics.Color(mColor);
+						mBarPointerPaint.Color = new Color(mColor);
 					if (mPicker != null) {
 						mPicker.setNewCenterColor(mColor);
 						mPicker.changeOpacityBarColor(mColor);
@@ -374,7 +374,7 @@ public class ValueBar : View {
 				} else if (dimen > (mBarPointerHaloRadius + mBarLength)) {
 					mBarPointerPosition = mBarPointerHaloRadius + mBarLength;
 						mColor = Color.Black;
-						mBarPointerPaint.Color = new Android.Graphics.Color(mColor);
+						mBarPointerPaint.Color = new Color(mColor);
 					if (mPicker != null) {
 						mPicker.setNewCenterColor(mColor);
 						mPicker.changeOpacityBarColor(mColor);
@@ -412,13 +412,13 @@ public class ValueBar : View {
 			y1 = (mBarLength + mBarPointerHaloRadius);
 		}
 		
-			Color.ColorToHSV(new Android.Graphics.Color(color), mHSVColor);
+			Color.ColorToHSV(new Color(color), mHSVColor);
 		shader = new LinearGradient(mBarPointerHaloRadius, 0,
 				x1, y1, new int[] {
 					color, Color.Black }, null, Shader.TileMode.Clamp);
 		mBarPaint.SetShader(shader);
 		calculateColor(mBarPointerPosition);
-			mBarPointerPaint.Color = new Android.Graphics.Color(mColor);
+			mBarPointerPaint.Color = new Color(mColor);
 		if (mPicker != null) {
 			mPicker.setNewCenterColor(mColor);
 			if(mPicker.hasOpacityBar())
@@ -438,7 +438,7 @@ public class ValueBar : View {
 				.Round((mBarLength - (mSatToPosFactor * value))
 						+ mBarPointerHaloRadius);
 		calculateColor(mBarPointerPosition);
-			mBarPointerPaint.Color = new Android.Graphics.Color(mColor);
+			mBarPointerPaint.Color = new Color(mColor);
 		if (mPicker != null) {
 			mPicker.setNewCenterColor(mColor);
 			mPicker.changeOpacityBarColor(mColor);
@@ -495,7 +495,7 @@ public class ValueBar : View {
 		state.PutFloatArray(STATE_COLOR, mHSVColor);
 
 		float[] hsvColor = new float[3];
-			Color.ColorToHSV(new Android.Graphics.Color(mColor), hsvColor);
+			Color.ColorToHSV(new Color(mColor), hsvColor);
 		state.PutFloat(STATE_VALUE, hsvColor[2]);
 
 		return state;

@@ -13,6 +13,7 @@
     <declare-styleable name="ColorBars">
         <attr name="bar_thickness" format="dimension" />
         <attr name="bar_length" format="dimension" />
+        <attr name="bar_corner_radius" format="float" />
         <attr name="bar_pointer_radius" format="dimension" />
         <attr name="bar_pointer_halo_radius" format="dimension" />
         <attr name="bar_orientation_horizontal" format="boolean" />

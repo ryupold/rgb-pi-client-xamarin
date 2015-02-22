@@ -1,6 +1,7 @@
 ﻿using System;
 using Cirrious.MvvmCross.ViewModels;
 using RGBPi.Core.Model;
+using RGBPi.Core.Model.DataTypes;
 
 namespace RGBPi.Core.ViewModels
 {

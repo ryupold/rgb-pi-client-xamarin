@@ -2,53 +2,54 @@
 using RGBPi.Core;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Java.Net;
+using System.Threading;
+using RGBPi.Core.Model;
+using System.IO;
+using System.Text;
 
 namespace RGBPi.Android
 {
 	public class Socket : ISocket
 	{
-		private Java.Net.Socket socket = new Java.Net.Socket();
-		private Queue<string> commandQ;
-		private bool stop = false;
-		private Task task;
-		private Action worker = () => {
-//			bool connected = false;
-//			while(!stop){
-//				//really?
-//			}
-		};
+		private Java.Net.Socket socket;
 
-
-		public Socket ()
+		#region implemented abstract members of ISocket
+		protected override bool ConnectNative (string ip, int port)
 		{
-			//task = Task.Factory.StartNew (worker);
+			if (socket == null)
+				socket = new Java.Net.Socket (ip, port);
+
+			return true;
 		}
 
-		public async Task<string> Send (string command)
+		protected override bool SendNative (string clientMessage)
 		{
-			byte[] stringAsBytes = System.Text.Encoding.UTF8.GetBytes (command);
-			await socket.OutputStream.WriteAsync(stringAsBytes, 0, stringAsBytes.Length);
-			byte[] buffer = new byte[1024];
-			string response = "";
-			int read = -1;
-			while((read = await socket.InputStream.ReadAsync (buffer, 0, buffer.Length)) > 0){
-				response += System.Text.Encoding.UTF8.GetString (buffer, 0, read);
+			byte[] stringAsBytes = System.Text.Encoding.UTF8.GetBytes (clientMessage);
+			socket.OutputStream.Write (stringAsBytes, 0, stringAsBytes.Length);
+			return true;
+		}
+
+		protected override string ReceiveNative ()
+		{
+			using (MemoryStream ms = new MemoryStream ()) {
+				byte[] buffer = new byte[1024];
+				int read = -1;
+				while ((read = socket.InputStream.Read (buffer, 0, buffer.Length)) > 0) {
+					ms.Write (buffer, 0, read);
+				}
+
+				return Encoding.UTF8.GetString(ms.ToArray ());
 			}
-			return response;
 		}
-
-		private async Task<string> SendCommand (string command)
+		protected override void CloseNative ()
 		{
-			byte[] stringAsBytes = System.Text.Encoding.UTF8.GetBytes (command);
-			await socket.OutputStream.WriteAsync(stringAsBytes, 0, stringAsBytes.Length);
-			byte[] buffer = new byte[1024];
-			string response = "";
-			int read = -1;
-			while((read = await socket.InputStream.ReadAsync (buffer, 0, buffer.Length)) > 0){
-				response += System.Text.Encoding.UTF8.GetString (buffer, 0, read);
+			if (socket != null) {
+				socket.Close ();
+				socket = null;
 			}
-			return response;
 		}
+		#endregion implemented abstract members of ISocket
 	}
 }
 

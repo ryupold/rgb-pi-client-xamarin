@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RGBPi.Core.Model
+namespace RGBPi.Core.Model.DataTypes
 {
 	public struct Color
 	{
-		public float R, G, B;
-		public byte Address;
+		public readonly float R, G, B;
+		public readonly byte Address;
+		private readonly string type;
+		private readonly float[] randomRGB;
 
+		#region ctors
 
 		public Color (float r, float g, float b) : this (r, g, b, 0xF)
 		{
@@ -15,18 +18,69 @@ namespace RGBPi.Core.Model
 
 		public Color (float r, float g, float b, byte address)
 		{
+			type = "f";
 			Address = address;
 			R = r;
 			G = g;
 			B = b;
+			randomRGB = new float[6];
 		}
 
+		public Color (int argb)
+			: this (argb >> 16 & 0xFF,
+			        (argb >> 8) & 0xFF,
+			        (argb) & 0xFF,
+			        0xF
+			)
+		{
+		}
+
+		/// <summary>
+		/// Creates a random color
+		/// </summary>
+		/// <param name="rndFromRed">Random from red.</param>
+		/// <param name="rndToRed">Random to red.</param>
+		/// <param name="rndFromGreen">Random from green.</param>
+		/// <param name="rndToGreen">Random to green.</param>
+		/// <param name="rndFromBlue">Random from blue.</param>
+		/// <param name="rndToBlue">Random to blue.</param>
+		public Color(float rndFromRed, float rndToRed, float rndFromGreen, float rndToGreen, float rndFromBlue, float rndToBlue){
+
+			this.type = "r";
+			this.Address = 0xF;
+			this.randomRGB = new float[6];
+
+			float fromRed  = rndFromRed;
+			float toRed    = rndToRed;
+			float fromGreen= rndFromGreen;
+			float toGreen  = rndToGreen;
+			float fromBlue = rndFromBlue;
+			float toBlue   = rndToBlue;
+
+			Random rnd = new Random (); 
+			this.R = (float)rnd.NextDouble () * (toRed - fromRed) + fromRed;
+			this.G = (float)rnd.NextDouble () * (toGreen - fromGreen) + fromGreen;
+			this.B = (float)rnd.NextDouble () * (toBlue - fromBlue) + fromRed;
+
+			this.randomRGB [0] = fromRed;
+			this.randomRGB [1] = toRed;
+			this.randomRGB [2] = fromGreen;
+			this.randomRGB [3] = toGreen;
+			this.randomRGB [4] = fromBlue;
+			this.randomRGB [5] = toBlue;
+		}
+
+		/// <summary>
+		/// Creates a color from a color string.
+		/// </summary>
+		/// <param name="colorString">Color string.</param>
 		public Color (string colorString)
 		{
 			this.R = 0;
 			this.G = 0;
 			this.B = 0;
 			this.Address = 0;
+			this.randomRGB = new float[6];
 
 			List<string> types = new List<string> { "x", "b", "f", "r", "hsv", "hsl" };
 			string[] colorParts;
@@ -42,6 +96,8 @@ namespace RGBPi.Core.Model
 			if (!types.Contains (colorParts [0]))
 				throw new ArgumentException ("unknown color type: " + colorParts [0]);
 
+			type = colorParts [0];
+
 			// extracting Address
 			if (colorParts.Length > 2)
 				this.Address = byte.Parse (colorParts [2], System.Globalization.NumberStyles.HexNumber);
@@ -49,27 +105,27 @@ namespace RGBPi.Core.Model
 				this.Address = 0xF;
 
 			// extracting RGB
-			if (colorParts [0] == "x") {
+			if (type == "x") {
 				int rgbcomps = int.Parse (colorParts [1], System.Globalization.NumberStyles.HexNumber);
 				this.R = (rgbcomps >> 16) / 255f;
 				this.G = ((rgbcomps & 0xFF) >> 8) / 255f;
 				this.B = (rgbcomps & 0xFF) / 255f;
 			}
-			if (colorParts [0] == "b") {
+			if (type == "b") {
 				string[] rgbcomps = colorParts [1].Split (',');
 				this.R = int.Parse (rgbcomps [0]) / 255f;
 				this.G = int.Parse (rgbcomps [1]) / 255f;
 				this.B = int.Parse (rgbcomps [2]) / 255f;
 			}
 
-			if (colorParts [0] == "f") {
+			if (type == "f") {
 				string[] rgbcomps = colorParts [1].Split (',');
 				this.R = float.Parse (rgbcomps [0]);
 				this.G = float.Parse (rgbcomps [1]);
 				this.B = float.Parse (rgbcomps [2]);
 			}
 
-			if (colorParts [0] == "r") {
+			if (type == "r") {
 				string[] rndValues = colorParts [1].Split (',');
 
 				float fromRed = float.Parse (rndValues [0].Split ('-') [0]);
@@ -83,8 +139,15 @@ namespace RGBPi.Core.Model
 				this.R = (float)rnd.NextDouble () * (toRed - fromRed) + fromRed;
 				this.G = (float)rnd.NextDouble () * (toGreen - fromGreen) + fromGreen;
 				this.B = (float)rnd.NextDouble () * (toBlue - fromBlue) + fromRed;
+
+				this.randomRGB [0] = fromRed;
+				this.randomRGB [1] = toRed;
+				this.randomRGB [2] = fromGreen;
+				this.randomRGB [3] = toGreen;
+				this.randomRGB [4] = fromBlue;
+				this.randomRGB [5] = toBlue;
 			}
-			if (colorParts [0] == "hsv") {
+			if (type == "hsv") {
 				string[] hsvcomps = colorParts [1].Split (',');
 				float h = float.Parse (hsvcomps [0]);
 				float s = float.Parse (hsvcomps [1]);
@@ -96,7 +159,7 @@ namespace RGBPi.Core.Model
 				this.B = c.B;
 			}
 				
-			if (colorParts [0] == "hsl") {
+			if (type == "hsl") {
 				string[] hslcomps = colorParts [1].Split (',');
 				float h = float.Parse (hslcomps [0]);
 				float s = float.Parse (hslcomps [1]);
@@ -215,6 +278,39 @@ namespace RGBPi.Core.Model
 
 			return new Color ((float)R, (float)G, (float)B);
 		}
+
+		#endregion ctors
+
+		#region Properties
+		public bool IsRandomColor{get{ return type == "r";}}
+		#endregion Properties
+
+		#region Conversion
+		public static implicit operator string (Color color)
+		{
+			return color.ToString ();
+		}
+
+		public static implicit operator Color (string str)
+		{
+			return new Color (str);
+		}
+
+		public override string ToString ()
+		{
+			string colorString = "{";
+
+			if (IsRandomColor) {
+				colorString += "r:" + randomRGB [0] + "-" + randomRGB [1] + "," + randomRGB [2] + "-" + randomRGB [3] + "," + randomRGB [4] + "-" + randomRGB [5];
+			} else {
+				colorString += "f:"+R+","+G+","+B;
+			}
+
+			colorString += "}";
+			return colorString;
+		}
+
+		#endregion Conversion
 	}
 }
 
