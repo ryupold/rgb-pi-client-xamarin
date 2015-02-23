@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace RGBPi.Core.Model.Requests
 {
-	[JsonObject(MemberSerialization.OptIn)]
+	[JsonObject]
 	public class Request
 	{
 

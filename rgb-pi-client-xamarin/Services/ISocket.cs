@@ -40,14 +40,9 @@ namespace RGBPi.Core
 
 									ConnectNative("192.168.1.125", 4321);
 
-									string testSend, testReceive;
+									SendNative(JsonConvert.SerializeObject(cmd, serializationSettings));
 
-									SendNative(testSend = JsonConvert.SerializeObject(cmd, serializationSettings));
-
-									Answer answer = JsonConvert.DeserializeObject<Answer>(testReceive = ReceiveNative(), serializationSettings);
-
-									Debug.WriteLine("SEND: "+testSend);
-									Debug.WriteLine("RECEIVED: "+testReceive);
+									Answer answer = JsonConvert.DeserializeObject<Answer>(ReceiveNative(), serializationSettings);
 
 									if (OnResponse != null)
 										OnResponse (this, answer);
@@ -58,8 +53,6 @@ namespace RGBPi.Core
 									CloseNative();
 								}
 							}
-
-
 						}
 
 					} catch (Exception e) {
@@ -88,6 +81,7 @@ namespace RGBPi.Core
 		}
 
 		protected abstract bool ConnectNative (string ip, int port);
+		protected abstract bool ConnectNative (Host host);
 		protected abstract bool SendNative (string clientMessage);
 		protected abstract string ReceiveNative ();
 		protected abstract void CloseNative ();

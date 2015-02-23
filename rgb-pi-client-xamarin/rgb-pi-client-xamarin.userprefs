@@ -1,16 +1,40 @@
 ﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Services\ISocket.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Views\MainView.cs">
     <Files>
-      <File FileName="RGBPi.Android\Services\Socket.cs" Line="62" Column="62" />
-      <File FileName="ViewModels\ColorChooserViewModel.cs" Line="14" Column="14" />
-      <File FileName="RGBPi.Android\Views\ColorChooserView.cs" Line="62" Column="62" />
-      <File FileName="Services\ISocket.cs" Line="10" Column="10" />
-      <File FileName="Model\Commands\CC.cs" Line="13" Column="13" />
-      <File FileName="Model\Commands\Command.cs" Line="8" Column="8" />
-      <File FileName="Model\Answer.cs" Line="23" Column="23" />
-      <File FileName="Model\Message.cs" Line="22" Column="22" />
+      <File FileName="RGBPi.Android\Resources\values\style.xml" Line="42" Column="42" NotebookId="1" />
+      <File FileName="RGBPi.Android\Resources\values\themes.xml" Line="72" Column="72" NotebookId="1" />
+      <File FileName="ViewModels\RemoteControlViewModel.cs" Line="3" Column="3" NotebookId="1" />
+      <File FileName="ViewModels\ColorChooserViewModel.cs" Line="3" Column="3" NotebookId="1" />
+      <File FileName="RGBPi.Android\Views\ColorChooserView.cs" Line="20" Column="20" NotebookId="1" />
+      <File FileName="RGBPi.Android\Views\MainView.cs" Line="39" Column="39" NotebookId="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="RGBPi.Android" expanded="True">
+            <Node name="Properties" expanded="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="layout" expanded="True" />
+              <Node name="values" expanded="True" />
+            </Node>
+            <Node name="Services" expanded="True" />
+            <Node name="Views" expanded="True">
+              <Node name="HoloColorPicker" expanded="True" />
+              <Node name="MainView.cs" selected="True" />
+            </Node>
+          </Node>
+          <Node name="RGBPi.Core" expanded="True">
+            <Node name="Helpers" expanded="True" />
+            <Node name="Model" expanded="True">
+              <Node name="Commands" expanded="True" />
+            </Node>
+            <Node name="Services" expanded="True" />
+            <Node name="ViewModels" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
@@ -18,5 +42,5 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="Services\ISocket.cs" line="44" offsetX="935" offsetY="688" expression="answer" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.RGBPi.Android MonoForAntroid.PreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.RGBPi.Android MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.RGBPi" />
 </Properties>

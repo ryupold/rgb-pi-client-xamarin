@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace RGBPi.Core.Model.Commands
 {
-	[JsonObject(MemberSerialization.OptIn)]
+	[JsonObject]
 	public class Command
 	{
 

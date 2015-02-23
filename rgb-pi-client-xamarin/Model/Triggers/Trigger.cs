@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace RGBPi.Core.Model.Triggers
 {
-	[JsonObject(MemberSerialization.OptIn)]
+	[JsonObject]
 	public class Trigger
 	{
 

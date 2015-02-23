@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace RGBPi.Core.Model.DataTypes
 {
@@ -27,9 +28,9 @@ namespace RGBPi.Core.Model.DataTypes
 		}
 
 		public Color (int argb)
-			: this (argb >> 16 & 0xFF,
-			        (argb >> 8) & 0xFF,
-			        (argb) & 0xFF,
+			: this (((argb >> 16) & 0xFF) / 255f,
+				((argb >> 8) & 0xFF)/255f,
+				((argb) & 0xFF)/255f,
 			        0xF
 			)
 		{
@@ -301,9 +302,11 @@ namespace RGBPi.Core.Model.DataTypes
 			string colorString = "{";
 
 			if (IsRandomColor) {
-				colorString += "r:" + randomRGB [0] + "-" + randomRGB [1] + "," + randomRGB [2] + "-" + randomRGB [3] + "," + randomRGB [4] + "-" + randomRGB [5];
+				colorString += "r:" + randomRGB [0].ToString(CultureInfo.InvariantCulture) + "-" + randomRGB [1].ToString(CultureInfo.InvariantCulture) + 
+					"," + randomRGB [2].ToString(CultureInfo.InvariantCulture) + "-" + randomRGB [3].ToString(CultureInfo.InvariantCulture)
+					+ "," + randomRGB [4].ToString(CultureInfo.InvariantCulture) + "-" + randomRGB [5].ToString(CultureInfo.InvariantCulture);
 			} else {
-				colorString += "f:"+R+","+G+","+B;
+				colorString += "f:"+R.ToString(CultureInfo.InvariantCulture)+","+G.ToString(CultureInfo.InvariantCulture)+","+B.ToString(CultureInfo.InvariantCulture);
 			}
 
 			colorString += "}";

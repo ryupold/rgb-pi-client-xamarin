@@ -47,6 +47,9 @@
     <Compile Include="Model\Requests\Request.cs" />
     <Compile Include="Model\Triggers\Trigger.cs" />
     <Compile Include="Model\Answer.cs" />
+    <Compile Include="Helpers\Host.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Model\Commands\Fade.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

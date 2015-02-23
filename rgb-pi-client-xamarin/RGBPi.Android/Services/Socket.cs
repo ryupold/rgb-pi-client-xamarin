@@ -15,6 +15,11 @@ namespace RGBPi.Android
 		private Java.Net.Socket socket;
 
 		#region implemented abstract members of ISocket
+		protected override bool ConnectNative (Host host)
+		{
+			return ConnectNative (host.ip, host.port);
+		}
+
 		protected override bool ConnectNative (string ip, int port)
 		{
 			if (socket == null)

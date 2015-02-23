@@ -11,7 +11,7 @@ namespace RGBPi.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 				
-            RegisterAppStart<ViewModels.ColorChooserViewModel>();
+            RegisterAppStart<ViewModels.MainViewModel>();
         }
     }
 }

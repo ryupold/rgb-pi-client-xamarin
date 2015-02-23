@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace RGBPi.Core.Model.Filters
 {
-	[JsonObject(MemberSerialization.OptIn)]
+	[JsonObject]
 	public class Filter
 	{
 	}

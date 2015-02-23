@@ -8,8 +8,8 @@ namespace RGBPi.Core.Model.Commands
 	[JsonObject]
 	public class CC : Command
 	{
-		public String type = "cc";
-		public String color;
+		public string type = "cc";
+		public string color;
 	}
 }
 
