@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<!-- COLORS -->
+	<color name="rgbpi_tabbar_color">#474866</color>
+	<color name="rgbpi_primary_color">#474866</color>
+	<color name="rgbpi_primary_dark_color">#474866</color>
+	<color name="rgbpi_color_accent">#474888</color>
+	<color name="rgbpi_background">#474888</color>
+	<color name="transparent">#00000000</color>
+
+
+	<!-- STYLES --> 
+	<style name="RGBPiActionBar">
+		<item name="android:actionBarSize">@dimen/action_bar_height</item>
+		<item name="android:background">@color/rgbpi_primary_color</item>
+		<item name="android:color">@color/maintabs</item>
+	</style>
+	<style name="Tabbar">
+		<item name="android:color">@color/maintabs</item>
+	</style>
+</resources>

@@ -1,6 +1,6 @@
 using Cirrious.CrossCore.IoC;
 
-namespace rgbpiclientxamarin
+namespace RGBPi.Core
 {
     public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
     {
@@ -11,7 +11,7 @@ namespace rgbpiclientxamarin
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 				
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterAppStart<ViewModels.MainViewModel>();
         }
     }
 }

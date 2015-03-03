@@ -1,13 +1,20 @@
-﻿<Properties StartupItem="rgb-pi-client-xamarin.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToDo-MvvmCross\_ Core.txt">
+﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Views\MainView.cs">
     <Files>
-      <File FileName="MyClass.cs" Line="1" Column="1" />
-      <File FileName="ToDo-MvvmCross\_ Core.txt" Line="5" Column="5" />
+      <File FileName="RGBPi.Android\Views\ColorChooserView.cs" Line="1" Column="1" />
+      <File FileName="RGBPi.Android\Views\MainView.cs" Line="86" Column="86" />
+      <File FileName="ViewModels\ColorChooserViewModel.cs" Line="1" Column="1" />
+      <File FileName="Model\DataTypes\Color.cs" Line="1" Column="1" />
+      <File FileName="RGBPi.Android\Views\HoloColorPicker\ColorPicker.cs" Line="1" Column="1" />
+      <File FileName="RGBPi.Android\Resources\color\maintabs.xml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Services\ISocket.cs" line="44" offsetX="935" offsetY="688" expression="answer" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.RGBPi.Android MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.RGBPi" AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

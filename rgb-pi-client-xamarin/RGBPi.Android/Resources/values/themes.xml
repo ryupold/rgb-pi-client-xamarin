@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<style name="Theme.RGBPi" parent="Theme.AppCompat.Light">
+		<!-- Set AppCompat’s actionBarStyle -->
+		<item name="android:actionBarStyle">@style/RGBPiActionBar</item>
+		<!-- Set AppCompat’s color theming attrs -->
+		<item name="android:colorPrimary">@color/rgbpi_primary_color</item>
+		<item name="android:colorPrimaryDark">@color/rgbpi_primary_dark_color</item>
+		<item name="android:colorAccent">@color/rgbpi_color_accent</item>
+
+		<item name="android:background">@color/rgbpi_background</item>
+		<item name="android:windowActionBar">false</item>
+    	<item name="android:windowNoTitle">true</item>
+
+	</style>
+</resources>
