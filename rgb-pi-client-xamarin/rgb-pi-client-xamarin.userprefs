@@ -3,11 +3,11 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Views\MainView.cs">
     <Files>
       <File FileName="RGBPi.Android\Views\ColorChooserView.cs" Line="1" Column="1" />
-      <File FileName="RGBPi.Android\Views\MainView.cs" Line="14" Column="14" />
+      <File FileName="RGBPi.Android\Views\MainView.cs" Line="86" Column="86" />
       <File FileName="ViewModels\ColorChooserViewModel.cs" Line="1" Column="1" />
       <File FileName="Model\DataTypes\Color.cs" Line="1" Column="1" />
       <File FileName="RGBPi.Android\Views\HoloColorPicker\ColorPicker.cs" Line="1" Column="1" />
-      <File FileName="RGBPi.Android\Resources\color\maintabs.xml" Line="64" Column="64" />
+      <File FileName="RGBPi.Android\Resources\color\maintabs.xml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
