@@ -670,29 +670,29 @@ namespace RGBPi.Android
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f060036
-			public const int abc_background_cache_hint_selector_material_dark = 2131099702;
-			
 			// aapt resource value: 0x7f060037
-			public const int abc_background_cache_hint_selector_material_light = 2131099703;
+			public const int abc_background_cache_hint_selector_material_dark = 2131099703;
+			
+			// aapt resource value: 0x7f060038
+			public const int abc_background_cache_hint_selector_material_light = 2131099704;
 			
 			// aapt resource value: 0x7f060000
 			public const int abc_input_method_navigation_guard = 2131099648;
 			
-			// aapt resource value: 0x7f060038
-			public const int abc_primary_text_disable_only_material_dark = 2131099704;
-			
 			// aapt resource value: 0x7f060039
-			public const int abc_primary_text_disable_only_material_light = 2131099705;
+			public const int abc_primary_text_disable_only_material_dark = 2131099705;
 			
 			// aapt resource value: 0x7f06003a
-			public const int abc_primary_text_material_dark = 2131099706;
+			public const int abc_primary_text_disable_only_material_light = 2131099706;
 			
 			// aapt resource value: 0x7f06003b
-			public const int abc_primary_text_material_light = 2131099707;
+			public const int abc_primary_text_material_dark = 2131099707;
 			
 			// aapt resource value: 0x7f06003c
-			public const int abc_search_url_text = 2131099708;
+			public const int abc_primary_text_material_light = 2131099708;
+			
+			// aapt resource value: 0x7f06003d
+			public const int abc_search_url_text = 2131099709;
 			
 			// aapt resource value: 0x7f060001
 			public const int abc_search_url_text_normal = 2131099649;
@@ -703,11 +703,11 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f060003
 			public const int abc_search_url_text_selected = 2131099651;
 			
-			// aapt resource value: 0x7f06003d
-			public const int abc_secondary_text_material_dark = 2131099709;
-			
 			// aapt resource value: 0x7f06003e
-			public const int abc_secondary_text_material_light = 2131099710;
+			public const int abc_secondary_text_material_dark = 2131099710;
+			
+			// aapt resource value: 0x7f06003f
+			public const int abc_secondary_text_material_light = 2131099711;
 			
 			// aapt resource value: 0x7f060004
 			public const int accent_material_dark = 2131099652;
@@ -781,6 +781,9 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f06001b
 			public const int link_text_material_light = 2131099675;
 			
+			// aapt resource value: 0x7f060040
+			public const int maintabs = 2131099712;
+			
 			// aapt resource value: 0x7f06001c
 			public const int material_blue_grey_800 = 2131099676;
 			
@@ -820,17 +823,20 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f060028
 			public const int primary_text_disabled_material_light = 2131099688;
 			
+			// aapt resource value: 0x7f060035
+			public const int rgbpi_background = 2131099701;
+			
 			// aapt resource value: 0x7f060034
-			public const int rgbpi_background = 2131099700;
-			
-			// aapt resource value: 0x7f060033
-			public const int rgbpi_color_accent = 2131099699;
-			
-			// aapt resource value: 0x7f060031
-			public const int rgbpi_primary_color = 2131099697;
+			public const int rgbpi_color_accent = 2131099700;
 			
 			// aapt resource value: 0x7f060032
-			public const int rgbpi_primary_dark_color = 2131099698;
+			public const int rgbpi_primary_color = 2131099698;
+			
+			// aapt resource value: 0x7f060033
+			public const int rgbpi_primary_dark_color = 2131099699;
+			
+			// aapt resource value: 0x7f060031
+			public const int rgbpi_tabbar_color = 2131099697;
 			
 			// aapt resource value: 0x7f060029
 			public const int ripple_material_dark = 2131099689;
@@ -856,8 +862,8 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f060030
 			public const int switch_thumb_normal_material_light = 2131099696;
 			
-			// aapt resource value: 0x7f060035
-			public const int transparent = 2131099701;
+			// aapt resource value: 0x7f060036
+			public const int transparent = 2131099702;
 			
 			static Color()
 			{
@@ -1402,6 +1408,12 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f08000c
 			public const int tabMode = 2131230732;
 			
+			// aapt resource value: 0x7f080043
+			public const int tabsLayout = 2131230787;
+			
+			// aapt resource value: 0x7f080044
+			public const int tabsText = 2131230788;
+			
 			// aapt resource value: 0x7f080028
 			public const int title = 2131230760;
 			
@@ -1526,6 +1538,9 @@ namespace RGBPi.Android
 			
 			// aapt resource value: 0x7f030019
 			public const int support_simple_spinner_dropdown_item = 2130903065;
+			
+			// aapt resource value: 0x7f03001a
+			public const int tabs_bg = 2130903066;
 			
 			static Layout()
 			{

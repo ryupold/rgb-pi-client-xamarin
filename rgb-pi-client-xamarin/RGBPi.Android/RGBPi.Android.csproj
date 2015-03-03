@@ -111,6 +111,8 @@
     <AndroidResource Include="Resources\values\themes.xml" />
     <AndroidResource Include="Resources\values\style.xml" />
     <AndroidResource Include="Resources\layout\MainView.axml" />
+    <AndroidResource Include="Resources\color\maintabs.xml" />
+    <AndroidResource Include="Resources\layout\tabs_bg.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -118,6 +120,7 @@
     <Folder Include="Views\" />
     <Folder Include="Views\HoloColorPicker\" />
     <Folder Include="Services\" />
+    <Folder Include="Resources\color\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RGBPi.Core.csproj">

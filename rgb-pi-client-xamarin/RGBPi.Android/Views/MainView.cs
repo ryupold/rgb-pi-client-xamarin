@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using Android.Content;
 using Android.Support.V7.Widget;
 using Android.Widget;
+using Android.Graphics.Drawables;
+using Android.Views;
 
 namespace RGBPi.Android
 {
@@ -38,22 +40,47 @@ namespace RGBPi.Android
 			tv.Text = "RGB Pi";
 			toolbar.AddView(tv);
 
+			//add tabs
+			CreateColorChooser ();
+		}
+
+		private void CreateColorChooser(){
 			CreateTab(typeof(ColorChooserView), "cc", "Color Chooser", Resource.Drawable.Icon);
-			CreateTab(typeof(ColorChooserView), "cc 2", "Color Chooser 2", Resource.Drawable.Icon);
+			ColorChooserView ccv = (ColorChooserView)LocalActivityManager.GetActivity ("cc"); 
+			ccv.ColorChanged += (s, newColor) => {
+				RGBPi.Core.Model.DataTypes.Color c = new RGBPi.Core.Model.DataTypes.Color (newColor);
+
+				RGBPi.Core.Model.Message msg = new RGBPi.Core.Model.Message ();
+				CC fade = new CC ();
+				fade.color = c;
+				msg.commands = new List<RGBPi.Core.Model.Commands.Command> {
+					fade
+				};
+				ViewModel.SendCommandString (msg);
+			};
 		}
 
 		private void CreateTab(Type activityType, string tag, string label, int drawableId )
 		{
 			var intent = new Intent(this, activityType);
+
 			intent.AddFlags(ActivityFlags.NewTask);
 
 			var spec = TabHost.NewTabSpec(tag);
 			var drawableIcon = Resources.GetDrawable(drawableId);
 
-			spec.SetIndicator(label, drawableIcon);
+			//spec.SetIndicator(label, drawableIcon);
+			spec.SetIndicator(createTabView(this.ApplicationContext, label));
 			spec.SetContent(intent);
 
 			TabHost.AddTab(spec);
+		}
+
+		private static View createTabView(Context context, string text) {
+			View view = LayoutInflater.From(context).Inflate(RGBPi.Android.Resource.Layout.tabs_bg, null);
+			TextView tv = (TextView) view.FindViewById(Resource.Id.tabsText);
+			tv.Text = (text);
+			return view;
 		}
     }
 }

@@ -466,6 +466,11 @@ namespace RGBPi.Android.Views.HolorColorPicker
 			return mCenterNewColor;
 		}
 
+		public RGBPi.Core.Model.DataTypes.Color CurrentColor{
+			get{ return getColor (); }
+			set{ setColor (value);}
+		}
+
 		/**
 	 * Set the color to be highlighted by the pointer. </br> </br> If the
 	 * instances {@code SVBar} and the {@code OpacityBar} aren't null the color

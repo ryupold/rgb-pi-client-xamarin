@@ -20,7 +20,6 @@ namespace RGBPi.Android
 	public class ColorChooserView : MvxActivity
 	{
 		private ColorPicker colorPicker;
-
 		public EventHandler<int> ColorChanged{ get { return colorPicker.ColorChanged; } set { colorPicker.ColorChanged = value; } }
 
 		public new ColorChooserViewModel ViewModel {
@@ -36,17 +35,6 @@ namespace RGBPi.Android
 			colorPicker = (ColorPicker)FindViewById (Resource.Id.colorPicker);
 			SVBar sv = (SVBar)FindViewById (Resource.Id.svBar);
 			colorPicker.addSVBar (sv);
-			colorPicker.ColorChanged += (s, newColor) => {
-				RGBPi.Core.Model.DataTypes.Color c = ViewModel.CurrentColor = new RGBPi.Core.Model.DataTypes.Color (newColor);
-
-				RGBPi.Core.Model.Message msg = new RGBPi.Core.Model.Message ();
-				CC fade = new CC ();
-				fade.color = c;
-				msg.commands = new List<RGBPi.Core.Model.Commands.Command> {
-					fade
-				};
-				ViewModel.SendCommandString (msg);
-			};
 		}
 	}
 }

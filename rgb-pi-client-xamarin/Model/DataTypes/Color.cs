@@ -287,9 +287,22 @@ namespace RGBPi.Core.Model.DataTypes
 		#endregion Properties
 
 		#region Conversion
+		public static implicit operator int (Color color)
+		{
+			int r = (int)(color.R*255);
+			int g = (int)(color.G*255);
+			int b = (int)(color.B*255);
+			return 0xff << 24 + r << 16 + g << 8 + b;
+		}
+
 		public static implicit operator string (Color color)
 		{
 			return color.ToString ();
+		}
+
+		public static implicit operator Color (int argb)
+		{
+			return new Color (argb);
 		}
 
 		public static implicit operator Color (string str)
