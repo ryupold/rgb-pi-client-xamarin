@@ -6,10 +6,10 @@ namespace RGBPi.Core.Model.DataTypes
 {
 	public struct Color
 	{
-		public readonly float R, G, B;
-		public readonly byte Address;
-		private readonly string type;
-		private readonly float[] randomRGB;
+		public float R, G, B;
+		public byte Address;
+		private string type;
+		private float[] randomRGB;
 
 		#region ctors
 

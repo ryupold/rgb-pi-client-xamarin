@@ -6,11 +6,11 @@ namespace RGBPi.Core.Model.DataTypes
 {
 	public struct Condition
 	{
-		public readonly bool condition;
-		public readonly float time;
-		public readonly int count;
-		public readonly string color;
-		private readonly string type;
+		public bool condition;
+		public float time;
+		public int count;
+		public string color;
+		private string type;
 
 		#region ctors
 
@@ -18,6 +18,33 @@ namespace RGBPi.Core.Model.DataTypes
 		{
 			this.type = "b";
 			this.condition = b;
+			this.count = 0;
+			this.time = 0;
+			this.color = null;
+		}
+
+		public Condition(int count){
+			this.type = "i";
+			this.condition = false;
+			this.count = count;
+			this.time = 0;
+			this.color = null;
+		}
+
+		public Condition(float time){
+			this.type = "t";
+			this.condition = false;
+			this.count = 0;
+			this.time = time;
+			this.color = null;
+		}
+
+		public Condition(Color color){
+			this.type = "c";
+			this.condition = false;
+			this.count = 0;
+			this.time = 0;
+			this.color = color;
 		}
 
 		/// <summary>
@@ -26,7 +53,10 @@ namespace RGBPi.Core.Model.DataTypes
 		/// <param name="timeString">Time string.</param>
 		public Condition (string conditionString)
 		{
-			this.condition = 0;
+			this.condition = false;
+			this.count = 0;
+			this.time = 0;
+			this.color = null;
 
 			List<string> types = new List<string> {"b", "t", "i", "c"};
 			string[] conditionParts;
@@ -37,35 +67,35 @@ namespace RGBPi.Core.Model.DataTypes
 				conditionParts = conditionString.Split (':');
 
 				if (!types.Contains (conditionParts [0]))
-					throw new ArgumentException ("unknown color type: " + conditionParts [0]);
+					throw new ArgumentException ("unknown condition type: " + conditionParts [0]);
 
 				type = conditionParts [0];
 
-				// constant time
+				// constant bool
 				if (type == "b") {
-					if (!float.TryParse (conditionParts [1], NumberStyles.Float, CultureInfo.InvariantCulture, out this.time)) {
-						throw new ArgumentException ("time must be a constant value or defined within {} brackets" + conditionString);
+					if (!bool.TryParse (conditionParts [1], out this.condition)) {
+						throw new ArgumentException ("condition must be a constant value or defined within {} brackets" + conditionString);
 					}
 				}
 
-				//random time
+				//time
 				if (type == "t")
 				{
-					//TODO: Time Object??
 					float.TryParse (conditionParts [1], NumberStyles.Float, CultureInfo.InvariantCulture, out this.time);
 				}
-
+				//count
 				if (type == "i")
 				{
 					int.TryParse (conditionParts [1], out this.count);
 				}
-
+				//color
 				if (type == "c")
 				{
 					bool.TryParse (conditionParts [1], out this.condition);
 				}
 
 			} else {
+				type = "b";
 				if (!bool.TryParse (conditionString, out this.condition)) {
 					throw new ArgumentException ("condtion must be a constant value or defined within {} brackets" + conditionString);
 				}

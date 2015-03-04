@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rgbpi="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <Button
+        android:text="CC White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        rgbpi:MvxBind="Click TestCCWhiteCommand" />
+    <Button
+        android:text="CC Random"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rgbpi:MvxBind="Click TestCCRandomCommand"
+        android:id="@+id/button7" />
+    <Button
+        android:text="CC + (0.1, 0.1, 0.1)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rgbpi:MvxBind="Click TestCCPlusCommand"
+        android:id="@+id/button2" />
+    <Button
+        android:text="CC - (0.1, 0.1, 0.1)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rgbpi:MvxBind="Click TestCCMinusCommand"
+        android:id="@+id/button3" />
+    <Button
+        android:text="Fade Red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rgbpi:MvxBind="Click TestFadeRedCommand"
+        android:id="@+id/button4" />
+    <Button
+        android:text="Fade Blue to Green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rgbpi:MvxBind="Click TestFadeBlueGreenCommand"
+        android:id="@+id/button5" />
+    <Button
+        android:text="Fade Random"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rgbpi:MvxBind="Click TestFadeRandomCommand"
+        android:id="@+id/button6" />
+    <Button
+        android:text="List Test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rgbpi:MvxBind="Click TestListCommand"
+        android:id="@+id/button9" />
+    <Button
+        android:text="Wait Test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rgbpi:MvxBind="Click TestWaitCommand"
+        android:id="@+id/button8" />
+    <Button
+        android:text="Loop Test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rgbpi:MvxBind="Click TestLoopCommand"
+        android:id="@+id/button10" />
+</LinearLayout>

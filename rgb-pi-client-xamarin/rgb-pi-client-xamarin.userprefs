@@ -1,13 +1,11 @@
 ﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Views\MainView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Model\DataTypes\Condition.cs">
     <Files>
-      <File FileName="RGBPi.Android\Views\ColorChooserView.cs" Line="1" Column="1" />
-      <File FileName="RGBPi.Android\Views\MainView.cs" Line="86" Column="86" />
-      <File FileName="ViewModels\ColorChooserViewModel.cs" Line="1" Column="1" />
-      <File FileName="Model\DataTypes\Color.cs" Line="1" Column="1" />
-      <File FileName="RGBPi.Android\Views\HoloColorPicker\ColorPicker.cs" Line="1" Column="1" />
-      <File FileName="RGBPi.Android\Resources\color\maintabs.xml" Line="1" Column="1" />
+      <File FileName="RGBPi.Android\Views\MainView.cs" Line="5" Column="5" />
+      <File FileName="RGBPi.Android\Views\CommandTestView.cs" Line="4" Column="4" />
+      <File FileName="ViewModels\CommandTestViewModel.cs" Line="60" Column="60" />
+      <File FileName="Model\DataTypes\Condition.cs" Line="3" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

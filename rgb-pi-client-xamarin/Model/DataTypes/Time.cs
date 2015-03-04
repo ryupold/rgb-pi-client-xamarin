@@ -6,9 +6,9 @@ namespace RGBPi.Core.Model.DataTypes
 {
 	public struct Time
 	{
-		public readonly float time;
-		private readonly string type;
-		private readonly float[] randomTime;
+		public float time;
+		private string type;
+		private float[] randomTime;
 
 		#region ctors
 
@@ -55,7 +55,7 @@ namespace RGBPi.Core.Model.DataTypes
 
 
 				if (!types.Contains (timeParts [0]))
-					throw new ArgumentException ("unknown color type: " + timeParts [0]);
+					throw new ArgumentException ("unknown time type: " + timeParts [0]);
 
 				type = timeParts [0];
 
@@ -82,6 +82,7 @@ namespace RGBPi.Core.Model.DataTypes
 				this.time = Math.Max (this.time, 0);
 
 			} else {
+				type = "c";
 				if (float.TryParse (timeString, NumberStyles.Float, CultureInfo.InvariantCulture, out this.time)) {
 					this.randomTime = new float[2];
 				} else {

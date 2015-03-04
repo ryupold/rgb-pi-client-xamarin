@@ -16,7 +16,7 @@ namespace RGBPi.Core
 			socket = Mvx.Resolve<ISocket> ();
 		}
 
-		public void SendCommandString(Message command){
+		public void SendMessage(Message command){
 			socket.Send (command);
 		}
 	}
