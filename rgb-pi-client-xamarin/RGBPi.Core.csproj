@@ -50,6 +50,8 @@
     <Compile Include="Helpers\Host.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Model\Commands\Fade.cs" />
+    <Compile Include="Model\DataTypes\Time.cs" />
+    <Compile Include="Model\DataTypes\Condition.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
