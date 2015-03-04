@@ -1276,6 +1276,36 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f080014
 			public const int beginning = 2131230740;
 			
+			// aapt resource value: 0x7f080042
+			public const int button1 = 2131230786;
+			
+			// aapt resource value: 0x7f08004b
+			public const int button10 = 2131230795;
+			
+			// aapt resource value: 0x7f080044
+			public const int button2 = 2131230788;
+			
+			// aapt resource value: 0x7f080045
+			public const int button3 = 2131230789;
+			
+			// aapt resource value: 0x7f080046
+			public const int button4 = 2131230790;
+			
+			// aapt resource value: 0x7f080047
+			public const int button5 = 2131230791;
+			
+			// aapt resource value: 0x7f080048
+			public const int button6 = 2131230792;
+			
+			// aapt resource value: 0x7f080043
+			public const int button7 = 2131230787;
+			
+			// aapt resource value: 0x7f08004a
+			public const int button8 = 2131230794;
+			
+			// aapt resource value: 0x7f080049
+			public const int button9 = 2131230793;
+			
 			// aapt resource value: 0x7f08002a
 			public const int checkbox = 2131230762;
 			
@@ -1408,17 +1438,17 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f08000c
 			public const int tabMode = 2131230732;
 			
-			// aapt resource value: 0x7f080043
-			public const int tabsLayout = 2131230787;
+			// aapt resource value: 0x7f08004d
+			public const int tabsLayout = 2131230797;
 			
-			// aapt resource value: 0x7f080044
-			public const int tabsText = 2131230788;
+			// aapt resource value: 0x7f08004e
+			public const int tabsText = 2131230798;
 			
 			// aapt resource value: 0x7f080028
 			public const int title = 2131230760;
 			
-			// aapt resource value: 0x7f080042
-			public const int toolbar = 2131230786;
+			// aapt resource value: 0x7f08004c
+			public const int toolbar = 2131230796;
 			
 			// aapt resource value: 0x7f080008
 			public const int up = 2131230728;
@@ -1534,13 +1564,16 @@ namespace RGBPi.Android
 			public const int ColorChooserView = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int MainView = 2130903064;
+			public const int CommandTestView = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int support_simple_spinner_dropdown_item = 2130903065;
+			public const int MainView = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int tabs_bg = 2130903066;
+			public const int support_simple_spinner_dropdown_item = 2130903066;
+			
+			// aapt resource value: 0x7f03001b
+			public const int tabs_bg = 2130903067;
 			
 			static Layout()
 			{

@@ -6,10 +6,10 @@ namespace RGBPi.Core.Model.DataTypes
 {
 	public struct Color
 	{
-		public readonly float R, G, B;
-		public readonly byte Address;
-		private readonly string type;
-		private readonly float[] randomRGB;
+		public float R, G, B;
+		public byte Address;
+		private string type;
+		private float[] randomRGB;
 
 		#region ctors
 
@@ -283,7 +283,7 @@ namespace RGBPi.Core.Model.DataTypes
 		#endregion ctors
 
 		#region Properties
-		public bool IsRandomColor{get{ return type == "r";}}
+		public bool IsRandom{get{ return type == "r";}}
 		#endregion Properties
 
 		#region Conversion
@@ -314,7 +314,7 @@ namespace RGBPi.Core.Model.DataTypes
 		{
 			string colorString = "{";
 
-			if (IsRandomColor) {
+			if (IsRandom) {
 				colorString += "r:" + randomRGB [0].ToString(CultureInfo.InvariantCulture) + "-" + randomRGB [1].ToString(CultureInfo.InvariantCulture) + 
 					"," + randomRGB [2].ToString(CultureInfo.InvariantCulture) + "-" + randomRGB [3].ToString(CultureInfo.InvariantCulture)
 					+ "," + randomRGB [4].ToString(CultureInfo.InvariantCulture) + "-" + randomRGB [5].ToString(CultureInfo.InvariantCulture);

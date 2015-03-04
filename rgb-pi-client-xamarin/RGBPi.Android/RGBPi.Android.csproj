@@ -88,6 +88,7 @@
     <Compile Include="Views\HoloColorPicker\ValueBar.cs" />
     <Compile Include="Services\Socket.cs" />
     <Compile Include="Views\MainView.cs" />
+    <Compile Include="Views\CommandTestView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -113,6 +114,7 @@
     <AndroidResource Include="Resources\layout\MainView.axml" />
     <AndroidResource Include="Resources\color\maintabs.xml" />
     <AndroidResource Include="Resources\layout\tabs_bg.xml" />
+    <AndroidResource Include="Resources\layout\CommandTestView.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

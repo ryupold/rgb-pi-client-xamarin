@@ -41,23 +41,28 @@ namespace RGBPi.Android
 			toolbar.AddView(tv);
 
 			//add tabs
-			CreateColorChooser ();
+			CreateColorChooserTab ();
+			CreateCommandTestTab ();
 		}
 
-		private void CreateColorChooser(){
+		private void CreateColorChooserTab(){
 			CreateTab(typeof(ColorChooserView), "cc", "Color Chooser", Resource.Drawable.Icon);
 			ColorChooserView ccv = (ColorChooserView)LocalActivityManager.GetActivity ("cc"); 
 			ccv.ColorChanged += (s, newColor) => {
 				RGBPi.Core.Model.DataTypes.Color c = new RGBPi.Core.Model.DataTypes.Color (newColor);
 
 				RGBPi.Core.Model.Message msg = new RGBPi.Core.Model.Message ();
-				CC fade = new CC ();
-				fade.color = c;
+				CC fade = new CC (c);
 				msg.commands = new List<RGBPi.Core.Model.Commands.Command> {
 					fade
 				};
-				ViewModel.SendCommandString (msg);
+				ViewModel.SendMessage (msg);
 			};
+		}
+
+		private void CreateCommandTestTab(){
+			CreateTab(typeof(CommandTestView), "ct", "Command Test", Resource.Drawable.Icon);
+			CommandTestView ctv = (CommandTestView)LocalActivityManager.GetActivity ("ct"); 
 		}
 
 		private void CreateTab(Type activityType, string tag, string label, int drawableId )
