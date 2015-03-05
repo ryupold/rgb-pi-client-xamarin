@@ -468,7 +468,50 @@ namespace RGBPi.Android.Views.HolorColorPicker
 
 		public RGBPi.Core.Model.DataTypes.Color CurrentColor{
 			get{ return getColor (); }
-			set{ setColor (value);}
+			set{ 
+				int color = value;
+				mAngle = colorToAngle (color);
+				mPointerColor.Color = new Color (calculateColor (mAngle));
+
+				// check of the instance isn't null
+				if (mOpacityBar != null) {
+					// set the value of the opacity
+					mOpacityBar.setColor (mColor);
+					mOpacityBar.setOpacity (Color.GetAlphaComponent (color));
+				}
+
+				// check if the instance isn't null
+				if (mSVbar != null) {
+					// the array mHSV will be filled with the HSV values of the color.
+					Color.ColorToHSV (new Color (color), mHSV);
+					mSVbar.setColor (mColor);
+
+					// because of the design of the Saturation/Value bar,
+					// we can only use Saturation or Value every time.
+					// Here will be checked which we shall use.
+					if (mHSV [1] < mHSV [2]) {
+						mSVbar.setSaturation (mHSV [1]);
+					} else if (mHSV [1] > mHSV [2]) {
+						mSVbar.setValue (mHSV [2]);
+					}
+				}
+
+				if (mSaturationBar != null) {
+					Color.ColorToHSV (new Color (color), mHSV);
+					mSaturationBar.setColor (mColor);
+					mSaturationBar.setSaturation (mHSV [1]);
+				}
+
+				if (mValueBar != null && mSaturationBar == null) {
+					Color.ColorToHSV (new Color (color), mHSV);
+					mValueBar.setColor (mColor);
+					mValueBar.setValue (mHSV [2]);
+				} else if (mValueBar != null) {
+					Color.ColorToHSV (new Color (color), mHSV);
+					mValueBar.setValue (mHSV [2]);
+				}
+				setNewCenterColor (color);
+			}
 		}
 
 		/**
@@ -483,50 +526,50 @@ namespace RGBPi.Android.Views.HolorColorPicker
 	 *            won't look close to the original color. This is especially
 	 *            true for shades of grey. You have been warned!
 	 */
-		public void setColor (int color)
-		{
-			mAngle = colorToAngle (color);
-			mPointerColor.Color = new Color (calculateColor (mAngle));
-
-			// check of the instance isn't null
-			if (mOpacityBar != null) {
-				// set the value of the opacity
-				mOpacityBar.setColor (mColor);
-				mOpacityBar.setOpacity (Color.GetAlphaComponent (color));
-			}
-
-			// check if the instance isn't null
-			if (mSVbar != null) {
-				// the array mHSV will be filled with the HSV values of the color.
-				Color.ColorToHSV (new Color (color), mHSV);
-				mSVbar.setColor (mColor);
-
-				// because of the design of the Saturation/Value bar,
-				// we can only use Saturation or Value every time.
-				// Here will be checked which we shall use.
-				if (mHSV [1] < mHSV [2]) {
-					mSVbar.setSaturation (mHSV [1]);
-				} else if (mHSV [1] > mHSV [2]) {
-					mSVbar.setValue (mHSV [2]);
-				}
-			}
-
-			if (mSaturationBar != null) {
-				Color.ColorToHSV (new Color (color), mHSV);
-				mSaturationBar.setColor (mColor);
-				mSaturationBar.setSaturation (mHSV [1]);
-			}
-
-			if (mValueBar != null && mSaturationBar == null) {
-				Color.ColorToHSV (new Color (color), mHSV);
-				mValueBar.setColor (mColor);
-				mValueBar.setValue (mHSV [2]);
-			} else if (mValueBar != null) {
-				Color.ColorToHSV (new Color (color), mHSV);
-				mValueBar.setValue (mHSV [2]);
-			}
-			setNewCenterColor (color);
-		}
+//		public void setColor (int color)
+//		{
+//			mAngle = colorToAngle (color);
+//			mPointerColor.Color = new Color (calculateColor (mAngle));
+//
+//			// check of the instance isn't null
+//			if (mOpacityBar != null) {
+//				// set the value of the opacity
+//				mOpacityBar.setColor (mColor);
+//				mOpacityBar.setOpacity (Color.GetAlphaComponent (color));
+//			}
+//
+//			// check if the instance isn't null
+//			if (mSVbar != null) {
+//				// the array mHSV will be filled with the HSV values of the color.
+//				Color.ColorToHSV (new Color (color), mHSV);
+//				mSVbar.setColor (mColor);
+//
+//				// because of the design of the Saturation/Value bar,
+//				// we can only use Saturation or Value every time.
+//				// Here will be checked which we shall use.
+//				if (mHSV [1] < mHSV [2]) {
+//					mSVbar.setSaturation (mHSV [1]);
+//				} else if (mHSV [1] > mHSV [2]) {
+//					mSVbar.setValue (mHSV [2]);
+//				}
+//			}
+//
+//			if (mSaturationBar != null) {
+//				Color.ColorToHSV (new Color (color), mHSV);
+//				mSaturationBar.setColor (mColor);
+//				mSaturationBar.setSaturation (mHSV [1]);
+//			}
+//
+//			if (mValueBar != null && mSaturationBar == null) {
+//				Color.ColorToHSV (new Color (color), mHSV);
+//				mValueBar.setColor (mColor);
+//				mValueBar.setValue (mHSV [2]);
+//			} else if (mValueBar != null) {
+//				Color.ColorToHSV (new Color (color), mHSV);
+//				mValueBar.setValue (mHSV [2]);
+//			}
+//			setNewCenterColor (color);
+//		}
 
 		/**
 	 * Convert a color to an angle.
@@ -572,7 +615,7 @@ namespace RGBPi.Android.Views.HolorColorPicker
 				        && y >= -mColorCenterRadius && y <= mColorCenterRadius
 				        && mShowCenterOldColor) {
 					mCenterHaloPaint.Alpha = (0x50);
-					setColor (getOldCenterColor ());
+					CurrentColor = (getOldCenterColor ());
 					Invalidate ();
 				}
                         // Check whether the user pressed anywhere on the wheel.

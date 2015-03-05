@@ -8,15 +8,14 @@ using System.Diagnostics;
 
 namespace RGBPi.Core.ViewModels
 {
-	public class MainViewModel : RemoteControlViewModel
+	public class SettingsViewModel : RemoteControlViewModel
 	{
-		public ColorChooserViewModel ColorChooser{ get; set;}
-		public CommandTestViewModel CommandTest{ get; set;}
-
-		public MainViewModel ()
+		public SettingsViewModel ()
 		{
 			SetupCommands ();
 		}
+
+		private List<Host> hosts;
 
 
 		private void SetupCommands(){
@@ -37,10 +36,6 @@ namespace RGBPi.Core.ViewModels
 				new Fade (2f, new Color (0))
 			}); 
 			SendMessage (msg);
-
-			if(ColorChooser != null){
-				ColorChooser.CurrentColor = new Color (0f, 0f, 0f);
-			}
 		}
 
 

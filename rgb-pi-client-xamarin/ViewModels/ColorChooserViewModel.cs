@@ -11,11 +11,38 @@ namespace RGBPi.Core.ViewModels
 		private Color _currentColor;
 		public Color CurrentColor{ get { return _currentColor; } set{ 
 				_currentColor = value; 
-				//RaisePropertyChanged( () => CurrentColor);
+				BackgroundColor = MakePastel (_currentColor);
+				RaisePropertyChanged( () => CurrentColor);
 			}}
 
-		public ColorChooserViewModel(){
+		private Color _backgroundColor;
+		public Color BackgroundColor{ get { return _backgroundColor; } set{ 
+				_backgroundColor = value; 
+				RaisePropertyChanged( () => BackgroundColor);
+		}}
 
+		public void SetCurrentColor(Color c){
+			_currentColor = c; 
+			BackgroundColor = MakePastel (_currentColor);
+		}
+
+
+		private Color MakePastel(Color col){
+			return new Color (
+				MakePastel(col.R),
+				MakePastel(col.G),
+				MakePastel(col.B)
+			);
+		}
+
+		private float MakePastel(float col){
+			return Math.Max(col * 0.5f, 0.3f);
+		}
+
+
+
+		public ColorChooserViewModel(){
+			CurrentColor = 0;
 		}
 
 

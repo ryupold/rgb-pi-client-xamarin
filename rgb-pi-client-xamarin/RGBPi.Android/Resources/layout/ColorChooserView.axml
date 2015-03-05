@@ -2,18 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:rgbpi="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    rgbpi:MvxBind="Background BackgroundColor, Converter=Color">
     <ColorPicker
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        rgbpi:MvxBind="CurrentColor CurrentColor"
+        rgbpi:MvxBind="CurrentColor CurrentColor; Background BackgroundColor, Converter=Color"
         android:id="@+id/colorPicker" />
     <SVBar
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/svBar" />
+        android:id="@+id/svBar"
+        rgbpi:MvxBind="Background BackgroundColor, Converter=Color" />
 </LinearLayout>

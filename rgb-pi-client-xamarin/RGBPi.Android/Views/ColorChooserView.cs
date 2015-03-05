@@ -35,6 +35,9 @@ namespace RGBPi.Android
 			colorPicker = (ColorPicker)FindViewById (Resource.Id.colorPicker);
 			SVBar sv = (SVBar)FindViewById (Resource.Id.svBar);
 			colorPicker.addSVBar (sv);
+			ColorChanged += (s, c) => {
+				ViewModel.SetCurrentColor(c);
+			};
 		}
 	}
 }

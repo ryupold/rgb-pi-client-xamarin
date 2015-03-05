@@ -73,6 +73,12 @@
     <Reference Include="Cirrious.MvvmCross.Droid.Fragging">
       <HintPath>..\packages\MvvmCross.HotTuna.Droid.Fragging.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Droid.Fragging.dll</HintPath>
     </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Color.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -89,6 +95,8 @@
     <Compile Include="Services\Socket.cs" />
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\CommandTestView.cs" />
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="Converter\ColorConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -117,6 +125,7 @@
     <AndroidResource Include="Resources\layout\CommandTestView.axml" />
     <AndroidResource Include="Resources\layout\menu_toolbar.xml" />
     <AndroidResource Include="Resources\layout\Toolbar.xml" />
+    <AndroidResource Include="Resources\layout\Toolbar_settings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -125,6 +134,7 @@
     <Folder Include="Views\HoloColorPicker\" />
     <Folder Include="Services\" />
     <Folder Include="Resources\color\" />
+    <Folder Include="Converter\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RGBPi.Core.csproj">

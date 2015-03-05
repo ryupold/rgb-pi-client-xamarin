@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <resources>
 	<!-- COLORS -->
-	<color name="rgbpi_tabbar_color">#474866</color>
-	<color name="rgbpi_primary_color">#474866</color>
+	<color name="rgbpi_primary_color">#4748ff</color>
 	<color name="rgbpi_primary_dark_color">#474866</color>
-	<color name="rgbpi_color_accent">#474888</color>
-	<color name="rgbpi_background">#474888</color>
+	<color name="rgbpi_color_accent">#4748aa</color>
+	<color name="rgbpi_background">#4748aa</color>
+	<!-- <color name="rgbpi_background">#4748aa</color> -->
+	<color name="rgbpi_color_chooser_background">#b76</color>
 	<color name="transparent">#00000000</color>
+
 	<dimen name="default_padding">10dp</dimen>
 	<dimen name="default_padding_small">5dp</dimen>
 	<dimen name="default_padding_big">15dp</dimen>

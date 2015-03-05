@@ -43,6 +43,7 @@ namespace RGBPi.Android
 		private void CreateColorChooserTab(){
 			CreateTab(typeof(ColorChooserView), "cc", "Color Chooser", Resource.Drawable.Icon);
 			ColorChooserView ccv = (ColorChooserView)LocalActivityManager.GetActivity ("cc"); 
+			ViewModel.ColorChooser = ccv.ViewModel;
 			ccv.ColorChanged += (s, newColor) => {
 				RGBPi.Core.Model.DataTypes.Color c = new RGBPi.Core.Model.DataTypes.Color (newColor);
 
@@ -58,6 +59,7 @@ namespace RGBPi.Android
 		private void CreateCommandTestTab(){
 			CreateTab(typeof(CommandTestView), "ct", "Command Test", Resource.Drawable.Icon);
 			CommandTestView ctv = (CommandTestView)LocalActivityManager.GetActivity ("ct"); 
+
 		}
 
 		private void CreateTab(Type activityType, string tag, string label, int drawableId )

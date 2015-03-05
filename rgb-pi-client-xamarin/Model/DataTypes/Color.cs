@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using Cirrious.CrossCore.UI;
 
 namespace RGBPi.Core.Model.DataTypes
 {
@@ -292,12 +293,22 @@ namespace RGBPi.Core.Model.DataTypes
 			int r = (int)(color.R*255);
 			int g = (int)(color.G*255);
 			int b = (int)(color.B*255);
-			return 0xff << 24 + r << 16 + g << 8 + b;
+			return (0xff << 24) + (r << 16) + (g << 8) + b;
 		}
 
 		public static implicit operator string (Color color)
 		{
 			return color.ToString ();
+		}
+
+		public static implicit operator MvxColor (Color color)
+		{
+			return new MvxColor ((byte)(color.R * 255), (byte)(color.G * 255), (byte)(color.B * 255));
+		}
+
+		public static implicit operator Color (MvxColor col)
+		{
+			return new Color (col.ARGB);
 		}
 
 		public static implicit operator Color (int argb)

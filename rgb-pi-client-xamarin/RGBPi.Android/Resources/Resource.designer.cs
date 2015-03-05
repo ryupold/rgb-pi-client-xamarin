@@ -823,20 +823,20 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f060028
 			public const int primary_text_disabled_material_light = 2131099688;
 			
-			// aapt resource value: 0x7f060035
-			public const int rgbpi_background = 2131099701;
-			
 			// aapt resource value: 0x7f060034
-			public const int rgbpi_color_accent = 2131099700;
-			
-			// aapt resource value: 0x7f060032
-			public const int rgbpi_primary_color = 2131099698;
+			public const int rgbpi_background = 2131099700;
 			
 			// aapt resource value: 0x7f060033
-			public const int rgbpi_primary_dark_color = 2131099699;
+			public const int rgbpi_color_accent = 2131099699;
+			
+			// aapt resource value: 0x7f060035
+			public const int rgbpi_color_chooser_background = 2131099701;
 			
 			// aapt resource value: 0x7f060031
-			public const int rgbpi_tabbar_color = 2131099697;
+			public const int rgbpi_primary_color = 2131099697;
+			
+			// aapt resource value: 0x7f060032
+			public const int rgbpi_primary_dark_color = 2131099698;
 			
 			// aapt resource value: 0x7f060029
 			public const int ripple_material_dark = 2131099689;
@@ -1619,6 +1619,9 @@ namespace RGBPi.Android
 			
 			// aapt resource value: 0x7f03001d
 			public const int Toolbar = 2130903069;
+			
+			// aapt resource value: 0x7f03001e
+			public const int Toolbar_settings = 2130903070;
 			
 			static Layout()
 			{
