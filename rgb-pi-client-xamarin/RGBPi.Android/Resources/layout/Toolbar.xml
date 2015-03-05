@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="#00000000">
-<!--<item android:id="@+id/action_search"
-          android:title="@string/action_search"
-          android:icon="@drawable/ic_search"
-          android:showAsAction="ifRoom" /> -->
-    <item
-        android:id="@+id/tb_settings"
-        android:title="Settings"
-        android:orderInCategory="100"
-        android:showAsAction="ifRoom" />
-</menu>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rgbpi="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    style="@style/RGBPiActionBar">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/tb_left"
+        android:layout_weight="1">
+        <ImageView
+            android:src="@drawable/Icon"
+            android:layout_width="@dimen/action_bar_height"
+            android:layout_height="@dimen/action_bar_height"
+            android:id="@+id/tb_logo"
+            android:layout_gravity="left"
+            android:padding="@dimen/default_padding_small" />
+        <ImageView
+            android:src="@android:drawable/arrow_up_float"
+            android:layout_width="@dimen/action_bar_height"
+            android:layout_height="@dimen/action_bar_height"
+            android:id="@+id/tb_brighter"
+            android:layout_gravity="left"
+            android:padding="@dimen/default_padding"
+            rgbpi:MvxBind="Click ToolbarBrighterCommand" />
+        <ImageView
+            android:src="@android:drawable/arrow_down_float"
+            android:layout_width="@dimen/action_bar_height"
+            android:layout_height="@dimen/action_bar_height"
+            android:id="@+id/tb_darker"
+            android:layout_gravity="left"
+            android:padding="@dimen/default_padding"
+            rgbpi:MvxBind="Click ToolbarDarkerCommand" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/tb_right">
+        <ImageView
+            android:src="@android:drawable/ic_lock_power_off"
+            android:layout_width="@dimen/action_bar_height"
+            android:layout_height="@dimen/action_bar_height"
+            android:id="@+id/tb_off"
+            android:layout_gravity="left"
+            android:padding="@dimen/default_padding"
+            rgbpi:MvxBind="Click ToolbarOffCommand" />
+        <ImageView
+            android:src="@android:drawable/ic_menu_preferences"
+            android:layout_width="@dimen/action_bar_height"
+            android:layout_height="@dimen/action_bar_height"
+            android:id="@+id/tb_settings"
+            android:layout_gravity="left"
+            android:padding="@dimen/default_padding_small"
+            rgbpi:MvxBind="Click ToolbarShowSettingsCommand" />
+    </LinearLayout>
+</LinearLayout>

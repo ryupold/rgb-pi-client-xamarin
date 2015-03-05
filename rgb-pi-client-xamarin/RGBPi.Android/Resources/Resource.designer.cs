@@ -1022,6 +1022,24 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f07002c
 			public const int color_wheel_thickness = 2131165228;
 			
+			// aapt resource value: 0x7f070039
+			public const int default_margin = 2131165241;
+			
+			// aapt resource value: 0x7f07003b
+			public const int default_margin_big = 2131165243;
+			
+			// aapt resource value: 0x7f07003a
+			public const int default_margin_small = 2131165242;
+			
+			// aapt resource value: 0x7f070036
+			public const int default_padding = 2131165238;
+			
+			// aapt resource value: 0x7f070038
+			public const int default_padding_big = 2131165240;
+			
+			// aapt resource value: 0x7f070037
+			public const int default_padding_small = 2131165239;
+			
 			// aapt resource value: 0x7f070025
 			public const int dialog_fixed_height_major = 2131165221;
 			
@@ -1438,14 +1456,32 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f08000c
 			public const int tabMode = 2131230732;
 			
-			// aapt resource value: 0x7f08004d
-			public const int tabsLayout = 2131230797;
-			
 			// aapt resource value: 0x7f08004e
-			public const int tabsText = 2131230798;
+			public const int tabsLayout = 2131230798;
 			
 			// aapt resource value: 0x7f08004f
-			public const int tb_settings = 2131230799;
+			public const int tabsText = 2131230799;
+			
+			// aapt resource value: 0x7f080052
+			public const int tb_brighter = 2131230802;
+			
+			// aapt resource value: 0x7f080053
+			public const int tb_darker = 2131230803;
+			
+			// aapt resource value: 0x7f080050
+			public const int tb_left = 2131230800;
+			
+			// aapt resource value: 0x7f080051
+			public const int tb_logo = 2131230801;
+			
+			// aapt resource value: 0x7f080055
+			public const int tb_off = 2131230805;
+			
+			// aapt resource value: 0x7f080054
+			public const int tb_right = 2131230804;
+			
+			// aapt resource value: 0x7f08004d
+			public const int tb_settings = 2131230797;
 			
 			// aapt resource value: 0x7f080028
 			public const int title = 2131230760;
@@ -1573,13 +1609,16 @@ namespace RGBPi.Android
 			public const int MainView = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int support_simple_spinner_dropdown_item = 2130903066;
+			public const int menu_toolbar = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int tabs_bg = 2130903067;
+			public const int support_simple_spinner_dropdown_item = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int Toolbar = 2130903068;
+			public const int tabs_bg = 2130903068;
+			
+			// aapt resource value: 0x7f03001d
+			public const int Toolbar = 2130903069;
 			
 			static Layout()
 			{
