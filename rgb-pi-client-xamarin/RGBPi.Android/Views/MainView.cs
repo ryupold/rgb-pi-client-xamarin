@@ -35,11 +35,6 @@ namespace RGBPi.Android
 			base.OnViewModelSet();
 			SetContentView(Resource.Layout.MainView);
 
-			var toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
-			TextView tv = new TextView(this.BaseContext);
-			tv.Text = "RGB Pi";
-			toolbar.AddView(tv);
-
 			//add tabs
 			CreateColorChooserTab ();
 			CreateCommandTestTab ();
@@ -87,5 +82,6 @@ namespace RGBPi.Android
 			tv.Text = (text);
 			return view;
 		}
+
     }
 }
