@@ -1612,16 +1612,19 @@ namespace RGBPi.Android
 			public const int menu_toolbar = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int support_simple_spinner_dropdown_item = 2130903067;
+			public const int SettingsView = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int tabs_bg = 2130903068;
+			public const int support_simple_spinner_dropdown_item = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int Toolbar = 2130903069;
+			public const int tabs_bg = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int Toolbar_settings = 2130903070;
+			public const int Toolbar = 2130903070;
+			
+			// aapt resource value: 0x7f03001f
+			public const int Toolbar_settings = 2130903071;
 			
 			static Layout()
 			{

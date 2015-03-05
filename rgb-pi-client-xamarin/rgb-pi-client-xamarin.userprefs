@@ -2,12 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ViewModels\MainViewModel.cs">
     <Files>
-      <File FileName="RGBPi.Android\Views\MainView.cs" Line="3" Column="3" />
-      <File FileName="RGBPi.Android\Views\CommandTestView.cs" Line="4" Column="4" />
-      <File FileName="ViewModels\CommandTestViewModel.cs" Line="4" Column="4" />
-      <File FileName="Model\DataTypes\Condition.cs" Line="1" Column="1" />
-      <File FileName="RGBPi.Android\Resources\values\style.xml" Line="29" Column="29" />
-      <File FileName="ViewModels\MainViewModel.cs" Line="3" Column="3" />
+      <File FileName="RGBPi.Android\Views\MainView.cs" Line="4" Column="4" />
+      <File FileName="ViewModels\MainViewModel.cs" Line="40" Column="40" />
+      <File FileName="ViewModels\SettingsViewModel.cs" Line="40" Column="40" />
+      <File FileName="RGBPi.Android\Views\SettingsView.cs" Line="48" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

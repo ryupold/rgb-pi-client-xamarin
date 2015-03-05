@@ -68,7 +68,7 @@ namespace RGBPi.Core.ViewModels
 		public IMvxCommand ToolbarShowSettingsCommand{get{ return _toolbarShowSettingsCommand;}}
 
 		private void ShowSettings (){
-			Debug.WriteLine ("TODO: Open Settings");
+			ShowViewModel<SettingsViewModel> ();
 		}
 
 		#endregion

@@ -97,6 +97,7 @@
     <Compile Include="Views\CommandTestView.cs" />
     <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
     <Compile Include="Converter\ColorConverter.cs" />
+    <Compile Include="Views\SettingsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -126,6 +127,7 @@
     <AndroidResource Include="Resources\layout\menu_toolbar.xml" />
     <AndroidResource Include="Resources\layout\Toolbar.xml" />
     <AndroidResource Include="Resources\layout\Toolbar_settings.xml" />
+    <AndroidResource Include="Resources\layout\SettingsView.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
