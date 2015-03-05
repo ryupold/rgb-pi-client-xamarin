@@ -115,6 +115,7 @@
     <AndroidResource Include="Resources\color\maintabs.xml" />
     <AndroidResource Include="Resources\layout\tabs_bg.xml" />
     <AndroidResource Include="Resources\layout\CommandTestView.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

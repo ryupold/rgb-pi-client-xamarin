@@ -1444,6 +1444,9 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f08004e
 			public const int tabsText = 2131230798;
 			
+			// aapt resource value: 0x7f08004f
+			public const int tb_settings = 2131230799;
+			
 			// aapt resource value: 0x7f080028
 			public const int title = 2131230760;
 			
@@ -1574,6 +1577,9 @@ namespace RGBPi.Android
 			
 			// aapt resource value: 0x7f03001b
 			public const int tabs_bg = 2130903067;
+			
+			// aapt resource value: 0x7f03001c
+			public const int Toolbar = 2130903068;
 			
 			static Layout()
 			{

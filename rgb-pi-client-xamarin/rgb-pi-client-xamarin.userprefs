@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Model\DataTypes\Condition.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="RGBPi.Android\Views\MainView.cs" Line="5" Column="5" />
       <File FileName="RGBPi.Android\Views\CommandTestView.cs" Line="4" Column="4" />
-      <File FileName="ViewModels\CommandTestViewModel.cs" Line="60" Column="60" />
-      <File FileName="Model\DataTypes\Condition.cs" Line="3" Column="3" />
+      <File FileName="ViewModels\CommandTestViewModel.cs" Line="1" Column="1" />
+      <File FileName="Model\DataTypes\Condition.cs" Line="20" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
