@@ -25,21 +25,21 @@ namespace RGBPi.Core.Helpers
             }
         }
 
-		private static Host selectedHost = null;
-		public static Host SelectedHost{ get{ 
-				if(selectedHost == null){
-					string hostJSON = Settings.AppSettings.GetValueOrDefault ("selected_host", string.Empty);
+		private static Host _activeHost = null;
+		public static Host ActiveHost{ get{ 
+				if(_activeHost == null){
+					string hostJSON = Settings.AppSettings.GetValueOrDefault ("active_host", string.Empty);
 					if(hostJSON != string.Empty){
-						selectedHost = JsonConvert.DeserializeObject<Host> (hostJSON);
+						_activeHost = JsonConvert.DeserializeObject<Host> (hostJSON);
 					}
 				}
 
-				return selectedHost;
+				return _activeHost;
 			} 
 			set
 			{
-				selectedHost = value;
-				Settings.AppSettings.AddOrUpdateValue ("selected_host", JsonConvert.SerializeObject(selectedHost));
+				_activeHost = value;
+				Settings.AppSettings.AddOrUpdateValue ("active_host", JsonConvert.SerializeObject(_activeHost));
 				Settings.AppSettings.Save ();
 			}
 		}

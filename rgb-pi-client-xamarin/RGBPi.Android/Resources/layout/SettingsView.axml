@@ -5,4 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px" />
+    android:minHeight="25px"
+    rgbpi:theme="@style/Theme.RGBPi">
+    <Mvx.MvxListView
+        android:id="@+id/list_hosts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        rgbpi:MvxBind="ItemsSource Hosts"
+        rgbpi:MvxItemTemplate="@layout/host_item" />
+</LinearLayout>

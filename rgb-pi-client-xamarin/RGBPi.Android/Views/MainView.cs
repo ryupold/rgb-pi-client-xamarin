@@ -19,7 +19,6 @@ namespace RGBPi.Android
 		Label = "RGB-Pi Remote"
 		, MainLauncher = true
 		, Icon = "@drawable/icon"
-		, NoHistory = true
 		, Theme = "@style/Theme.RGBPi"
 		, ScreenOrientation = ScreenOrientation.Portrait)]
 	public class MainView : MvxTabActivity

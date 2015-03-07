@@ -58,6 +58,7 @@
     <Compile Include="ViewModels\CommandTestViewModel.cs" />
     <Compile Include="ViewModels\ColorChooserViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\HostViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

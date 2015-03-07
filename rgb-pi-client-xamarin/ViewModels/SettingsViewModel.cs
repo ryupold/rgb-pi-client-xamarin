@@ -15,8 +15,8 @@ namespace RGBPi.Core.ViewModels
 			SetupCommands ();
 		}
 
-		private List<Host> _hosts;
-		public List<Host> Hosts {
+		private List<HostViewModel> _hosts;
+		public List<HostViewModel> Hosts {
 			get{ return _hosts; }
 			set{
 				_hosts = value;
@@ -26,16 +26,24 @@ namespace RGBPi.Core.ViewModels
 
 
 		private void SetupCommands(){
-			_toolbarShowSettingsCommand = new MvxCommand (() => ShowSettings());
+			_toolbarGoBackCommand = new MvxCommand (() => GoBack());
+			_toolbarAddHostCommand = new MvxCommand (() => AddHost());
 		}
 
 		#region Commands
 
-		private MvxCommand _toolbarShowSettingsCommand;
-		public IMvxCommand ToolbarShowSettingsCommand{get{ return _toolbarShowSettingsCommand;}}
+		private MvxCommand _toolbarGoBackCommand;
+		public IMvxCommand ToolbarGoBackCommand{get{ return _toolbarGoBackCommand;}}
 
-		private void ShowSettings (){
-			Debug.WriteLine ("TODO: Open Settings");
+		private void GoBack (){
+			Close (this);
+		}
+
+		private MvxCommand _toolbarAddHostCommand;
+		public IMvxCommand ToolbarAddHostCommand{get{ return _toolbarAddHostCommand;}}
+
+		private void AddHost (){
+			Debug.WriteLine ("TODO: add host");
 		}
 
 		#endregion

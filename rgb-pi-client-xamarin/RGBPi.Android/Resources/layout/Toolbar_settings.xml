@@ -13,13 +13,17 @@
         android:layout_height="match_parent"
         android:id="@+id/tb_left"
         android:layout_weight="1">
-        <ImageView
-            android:src="@drawable/Icon"
-            android:layout_width="@dimen/action_bar_height"
-            android:layout_height="@dimen/action_bar_height"
+        <Button
+            android:background="@drawable/ic_chevron_left_white_36dp"
+            android:id="@+id/tb_back"
+            style="@style/TabbarIcon_small_left"
+            rgbpi:MvxBind="Click ToolbarGoBackCommand" />
+        <Button
+            android:background="@drawable/Icon"
             android:id="@+id/tb_logo"
-            android:layout_gravity="left"
-            android:padding="@dimen/default_padding_small" />
+            style="@style/TabbarIcon_left"
+            android:layout_marginLeft="-10dp"
+            rgbpi:MvxBind="Click ToolbarGoBackCommand" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -27,5 +31,11 @@
         android:layout_height="match_parent"
         android:id="@+id/tb_right"
         android:minWidth="25px"
-        android:minHeight="25px" />
+        android:minHeight="25px">
+        <Button
+            android:background="@drawable/ic_add_circle_outline_white_36dp"
+            android:id="@+id/tb_add"
+            style="@style/TabbarIcon_right"
+            rgbpi:MvxBind="Click ToolbarAddHostCommand" />
+    </LinearLayout>
 </LinearLayout>

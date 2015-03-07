@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rgbpi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    style="@style/HostItem">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_container"
+        style="@style/HostItem_container">
+        <TextView
+            android:text="NAME"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/txt_name"
+            android:layout_gravity="center_horizontal|top"
+            android:background="@color/transparent" />
+        <TextView
+            android:text="IP"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/txt_ip"
+            android:background="@color/transparent" />
+        <TextView
+            android:text="PORT"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/txt_port"
+            android:background="@color/transparent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_container_edit"
+        style="@style/HostItem_container">
+        <TextView
+            android:text="NAME"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/txt_name_edit"
+            android:layout_gravity="center_horizontal|top"
+            android:background="@color/transparent" />
+        <EditText
+            android:text="IP"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/txt_ip_edit"
+            android:background="@color/transparent" />
+        <EditText
+            android:text="PORT"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/txt_port_edit"
+            android:background="@color/transparent" />
+    </LinearLayout>
+    <Button
+        android:layout_width="@dimen/host_item_edit_button_sise"
+        android:layout_height="@dimen/host_item_edit_button_sise"
+        android:layout_gravity="top|right"
+        android:id="@+id/btn_edit"
+        android:background="@drawable/ic_tune_black_36dp" />
+    <Button
+        android:layout_width="@dimen/host_item_edit_button_sise"
+        android:layout_height="@dimen/host_item_edit_button_sise"
+        android:layout_gravity="top|right"
+        android:id="@+id/btn_save"
+        android:background="@drawable/ic_check_black_36dp" />
+    <Button
+        android:background="@drawable/ic_panorama_fisheye_black_36dp"
+        android:layout_width="@dimen/host_item_edit_circle_sise"
+        android:layout_height="@dimen/host_item_edit_circle_sise"
+        android:layout_gravity="center_vertical|left"
+        android:id="@+id/btn_circle" />
+    <Button
+        android:background="@drawable/Icon"
+        android:layout_width="@dimen/host_item_edit_active_sise"
+        android:layout_height="@dimen/host_item_edit_active_sise"
+        android:layout_marginLeft="@dimen/host_item_edit_active_delta_sise"
+        android:layout_gravity="center_vertical|left"
+        android:id="@+id/btn_active" />
+    <Button
+        android:background="@drawable/ic_remove_circle_outline_black_36dp"
+        android:layout_width="@dimen/host_item_edit_button_sise"
+        android:layout_height="@dimen/host_item_edit_button_sise"
+        android:layout_gravity="bottom|right"
+        android:id="@+id/btn_remove" />
+</FrameLayout>

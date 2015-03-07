@@ -13,10 +13,15 @@ using Android.OS;
 using Cirrious.MvvmCross.Droid.Fragging;
 using Android.Content;
 using Android.Util;
+using Cirrious.MvvmCross.Binding.Droid.Views;
+using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 
 namespace RGBPi.Android
 {
-	[Activity (Label = "Settings", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity (Label = "Settings"
+		, Icon = "@drawable/icon"
+		, Theme = "@style/Theme.RGBPi",
+		ScreenOrientation = ScreenOrientation.Portrait)]
 	public class SettingsView : MvxActivity
 	{
 
@@ -32,6 +37,37 @@ namespace RGBPi.Android
 			base.OnViewModelSet();
 			SetContentView (Resource.Layout.SettingsView);
 
+		}
+	}
+
+	public class CustomAdapter : MvxAdapter
+	{
+		public CustomAdapter(Context context, IMvxAndroidBindingContext bindingContext)
+			: base(context, bindingContext)
+		{
+		}
+
+		public override int GetItemViewType(int position)
+		{
+			var item = GetRawItem(position);
+			if (item is Kitten)
+				return 0;
+			return 1;
+		}
+
+		public override int ViewTypeCount
+		{
+			get { return 2; }
+		}
+
+		protected override View GetBindableView(View convertView, object source, int templateId)
+		{
+			if (source is Kitten)
+				templateId = Resource.Layout.ListItem_Kitten;
+			else if (source is Dog)
+				templateId = Resource.Layout.ListItem_Dog;
+
+			return base.GetBindableView(convertView, source, templateId);
 		}
 	}
 }
