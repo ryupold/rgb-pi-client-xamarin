@@ -74,11 +74,14 @@
     <Reference Include="Cirrious.MvvmCross">
       <HintPath>packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.0\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
-    <Reference Include="Refractored.MvxPlugins.Settings">
-      <HintPath>packages\Mvx.Plugins.Settings.1.4.1\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS10\Refractored.MvxPlugins.Settings.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.Xam.Settings.Abstractions">
+      <HintPath>packages\Xam.Plugins.Settings.1.5.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10\Refractored.Xam.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.Xam.Settings">
+      <HintPath>packages\Xam.Plugins.Settings.1.5.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10\Refractored.Xam.Settings.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -10,7 +10,11 @@ namespace RGBPi.Core
 		public string ip;
 		public int port;
 
-		public Host(){}
+		public Host(){
+			name = string.Empty;
+			ip = string.Empty;
+			port = 4321;
+		}
 
 		public Host(string name, string ip, int port){
 			this.name = name;

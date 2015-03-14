@@ -15,6 +15,8 @@ using Android.Content;
 using Android.Util;
 using Cirrious.MvvmCross.Binding.Droid.Views;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
+using RGBPi.Core;
+using RGBPi.Core.Helpers;
 
 namespace RGBPi.Android
 {
@@ -36,13 +38,14 @@ namespace RGBPi.Android
 		{
 			base.OnViewModelSet();
 			SetContentView (Resource.Layout.SettingsView);
-
+			MvxListView list = FindViewById<MvxListView> (Resource.Id.list_hosts);
+			list.Adapter = new HostViewAdapter (this, (IMvxAndroidBindingContext)this.BindingContext);
 		}
 	}
 
-	public class CustomAdapter : MvxAdapter
+	public class HostViewAdapter : MvxAdapter
 	{
-		public CustomAdapter(Context context, IMvxAndroidBindingContext bindingContext)
+		public HostViewAdapter(Context context, IMvxAndroidBindingContext bindingContext)
 			: base(context, bindingContext)
 		{
 		}
@@ -50,22 +53,20 @@ namespace RGBPi.Android
 		public override int GetItemViewType(int position)
 		{
 			var item = GetRawItem(position);
-			if (item is Kitten)
+			if (item is Host)
 				return 0;
-			return 1;
+			return 0;
 		}
 
 		public override int ViewTypeCount
 		{
-			get { return 2; }
+			get { return 1; }
 		}
 
 		protected override View GetBindableView(View convertView, object source, int templateId)
 		{
-			if (source is Kitten)
-				templateId = Resource.Layout.ListItem_Kitten;
-			else if (source is Dog)
-				templateId = Resource.Layout.ListItem_Dog;
+			if (source is Host)
+				templateId = Resource.Layout.host_item;
 
 			return base.GetBindableView(convertView, source, templateId);
 		}

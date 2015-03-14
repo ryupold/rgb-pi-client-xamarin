@@ -1,13 +1,35 @@
 ﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Views\HostView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Helpers\Settings.cs">
     <Files>
-      <File FileName="RGBPi.Android\Views\SettingsView.cs" Line="41" Column="41" />
-      <File FileName="ViewModels\SettingsViewModel.cs" Line="3" Column="3" />
-      <File FileName="RGBPi.Android\Resources\values\style.xml" Line="35" Column="35" />
+      <File FileName="RGBPi.Android\Views\SettingsView.cs" Line="94" Column="94" />
+      <File FileName="ViewModels\SettingsViewModel.cs" Line="41" Column="41" />
+      <File FileName="RGBPi.Android\Resources\values\style.xml" Line="1" Column="1" />
       <File FileName="ViewModels\HostViewModel.cs" Line="3" Column="3" />
-      <File FileName="RGBPi.Android\Views\HostView.cs" Line="3" Column="3" />
+      <File FileName="RGBPi.Android\Views\HostView.cs" Line="4" Column="4" />
+      <File FileName="RGBPi.Android\Views\MainView.cs" Line="1" Column="1" />
+      <File FileName="App.cs" Line="4" Column="4" />
+      <File FileName="Helpers\Settings.cs" Line="34" Column="34" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="RGBPi.Android" expanded="True">
+            <Node name="Resources" expanded="True">
+              <Node name="layout" expanded="True" />
+            </Node>
+            <Node name="Views" expanded="True" />
+          </Node>
+          <Node name="RGBPi.Core" expanded="True">
+            <Node name="Packages" expanded="True" />
+            <Node name="Helpers" expanded="True">
+              <Node name="Settings.cs" selected="True" />
+            </Node>
+            <Node name="ViewModels" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

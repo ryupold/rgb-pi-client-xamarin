@@ -17,7 +17,6 @@ namespace RGBPi.Core
 			}
 		}
 
-
 		public string Name {
 			get{ return Item.name; }
 			set{ 
@@ -41,6 +40,28 @@ namespace RGBPi.Core
 				RaisePropertyChanged (() => Port);
 			}
 		}
+
+		private bool _isInEditMode;
+		public bool IsInEditMode{ 
+			get
+			{
+				return _isInEditMode;
+			}
+			set{
+				_isInEditMode = value;
+				RaisePropertyChanged (()=>IsInEditMode);
+			}
+		}
+
+		private bool _isNew;
+		public bool IsNew{
+			get{ return _isNew;}
+			set{ 
+				_isNew = value;
+				RaisePropertyChanged (() => IsNew);
+			}
+		}
+
 		#endregion 
 
 		#region ViewModel stuff
@@ -86,6 +107,11 @@ namespace RGBPi.Core
 
 		private void ToggleEdit (){
 			Debug.WriteLine ("TODO: edit "+Item);
+			if(IsInEditMode && IsNew){
+				Save ();
+				IsNew = false;
+			}
+			IsInEditMode = !IsInEditMode;
 		}
 
 		private MvxCommand _saveCommand;

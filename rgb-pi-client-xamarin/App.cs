@@ -1,4 +1,7 @@
 using Cirrious.CrossCore.IoC;
+using Cirrious.CrossCore;
+using RGBPi.Core.Helpers;
+using System.Diagnostics;
 
 namespace RGBPi.Core
 {
@@ -10,7 +13,9 @@ namespace RGBPi.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
+
+			//Mvx.RegisterSingleton<ISettings> (Settings);
+
             RegisterAppStart<ViewModels.MainViewModel>();
         }
     }
