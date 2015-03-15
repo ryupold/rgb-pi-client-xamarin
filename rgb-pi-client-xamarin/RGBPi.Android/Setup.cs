@@ -5,17 +5,18 @@ using Cirrious.MvvmCross.ViewModels;
 using Cirrious.CrossCore;
 using RGBPi.Core;
 
+
 namespace RGBPi.Android
 {
     public class Setup : MvxAndroidSetup
     {
-        public Setup(Context applicationContext) : base(applicationContext)
+		public Setup(Context applicationContext) : base(applicationContext)
         {
         }
 
         protected override IMvxApplication CreateApp()
         {
-
+			Mvx.RegisterSingleton<ISettings> (new AndroidSettings(this.ApplicationContext));
 			Mvx.RegisterSingleton<ISocket>(new Socket());
             return new Core.App();
         }

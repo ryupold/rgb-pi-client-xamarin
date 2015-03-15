@@ -1,41 +1,21 @@
 ﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Helpers\Settings.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ViewModels\SettingsViewModel.cs">
     <Files>
-      <File FileName="RGBPi.Android\Views\SettingsView.cs" Line="94" Column="94" />
-      <File FileName="ViewModels\SettingsViewModel.cs" Line="41" Column="41" />
-      <File FileName="RGBPi.Android\Resources\values\style.xml" Line="1" Column="1" />
-      <File FileName="ViewModels\HostViewModel.cs" Line="3" Column="3" />
-      <File FileName="RGBPi.Android\Views\HostView.cs" Line="4" Column="4" />
+      <File FileName="RGBPi.Android\Views\SettingsView.cs" Line="4" Column="4" />
+      <File FileName="ViewModels\SettingsViewModel.cs" Line="18" Column="18" />
+      <File FileName="ViewModels\HostViewModel.cs" Line="44" Column="44" />
+      <File FileName="RGBPi.Android\Views\HostView.cs" Line="44" Column="44" />
       <File FileName="RGBPi.Android\Views\MainView.cs" Line="1" Column="1" />
-      <File FileName="App.cs" Line="4" Column="4" />
-      <File FileName="Helpers\Settings.cs" Line="34" Column="34" />
+      <File FileName="RGBPi.Android\Services\AndroidSettings.cs" Line="28" Column="28" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="RGBPi.Android" expanded="True">
-            <Node name="Resources" expanded="True">
-              <Node name="layout" expanded="True" />
-            </Node>
-            <Node name="Views" expanded="True" />
-          </Node>
-          <Node name="RGBPi.Core" expanded="True">
-            <Node name="Packages" expanded="True" />
-            <Node name="Helpers" expanded="True">
-              <Node name="Settings.cs" selected="True" />
-            </Node>
-            <Node name="ViewModels" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="Services\ISocket.cs" line="44" offsetX="935" offsetY="688" expression="answer" liveUpdate="False" />
+    <Watch file="RGBPi.Android\Services\AndroidSettings.cs" line="50" offsetX="676" offsetY="784" expression="hosts" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.RGBPi.Android MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.RGBPi" AndroidDesignerPreferredDevice="Nexus S" AndroidDesignerPreferredTheme="Theme.RGBPi" />
 </Properties>

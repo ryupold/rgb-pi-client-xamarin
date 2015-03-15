@@ -16,7 +16,7 @@ using Android.Util;
 using Cirrious.MvvmCross.Binding.Droid.Views;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using RGBPi.Core;
-using RGBPi.Core.Helpers;
+
 
 namespace RGBPi.Android
 {
@@ -39,8 +39,11 @@ namespace RGBPi.Android
 			base.OnViewModelSet();
 			SetContentView (Resource.Layout.SettingsView);
 			MvxListView list = FindViewById<MvxListView> (Resource.Id.list_hosts);
-			list.Adapter = new HostViewAdapter (this, (IMvxAndroidBindingContext)this.BindingContext);
+
+			//list.Adapter = new HostViewAdapter (this, (IMvxAndroidBindingContext)this.BindingContext);
 		}
+
+
 	}
 
 	public class HostViewAdapter : MvxAdapter

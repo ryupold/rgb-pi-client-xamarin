@@ -31,6 +31,11 @@ namespace RGBPi.Core
 
 			return false;
 		}
+
+		public override string ToString ()
+		{
+			return string.Format ("Host: {0} (IP={1}, Port={2})", name, ip, port);
+		}
 	}
 }
 

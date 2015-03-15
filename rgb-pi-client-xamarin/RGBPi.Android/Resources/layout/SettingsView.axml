@@ -16,5 +16,6 @@
         android:id="@+id/list_hosts"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        rgbpi:MvxBind="ItemsSource Hosts" />
+        rgbpi:MvxBind="ItemsSource Hosts"
+        rgbpi:MvxItemTemplate="@layout/host_item" />
 </LinearLayout>

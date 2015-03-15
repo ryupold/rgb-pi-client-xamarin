@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/layout_container"
-        style="@style/HostItem_container">
+        style="@style/HostItem_container"
+        rgbpi:MvxBind="Visible IsInViewMode">
         <TextView
             android:text="NAME"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -22,7 +23,8 @@
             android:layout_weight="1"
             android:id="@+id/txt_name"
             android:layout_gravity="center_horizontal|top"
-            android:background="@color/transparent" />
+            android:background="@color/transparent"
+            rgbpi:MvxBind="Text Name" />
         <TextView
             android:text="IP"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -31,7 +33,8 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:id="@+id/txt_ip"
-            android:background="@color/transparent" />
+            android:background="@color/transparent"
+            rgbpi:MvxBind="Text IP" />
         <TextView
             android:text="PORT"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -40,7 +43,8 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:id="@+id/txt_port"
-            android:background="@color/transparent" />
+            android:background="@color/transparent"
+            rgbpi:MvxBind="Text Port" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -49,7 +53,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/layout_container_edit"
-        style="@style/HostItem_container">
+        style="@style/HostItem_container"
+        rgbpi:MvxBind="Visible IsInEditMode">
         <EditText
             android:text="NAME"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -58,7 +63,8 @@
             android:layout_weight="1"
             android:id="@+id/txt_name_edit"
             android:layout_gravity="center_horizontal|top"
-            android:background="@color/transparent" />
+            android:background="@color/transparent"
+            rgbpi:MvxBind="Text Name" />
         <EditText
             android:text="IP"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -67,7 +73,8 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:id="@+id/txt_ip_edit"
-            android:background="@color/transparent" />
+            android:background="@color/transparent"
+            rgbpi:MvxBind="Text IP" />
         <EditText
             android:text="PORT"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -76,37 +83,43 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:id="@+id/txt_port_edit"
-            android:background="@color/transparent" />
+            android:background="@color/transparent"
+            rgbpi:MvxBind="Text Port" />
     </LinearLayout>
     <Button
         android:layout_width="@dimen/host_item_edit_button_sise"
         android:layout_height="@dimen/host_item_edit_button_sise"
         android:layout_gravity="top|right"
         android:id="@+id/btn_edit"
-        android:background="@drawable/ic_tune_black_36dp" />
+        android:background="@drawable/ic_tune_black_36dp"
+        rgbpi:MvxBind="Visible IsInViewMode; Click ToggleEditCommand" />
     <Button
         android:layout_width="@dimen/host_item_edit_button_sise"
         android:layout_height="@dimen/host_item_edit_button_sise"
         android:layout_gravity="top|right"
         android:id="@+id/btn_save"
-        android:background="@drawable/ic_check_black_36dp" />
+        android:background="@drawable/ic_check_black_36dp"
+        rgbpi:MvxBind="Visible IsInEditMode; Click ToggleEditCommand" />
     <Button
         android:background="@drawable/ic_panorama_fisheye_black_36dp"
         android:layout_width="@dimen/host_item_edit_circle_sise"
         android:layout_height="@dimen/host_item_edit_circle_sise"
         android:layout_gravity="center_vertical|left"
-        android:id="@+id/btn_circle" />
+        android:id="@+id/btn_circle"
+        rgbpi:MvxBind="Click ToggleActiveCommand" />
     <Button
         android:background="@drawable/Icon"
         android:layout_width="@dimen/host_item_edit_active_sise"
         android:layout_height="@dimen/host_item_edit_active_sise"
         android:layout_marginLeft="@dimen/host_item_edit_active_delta_sise"
         android:layout_gravity="center_vertical|left"
-        android:id="@+id/btn_active" />
+        android:id="@+id/btn_active"
+        rgbpi:MvxBind="Visible IsActive" />
     <Button
         android:background="@drawable/ic_remove_circle_outline_black_36dp"
         android:layout_width="@dimen/host_item_edit_button_sise"
         android:layout_height="@dimen/host_item_edit_button_sise"
         android:layout_gravity="bottom|right"
-        android:id="@+id/btn_remove" />
+        android:id="@+id/btn_remove"
+        rgbpi:MvxBind="Visible IsInEditMode; Click RemoveCommand" />
 </FrameLayout>

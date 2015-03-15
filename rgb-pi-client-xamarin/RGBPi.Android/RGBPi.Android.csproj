@@ -79,6 +79,10 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.Color.Droid">
       <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Color.Droid.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -99,6 +103,7 @@
     <Compile Include="Converter\ColorConverter.cs" />
     <Compile Include="Views\SettingsView.cs" />
     <Compile Include="Views\HostView.cs" />
+    <Compile Include="Services\AndroidSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

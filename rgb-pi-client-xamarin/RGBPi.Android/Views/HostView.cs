@@ -28,7 +28,7 @@ namespace RGBPi.Android
 
 
 		public HostView (Context c, IMvxLayoutInflater inflator, object dataContext, int templateId) : base (c, inflator, dataContext, templateId){
-
+			System.Diagnostics.Debug.WriteLine ("bäm");
 		}
 			
 	}

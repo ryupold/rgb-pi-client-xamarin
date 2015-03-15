@@ -1,6 +1,5 @@
 using Cirrious.CrossCore.IoC;
 using Cirrious.CrossCore;
-using RGBPi.Core.Helpers;
 using System.Diagnostics;
 
 namespace RGBPi.Core

@@ -5,14 +5,18 @@ using System.Collections.Generic;
 using RGBPi.Core.Model.Commands;
 using RGBPi.Core.Model.DataTypes;
 using System.Diagnostics;
-using RGBPi.Core.Helpers;
+using Cirrious.CrossCore;
 
 namespace RGBPi.Core.ViewModels
 {
 	public class SettingsViewModel : RemoteControlViewModel
 	{
+		private ISettings settings;
+
+
 		public SettingsViewModel ()
 		{
+			settings = Mvx.Resolve<ISettings> ();
 			SetupCommands ();
 			LoadData ();
 		}
@@ -27,13 +31,20 @@ namespace RGBPi.Core.ViewModels
 		}
 
 		private void LoadData(){
-			List<Host> hosts = new List<Host> ();//Settings.Hosts;
 			Hosts = new List<HostViewModel> ();
-			foreach(var h in hosts){
-				Hosts.Add (new HostViewModel(h));
+			var hosts = settings.GetHosts();
+			foreach (var h in hosts) {
+				Hosts.Add (new HostViewModel(h, this));
 			}
-
 			RaiseAllPropertiesChanged ();
+		}
+
+		public void ReloadActiveState(){
+			if(Hosts != null){
+				foreach (var hvm in Hosts) {
+					hvm.ReloadActiveState ();
+				}
+			}
 		}
 
 		private void SetupCommands(){
@@ -56,10 +67,10 @@ namespace RGBPi.Core.ViewModels
 		private void AddHost (Host host=null){
 			host = host ?? new Host ();
 			Debug.WriteLine ("adding host "+host);
-			HostViewModel hvm = new HostViewModel (host);
+			HostViewModel hvm = new HostViewModel (host, this);
 			hvm.IsNew = hvm.IsInEditMode = true;
 			Hosts.Add (hvm);
-			RaisePropertyChanged (() => Hosts);
+			RaiseAllPropertiesChanged ();
 		}
 
 		#endregion
