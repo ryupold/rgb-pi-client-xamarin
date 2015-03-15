@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:rgbpi="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/color_chooser_view"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
     rgbpi:MvxBind="Background BackgroundColor, Converter=Color">
+<!-- //Y U NOT WORKING IN RELEASE???-->
     <ColorPicker
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         rgbpi:MvxBind="CurrentColor CurrentColor; Background BackgroundColor, Converter=Color"
         android:id="@+id/colorPicker" />
+<!-- rgbpi:MvxBind="CurrentColor CurrentColor; Background BackgroundColor, Converter=Color" -->
     <SVBar
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/svBar"
         rgbpi:MvxBind="Background BackgroundColor, Converter=Color" />
+<!-- rgbpi:MvxBind="Background BackgroundColor, Converter=Color" -->
 </LinearLayout>

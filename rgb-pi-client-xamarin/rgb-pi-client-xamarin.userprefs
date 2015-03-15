@@ -1,17 +1,25 @@
 ﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ViewModels\SettingsViewModel.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Model\DataTypes\Color.cs">
     <Files>
-      <File FileName="RGBPi.Android\Views\SettingsView.cs" Line="4" Column="4" />
-      <File FileName="ViewModels\SettingsViewModel.cs" Line="18" Column="18" />
-      <File FileName="ViewModels\HostViewModel.cs" Line="44" Column="44" />
-      <File FileName="RGBPi.Android\Views\HostView.cs" Line="44" Column="44" />
+      <File FileName="RGBPi.Android\Views\SettingsView.cs" Line="46" Column="46" />
+      <File FileName="ViewModels\SettingsViewModel.cs" Line="19" Column="19" />
+      <File FileName="ViewModels\HostViewModel.cs" Line="3" Column="3" />
       <File FileName="RGBPi.Android\Views\MainView.cs" Line="1" Column="1" />
-      <File FileName="RGBPi.Android\Services\AndroidSettings.cs" Line="28" Column="28" />
+      <File FileName="RGBPi.Android\Services\AndroidSettings.cs" Line="5" Column="5" />
+      <File FileName="RGBPi.Android\Views\HostView.cs" Line="34" Column="34" />
+      <File FileName="RGBPi.Android\Converter\ColorConverter.cs" Line="75" Column="75" />
+      <File FileName="RGBPi.Android\Setup.cs" Line="34" Column="34" />
+      <File FileName="Model\DataTypes\Color.cs" Line="32" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\Stuff\Proggen\rgb-pi-client-xamarin\rgb-pi-client-xamarin\RGBPi.Android\Views\HostView.cs" line="31" column="42" />
+      <Breakpoint file="D:\Stuff\Proggen\rgb-pi-client-xamarin\rgb-pi-client-xamarin\RGBPi.Android\Converter\ColorConverter.cs" line="26" column="1" />
+      <Breakpoint hitAction="PrintExpression" traceExpression="{i}" file="D:\Stuff\Proggen\rgb-pi-client-xamarin\rgb-pi-client-xamarin\RGBPi.Android\Converter\ColorConverter.cs" line="18" column="1" />
+      <Breakpoint file="D:\Stuff\Proggen\rgb-pi-client-xamarin\rgb-pi-client-xamarin\RGBPi.Android\Converter\ColorConverter.cs" line="16" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="Services\ISocket.cs" line="44" offsetX="935" offsetY="688" expression="answer" liveUpdate="False" />

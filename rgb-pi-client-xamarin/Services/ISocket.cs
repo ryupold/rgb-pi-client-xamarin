@@ -9,6 +9,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using RGBPi.Core.Model.Commands;
 using Newtonsoft.Json;
+using Cirrious.CrossCore;
 
 namespace RGBPi.Core
 {
@@ -21,16 +22,18 @@ namespace RGBPi.Core
 		protected Task task;
 		protected Action worker;
 		protected JsonSerializerSettings serializationSettings = new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore };
+		protected ISettings settings;
 
 
 		public ISocket ()
 		{
+			settings = Mvx.Resolve<ISettings> ();
 
 			//background thread
 			worker = () => {
 				while (!stop) {
 					try {
-						if (commandQ.Count > 0) {							
+						if (commandQ.Count > 0 && settings.ActiveHost != null) {							
 							while (commandQ.Count > 0) {
 								try {
 									Message cmd;
@@ -38,7 +41,7 @@ namespace RGBPi.Core
 										cmd = commandQ.Dequeue ();
 									}
 
-									ConnectNative("192.168.1.125", 4321);
+									ConnectNative(settings.ActiveHost);
 
 									SendNative(JsonConvert.SerializeObject(cmd, serializationSettings));
 
@@ -75,8 +78,10 @@ namespace RGBPi.Core
 		{
 			lock (commandQ) {
 				commandQ.Clear ();
-				commandQ.Enqueue (command);
-				Monitor.Pulse (commandQ);
+				if(settings.ActiveHost != null){
+					commandQ.Enqueue (command);
+					Monitor.Pulse (commandQ);
+				}
 			}
 		}
 

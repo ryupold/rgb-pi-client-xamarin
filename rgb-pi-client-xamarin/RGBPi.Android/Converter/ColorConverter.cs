@@ -12,8 +12,13 @@ namespace RGBPi.Android
 
 		public object Convert (object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 		{
-			RGBPi.Core.Model.DataTypes.Color c = (RGBPi.Core.Model.DataTypes.Color)value;
-			return new ColorDrawable(new Color(c)); 
+			try{
+				RGBPi.Core.Model.DataTypes.Color c = new RGBPi.Core.Model.DataTypes.Color(value.ToString());
+				int i = c.ToInt ();
+				return new ColorDrawable(new Color(i)); 
+			}catch(Exception e){
+				return new ColorDrawable(Color.Red); 
+			}
 		}
 
 		public object ConvertBack (object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

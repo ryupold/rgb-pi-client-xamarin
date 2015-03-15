@@ -14,6 +14,8 @@
         style="@style/RGBPiActionBar" />
     <Mvx.MvxListView
         android:id="@+id/list_hosts"
+        style="@style/HostList"
+        android:descendantFocusability="beforeDescendants"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         rgbpi:MvxBind="ItemsSource Hosts"

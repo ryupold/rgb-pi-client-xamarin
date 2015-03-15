@@ -16,14 +16,17 @@ using Android.Util;
 using Cirrious.MvvmCross.Binding.Droid.Views;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using RGBPi.Core;
+using Android.Widget;
 
 
 namespace RGBPi.Android
 {
 	[Activity (Label = "Settings"
 		, Icon = "@drawable/icon"
-		, Theme = "@style/Theme.RGBPi",
-		ScreenOrientation = ScreenOrientation.Portrait)]
+		, Theme = "@style/Theme.RGBPi"
+		, ScreenOrientation = ScreenOrientation.Portrait
+		, WindowSoftInputMode = SoftInput.AdjustPan)
+	]
 	public class SettingsView : MvxActivity
 	{
 
@@ -36,11 +39,10 @@ namespace RGBPi.Android
 
 		protected override void OnViewModelSet ()
 		{
-			base.OnViewModelSet();
+			base.OnViewModelSet(); 
 			SetContentView (Resource.Layout.SettingsView);
 			MvxListView list = FindViewById<MvxListView> (Resource.Id.list_hosts);
-
-			//list.Adapter = new HostViewAdapter (this, (IMvxAndroidBindingContext)this.BindingContext);
+			list.Adapter = new HostViewAdapter (this, (IMvxAndroidBindingContext)this.BindingContext);
 		}
 
 

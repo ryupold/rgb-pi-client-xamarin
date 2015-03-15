@@ -13,13 +13,19 @@ namespace RGBPi.Core
 		public Host(){
 			name = string.Empty;
 			ip = string.Empty;
-			port = 4321;
+			port = 0;
 		}
 
 		public Host(string name, string ip, int port){
 			this.name = name;
 			this.ip = ip;
 			this.port = port;
+		}
+
+		public bool IsValid{
+			get{
+				return !string.IsNullOrWhiteSpace (name) && !string.IsNullOrWhiteSpace (ip) && port > 0;
+			}
 		}
 
 		public override bool Equals (object obj)

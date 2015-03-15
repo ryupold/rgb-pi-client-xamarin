@@ -3,6 +3,7 @@ using Cirrious.MvvmCross.ViewModels;
 using System.Diagnostics;
 using Cirrious.CrossCore;
 using RGBPi.Core.ViewModels;
+using RGBPi.Core.Model.DataTypes;
 
 namespace RGBPi.Core
 {
@@ -11,6 +12,8 @@ namespace RGBPi.Core
 		private ISettings settings;
 		private string oldName;
 		private SettingsViewModel parent;
+		private static readonly int NO_ERROR_COLOR = new Color(0.8f, 0.8f, 0.8f);
+		private static readonly int ERROR_COLOR = new Color(0.8f, 0.4f, 0.4f);
 
 		#region Host
 		private Host _item;
@@ -43,9 +46,9 @@ namespace RGBPi.Core
 		}
 
 		public string Port {
-			get{ return Item.port.ToString(); }
-			set{ 
-				Item.port = int.Parse(value);
+			get{ return Item.port==0 ? string.Empty: Item.port.ToString(); }
+			set{
+				int.TryParse(value, out Item.port);
 				RaisePropertyChanged (() => Port);
 			}
 		}
@@ -63,6 +66,7 @@ namespace RGBPi.Core
 			}
 		}
 
+		//to lazy to write a converter xD
 		public bool IsInViewMode{get{ return !IsInEditMode;}}
 
 		private bool _isNew;
@@ -77,6 +81,7 @@ namespace RGBPi.Core
 			}
 		}
 
+		//to lazy to write a converter xD
 		public bool IsOld{get{ return !IsNew;}}
 
 		private bool _isActive;
@@ -90,6 +95,17 @@ namespace RGBPi.Core
 				RaisePropertyChanged (() => IsActive);
 			}
 		}
+
+		private Color _lastError = NO_ERROR_COLOR;
+		public Color LastError {
+			get{ return _lastError;}
+			set{ 
+				_lastError = value;
+				RaisePropertyChanged (() => LastError);
+			}
+		}
+
+
 
 		#endregion 
 
@@ -117,7 +133,6 @@ namespace RGBPi.Core
 		private void SetupCommands(){
 			_saveCommand = new MvxCommand (() => Save());
 			_toggleEditCommand = new MvxCommand (() => ToggleEdit());
-			_setActiveCommand = new MvxCommand (() => SetActive());
 			_removeCommand = new MvxCommand (() => Remove());
 			_toggleActiveCommand = new MvxCommand (() => ToggleActive());
 		}
@@ -136,15 +151,22 @@ namespace RGBPi.Core
 		private MvxCommand _removeCommand;
 		public IMvxCommand RemoveCommand{get{ return _removeCommand;}}
 
-		private void Remove (){
-			Debug.WriteLine ("TODO: remove "+Item);
-		}
+		private bool Remove (){
+			Debug.WriteLine ("remove "+Item);
+			bool success = false;
+			if (IsNew) {
+				Debug.WriteLine ("remove new " + Item);
+				success = true;
+			} else if (settings.RemoveHost (Item.name)) {
+				Debug.WriteLine ("remove old " + Item);
+				success = true;
+			} 
 
-		private MvxCommand _setActiveCommand;
-		public IMvxCommand SetActiveCommand{get{ return _setActiveCommand;}}
+			if(success){
+				parent.RemoveHost (this);
+			}
 
-		private void SetActive (){
-			Debug.WriteLine ("TODO: active "+Item);
+			return success;
 		}
 
 		private MvxCommand _toggleEditCommand;
@@ -152,8 +174,11 @@ namespace RGBPi.Core
 
 		private void ToggleEdit (){
 			Debug.WriteLine ("edit "+Item);
-			if(IsInEditMode) Save ();
-			IsInEditMode = !IsInEditMode;
+			if (IsInEditMode && Save ()) {
+				IsInEditMode = false;
+			}else{
+				IsInEditMode = true;
+			}
 		}
 
 		private MvxCommand _toggleActiveCommand;
@@ -168,14 +193,22 @@ namespace RGBPi.Core
 		private MvxCommand _saveCommand;
 		public IMvxCommand SaveCommand{get{ return _saveCommand;}}
 
-		private void Save (){
+		private bool Save (){
 			Debug.WriteLine ("save "+Item);
 			if (IsNew && settings.AddHost (Item)) {
+				Debug.WriteLine ("new "+Item);
 				oldName = Item.name;
 				IsNew = false;
-			}
-			else if (settings.UpdateHost (oldName, Item)) {
+				LastError = NO_ERROR_COLOR;
+				return true;
+			} else if (settings.UpdateHost (oldName, Item)) {
+				Debug.WriteLine ("update "+Item);
 				oldName = Item.name;
+				LastError = NO_ERROR_COLOR;
+				return true;
+			} else {
+				LastError = ERROR_COLOR;
+				return false;
 			}
 		}
 

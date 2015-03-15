@@ -19,17 +19,18 @@ using RGBPi.Core;
 
 namespace RGBPi.Android
 {
-	public class HostView : MvxListItemView
+	public class HostView : View
 	{
-		public HostViewModel ViewModel {
-			get { return (HostViewModel) base.DataContext; }
-			set { base.DataContext = value; }
+//		public HostViewModel ViewModel {
+//			get { return (HostViewModel) base.DataContext; }
+//			set { base.DataContext = value; }
+//		}
+
+
+		public HostView (Context c) : base (c){
+			Console.WriteLine ("asdasdasdasdsad");
 		}
 
 
-		public HostView (Context c, IMvxLayoutInflater inflator, object dataContext, int templateId) : base (c, inflator, dataContext, templateId){
-			System.Diagnostics.Debug.WriteLine ("bäm");
-		}
-			
 	}
 }

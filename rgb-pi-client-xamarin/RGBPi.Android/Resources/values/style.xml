@@ -34,6 +34,8 @@
     <color name="host_item_background_selected">#b76</color>
     <color name="host_item_background">#ccc</color>
     <color name="host_item_border_color">#000</color>
+    <color name="host_item_text_edit_color">#55F</color>
+    <color name="host_item_text_view_color">#000</color>
     <dimen name="host_item_height">100dp</dimen>
     <dimen name="host_item_margin">5dp</dimen>
     <dimen name="host_item_padding">3dp</dimen>
@@ -54,6 +56,23 @@
 		<item name="android:background">@color/host_item_background</item>
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">match_parent</item>
+	</style>
+
+	<style name="HostItem_text">
+		<item name="android:gravity">center</item>
+	</style>
+
+	<style name="HostItem_text_editmode" parent="HostItem_text">
+		<item name="android:textColor">@color/host_item_text_edit_color</item>
+	</style>
+
+	<style name="HostItem_text_viewmode" parent="HostItem_text">
+		<item name="android:textColor">@color/host_item_text_view_color</item>
+	</style>
+
+	<!-- HostList -->
+	<style name="HostList">
+		<item name="android:background">@color/rgbpi_primary_dark_color</item>
 	</style>
 
 

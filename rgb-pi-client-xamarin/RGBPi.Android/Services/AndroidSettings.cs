@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Android.Preferences;
 using Android.Content;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 
 
@@ -33,37 +34,47 @@ namespace RGBPi.Android
 				return _activeHost;
 			} 
 			set {
-				var editor = prefs.Edit ();
-				editor.PutString ("active_host", JsonConvert.SerializeObject (_activeHost));
-				if (editor.Commit ()) {
-					_activeHost = value;
+				if (value != null && value.IsValid) {
+					var editor = prefs.Edit ();
+					editor.PutString ("active_host", JsonConvert.SerializeObject (value));
+					if (editor.Commit ()) {
+						_activeHost = value;
+					}
 				}
 			}
 		}
 
-		public List<Host> GetHosts() { 
+		public List<Host> GetHosts ()
+		{ 
 
 			List<Host> hosts = null;
 				
-					string hostsJSON = prefs.GetString ("hosts", string.Empty);
-					if (hostsJSON != string.Empty) {
-						hosts = JsonConvert.DeserializeObject<List<Host>> (hostsJSON);
-					} else {
-						hosts = new List<Host> ();
-						var editor = prefs.Edit ();
-						editor.PutString ("hosts", JsonConvert.SerializeObject (hosts));
-						editor.Commit ();
-					}
+			string hostsJSON = prefs.GetString ("hosts", string.Empty);
+			if (hostsJSON != string.Empty) {
+				hosts = JsonConvert.DeserializeObject<List<Host>> (hostsJSON);
+			} else {
+				hosts = new List<Host> ();
+				var editor = prefs.Edit ();
+				editor.PutString ("hosts", JsonConvert.SerializeObject (hosts));
+				editor.Commit ();
+			}
 				
 
-				return hosts;
+			return hosts;
 		}
 
 		public bool AddHost (Host host)
 		{
+			//validate
+			if (!host.IsValid) {
+				Debug.WriteLine (string.Format ("Error adding {0} => not valid", host));
+				return false;
+			}
+
 			var hosts = GetHosts ();
 			foreach (Host h in hosts) {
 				if (h.Equals (host)) {
+					Debug.WriteLine (string.Format ("Error adding {0} => already in hosts", host));
 					return false;
 				}
 			}
@@ -71,7 +82,11 @@ namespace RGBPi.Android
 			hosts.Add (host);
 			var editor = prefs.Edit ();
 			editor.PutString ("hosts", JsonConvert.SerializeObject (hosts));
-			return editor.Commit ();
+			bool success = editor.Commit ();
+			if (success && hosts.Count == 1) {
+				ActiveHost = host;
+			}
+			return success;
 		}
 
 		public bool RemoveHost (string name)
@@ -88,27 +103,46 @@ namespace RGBPi.Android
 				hosts.Remove (toRemove);
 				var editor = prefs.Edit ();
 				editor.PutString ("hosts", JsonConvert.SerializeObject (hosts));
-				return editor.Commit ();
+				bool success = editor.Commit ();
+				if (success && ActiveHost != null && ActiveHost.name == name) {
+					ActiveHost = null;
+				}
+				return success;
 			} else {
+				Debug.WriteLine (string.Format ("Error removing {0} => no host with that name", name));
 				return false;
 			}
 		}
 
 		public bool UpdateHost (string name, Host host)
 		{
-			var hosts = GetHosts();
+			//validate
+			if (!host.IsValid) {
+				Debug.WriteLine (string.Format ("Error updating {0} => not valid", host));
+				return false;
+			}
+
+			var hosts = GetHosts ();
 			bool found = false;
-			for (int i=0; i<hosts.Count; i++) {
-				if (hosts[i].name == name) {
+			bool anotherWithTheSameName = false;
+			for (int i = 0; i < hosts.Count; i++) {
+				if (hosts [i].name == name) {
 					hosts [i] = host;
 					found = true;
+				} else if (hosts [i].Equals(host)) {
+					Debug.WriteLine (string.Format ("Error updating {0} => already in hosts", host));
+					anotherWithTheSameName = true;
 				}
 			}
 
-			if (found) {
+			if (found && !anotherWithTheSameName) {
 				var editor = prefs.Edit ();
 				editor.PutString ("hosts", JsonConvert.SerializeObject (hosts));
-				return editor.Commit ();
+				bool success = editor.Commit ();
+				if (success && ActiveHost != null && name == ActiveHost.name) {
+					ActiveHost = host;
+				}
+				return success;
 			}
 			return false;
 		}

@@ -6,6 +6,7 @@ using RGBPi.Core.Model.Commands;
 using RGBPi.Core.Model.DataTypes;
 using System.Diagnostics;
 using Cirrious.CrossCore;
+using System.Collections.ObjectModel;
 
 namespace RGBPi.Core.ViewModels
 {
@@ -21,8 +22,8 @@ namespace RGBPi.Core.ViewModels
 			LoadData ();
 		}
 
-		private List<HostViewModel> _hosts;
-		public List<HostViewModel> Hosts {
+		private ObservableCollection <HostViewModel> _hosts;
+		public ObservableCollection <HostViewModel> Hosts {
 			get{ return _hosts; }
 			set{
 				_hosts = value;
@@ -31,7 +32,7 @@ namespace RGBPi.Core.ViewModels
 		}
 
 		private void LoadData(){
-			Hosts = new List<HostViewModel> ();
+			Hosts = new ObservableCollection <HostViewModel> ();
 			var hosts = settings.GetHosts();
 			foreach (var h in hosts) {
 				Hosts.Add (new HostViewModel(h, this));
@@ -71,6 +72,12 @@ namespace RGBPi.Core.ViewModels
 			hvm.IsNew = hvm.IsInEditMode = true;
 			Hosts.Add (hvm);
 			RaiseAllPropertiesChanged ();
+		}
+
+		public bool RemoveHost(HostViewModel hvm){
+			bool success = Hosts.Remove (hvm);
+			RaiseAllPropertiesChanged ();
+			return success;
 		}
 
 		#endregion
