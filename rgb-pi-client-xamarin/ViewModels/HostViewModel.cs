@@ -4,6 +4,7 @@ using System.Diagnostics;
 using Cirrious.CrossCore;
 using RGBPi.Core.ViewModels;
 using RGBPi.Core.Model.DataTypes;
+using Cirrious.CrossCore.UI;
 
 namespace RGBPi.Core
 {
@@ -12,8 +13,7 @@ namespace RGBPi.Core
 		private ISettings settings;
 		private string oldName;
 		private SettingsViewModel parent;
-		private static readonly int NO_ERROR_COLOR = new Color(0.8f, 0.8f, 0.8f);
-		private static readonly int ERROR_COLOR = new Color(0.8f, 0.4f, 0.4f);
+
 
 		#region Host
 		private Host _item;
@@ -96,12 +96,12 @@ namespace RGBPi.Core
 			}
 		}
 
-		private Color _lastError = NO_ERROR_COLOR;
-		public Color LastError {
-			get{ return _lastError;}
+		private bool _error = false;
+		public bool Error {
+			get{ return _error;}
 			set{ 
-				_lastError = value;
-				RaisePropertyChanged (() => LastError);
+				_error = value;
+				RaisePropertyChanged (() => Error);
 			}
 		}
 
@@ -157,8 +157,8 @@ namespace RGBPi.Core
 			if (IsNew) {
 				Debug.WriteLine ("remove new " + Item);
 				success = true;
-			} else if (settings.RemoveHost (Item.name)) {
-				Debug.WriteLine ("remove old " + Item);
+			} else if (settings.RemoveHost (oldName)) {
+				Debug.WriteLine ("remove old " + oldName);
 				success = true;
 			} 
 
@@ -199,15 +199,15 @@ namespace RGBPi.Core
 				Debug.WriteLine ("new "+Item);
 				oldName = Item.name;
 				IsNew = false;
-				LastError = NO_ERROR_COLOR;
+				Error = false;
 				return true;
 			} else if (settings.UpdateHost (oldName, Item)) {
 				Debug.WriteLine ("update "+Item);
 				oldName = Item.name;
-				LastError = NO_ERROR_COLOR;
+				Error = false;
 				return true;
 			} else {
-				LastError = ERROR_COLOR;
+				Error = true;
 				return false;
 			}
 		}

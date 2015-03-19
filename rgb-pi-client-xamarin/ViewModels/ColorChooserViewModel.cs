@@ -8,14 +8,14 @@ namespace RGBPi.Core.ViewModels
 {
 	public class ColorChooserViewModel : RemoteControlViewModel
 	{
-		private Color _currentColor;
+		private Color _currentColor = new Color(0,0,0);
 		public Color CurrentColor{ get { return _currentColor; } set{ 
 				_currentColor = value; 
 				BackgroundColor = MakePastel (_currentColor);
 				RaisePropertyChanged( () => CurrentColor);
 			}}
 
-		private Color _backgroundColor;
+		private Color _backgroundColor = new Color(0,0,0);
 		public Color BackgroundColor{ get { return _backgroundColor; } set{ 
 				_backgroundColor = value; 
 				RaisePropertyChanged( () => BackgroundColor);
@@ -38,14 +38,6 @@ namespace RGBPi.Core.ViewModels
 		private float MakePastel(float col){
 			return Math.Max(col * 0.5f, 0.3f);
 		}
-
-
-
-		public ColorChooserViewModel(){
-			CurrentColor = 0;
-		}
-
-
 	}
 
 }

@@ -28,24 +28,44 @@
 		<item name="android:layout_height">@dimen/action_bar_height</item>
 	</style>
 
+	<!-- TABS -->
+	<dimen name="tabs_icon_size">30dp</dimen>
+    <dimen name="tabs_icon_size_small">20dp</dimen>
+
+    <!-- SETTINGS -->
+    <dimen name="settings_help_add_text_topmargin">80dp</dimen>
+    <dimen name="settings_help_add_text_margin">5dp</dimen>
+    <color name="settings_help_add_text_color">#fff</color>
+
+    <style name="settings_help_add_text">
+    	<item name="android:layout_marginLeft">@dimen/settings_help_add_text_margin</item>
+    	<item name="android:layout_marginRight">@dimen/settings_help_add_text_margin</item>
+    	<item name="android:layout_marginBottom">@dimen/settings_help_add_text_margin</item>
+    	<item name="android:layout_marginTop">@dimen/settings_help_add_text_margin</item>
+    	<item name="android:gravity">right</item>
+    	<item name="android:background">@color/transparent</item>
+    	<item name="android:textColor">@color/settings_help_add_text_color</item>
+    	<item name="android:textSize">20dp</item>
+    </style>
+
 
     <!-- Host -->
     <color name="host_item_background_active">#b76</color>
     <color name="host_item_background_selected">#b76</color>
     <color name="host_item_background">#ccc</color>
     <color name="host_item_border_color">#000</color>
-    <color name="host_item_text_edit_color">#55F</color>
+    <color name="host_item_text_edit_color">#000</color>
     <color name="host_item_text_view_color">#000</color>
     <dimen name="host_item_height">100dp</dimen>
     <dimen name="host_item_margin">5dp</dimen>
-    <dimen name="host_item_padding">3dp</dimen>
+    <dimen name="host_item_padding">15dp</dimen>
     <dimen name="host_item_edit_button_sise">25dp</dimen>
     <dimen name="host_item_edit_circle_sise">50dp</dimen>
     <dimen name="host_item_edit_active_sise">34dp</dimen>
     <dimen name="host_item_edit_active_delta_sise">8dp</dimen>
 
     <style name="HostItem">
-		<item name="android:background">@color/host_item_border_color</item>
+		<item name="android:background">@drawable/host_item_bg</item>
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">@dimen/host_item_height</item>
 		<item name="android:layout_margin">@dimen/host_item_margin</item>
@@ -53,13 +73,14 @@
 	</style>
 
 	<style name="HostItem_container">
-		<item name="android:background">@color/host_item_background</item>
+		<item name="android:background">@color/transparent</item>
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">match_parent</item>
 	</style>
 
 	<style name="HostItem_text">
 		<item name="android:gravity">center</item>
+		<item name="android:background">@color/transparent</item>
 	</style>
 
 	<style name="HostItem_text_editmode" parent="HostItem_text">
@@ -67,7 +88,7 @@
 	</style>
 
 	<style name="HostItem_text_viewmode" parent="HostItem_text">
-		<item name="android:textColor">@color/host_item_text_view_color</item>
+		<!--<item name="android:textColor">@color/host_item_text_view_color</item>-->
 	</style>
 
 	<!-- HostList -->

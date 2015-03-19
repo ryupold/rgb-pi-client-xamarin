@@ -36,6 +36,6 @@
             android:background="@drawable/ic_add_circle_outline_white_36dp"
             android:id="@+id/tb_add"
             style="@style/TabbarIcon_right"
-            rgbpi:MvxBind="Click ToolbarAddHostCommand" />
+            rgbpi:MvxBind="Click ToolbarAddHostCommand; Visible AddButtonVisible" />
     </LinearLayout>
 </LinearLayout>

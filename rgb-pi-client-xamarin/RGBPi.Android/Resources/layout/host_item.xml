@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:rgbpi="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
     android:minWidth="25px"
     android:minHeight="25px"
     style="@style/HostItem">
-    <LinearLayout
+<!-- <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
         android:minHeight="25px"
@@ -48,7 +46,7 @@
             android:id="@+id/txt_port"
             android:background="@color/transparent"
             rgbpi:MvxBind="Text Port" />
-    </LinearLayout>
+    </LinearLayout> -->
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -56,8 +54,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/layout_container_edit"
-        style="@style/HostItem_container"
-        rgbpi:MvxBind="Visible IsInEditMode; Background LastError, Converter=Color">
+        style="@style/HostItem_container">
+    <!-- rgbpi:MvxBind="Visible IsInEditMode" -->
         <EditText
             android:text="NAME"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -67,10 +65,9 @@
             android:layout_weight="1"
             android:id="@+id/txt_name_edit"
             android:layout_gravity="center_horizontal|top"
-            android:background="@color/transparent"
             android:inputType="text"
             android:hint="host name"
-            rgbpi:MvxBind="Text Name" />
+            rgbpi:MvxBind="Text Name; Enabled IsInEditMode" />
         <EditText
             android:text="IP"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -80,11 +77,10 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:id="@+id/txt_ip_edit"
-            android:background="@color/transparent"
             android:inputType="number"
             android:digits="0123456789."
             android:hint="IP address"
-            rgbpi:MvxBind="Text IP" />
+            rgbpi:MvxBind="Text IP; Enabled IsInEditMode" />
         <EditText
             android:text="PORT"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -94,10 +90,9 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:id="@+id/txt_port_edit"
-            android:background="@color/transparent"
             android:inputType="number"
             android:hint="port"
-            rgbpi:MvxBind="Text Port" />
+            rgbpi:MvxBind="Text Port; Enabled IsInEditMode" />
     </LinearLayout>
     <Button
         android:layout_width="@dimen/host_item_edit_button_sise"
@@ -120,6 +115,13 @@
         android:layout_gravity="center_vertical|left"
         android:id="@+id/btn_circle"
         rgbpi:MvxBind="Visible IsInViewMode; Click ToggleActiveCommand" />
+    <Button
+        android:background="@drawable/ic_error_circle"
+        android:layout_width="@dimen/host_item_edit_circle_sise"
+        android:layout_height="@dimen/host_item_edit_circle_sise"
+        android:layout_gravity="center_vertical|left"
+        android:id="@+id/btn_error"
+        rgbpi:MvxBind="Visible Error" />
     <Button
         android:background="@drawable/Icon"
         android:layout_width="@dimen/host_item_edit_active_sise"

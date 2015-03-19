@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tabsLayout"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:padding="10dip"
     android:gravity="center"
     android:orientation="vertical">
+    <ImageView
+        android:id="@+id/tabsIcon"
+        android:layout_width="@dimen/tabs_icon_size"
+        android:layout_height="@dimen/tabs_icon_size"
+        android:src="@drawable/Icon" />
     <TextView
         android:id="@+id/tabsText"
         android:layout_width="wrap_content"

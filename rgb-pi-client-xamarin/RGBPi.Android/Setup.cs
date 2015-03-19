@@ -7,6 +7,7 @@ using RGBPi.Core;
 using System.Collections.Generic;
 using System.Reflection;
 using Cirrious.CrossCore.Converters;
+using System;
 
 
 namespace RGBPi.Android
@@ -34,11 +35,6 @@ namespace RGBPi.Android
 //			}
 //		}
 
-		protected override void FillValueConverters (IMvxValueConverterRegistry registry)
-		{
-			base.FillValueConverters (registry);
-			registry.AddOrOverwrite("Color", new ColorConverter());
-		}
 		
         protected override IMvxTrace CreateDebugTrace()
         {

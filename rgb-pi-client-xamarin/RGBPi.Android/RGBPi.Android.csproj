@@ -36,6 +36,11 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>D:\Stuff\Proggen\rgb-pi-client-xamarin\rgb-pi-client-xamarin\RGBPi.Android\rgbpi.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>rgbpiremote</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>rgbpi</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>rgbpiremote</AndroidSigningKeyPass>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -100,10 +105,14 @@
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\CommandTestView.cs" />
     <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
-    <Compile Include="Converter\ColorConverter.cs" />
     <Compile Include="Views\SettingsView.cs" />
     <Compile Include="Views\HostView.cs" />
     <Compile Include="Services\AndroidSettings.cs" />
+    <Compile Include="Converters\ColorConverter.cs" />
+    <Compile Include="Views\FaderView.cs" />
+    <Compile Include="Views\DimView.cs" />
+    <Compile Include="Views\CommandsView.cs" />
+    <Compile Include="Views\CommandBuilderView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -644,6 +653,30 @@
     <AndroidResource Include="Resources\drawable\ic_remove_grey600_36dp.png" />
     <AndroidResource Include="Resources\drawable\ic_remove_white_36dp.png" />
     <AndroidResource Include="Resources\layout\host_item.xml" />
+    <AndroidResource Include="Resources\drawable\icon_bw.png" />
+    <AndroidResource Include="Resources\drawable\icon_bw_invert.png" />
+    <AndroidResource Include="Resources\drawable\host_item_bg.png" />
+    <AndroidResource Include="Resources\drawable\ic_error_circle.png" />
+    <AndroidResource Include="Resources\layout\FaderView.axml" />
+    <AndroidResource Include="Resources\layout\DimView.axml" />
+    <AndroidResource Include="Resources\layout\CommandsView.axml" />
+    <AndroidResource Include="Resources\layout\CommandBuilderView.axml" />
+    <AndroidResource Include="Resources\drawable\ic_delete_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_delete_grey600_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_delete_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_dns_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_dns_grey600_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_dns_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_extension_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_extension_grey600_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_extension_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_favorite_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_favorite_grey600_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_favorite_outline_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_favorite_outline_grey600_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_favorite_outline_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_favorite_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_arrow_up_white_36dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -652,7 +685,7 @@
     <Folder Include="Views\HoloColorPicker\" />
     <Folder Include="Services\" />
     <Folder Include="Resources\color\" />
-    <Folder Include="Converter\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RGBPi.Core.csproj">

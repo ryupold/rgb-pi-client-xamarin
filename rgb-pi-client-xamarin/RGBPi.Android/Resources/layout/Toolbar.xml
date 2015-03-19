@@ -34,8 +34,8 @@
         android:layout_height="match_parent"
         android:id="@+id/tb_right">
         <ImageView
-            android:src="@drawable/ic_adjust_black_36dp"
-            style="@style/TabbarIcon_right"
+            android:src="@drawable/ic_brightness_1_black_36dp"
+            style="@style/TabbarIcon_small_right"
             android:id="@+id/tb_off"
             rgbpi:MvxBind="Click ToolbarOffCommand"
             android:layout_marginRight="10dp" />

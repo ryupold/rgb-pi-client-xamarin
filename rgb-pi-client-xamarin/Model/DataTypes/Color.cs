@@ -5,7 +5,7 @@ using Cirrious.CrossCore.UI;
 
 namespace RGBPi.Core.Model.DataTypes
 {
-	public struct Color
+	public class Color
 	{
 		public float R, G, B;
 		public byte Address;
@@ -115,27 +115,27 @@ namespace RGBPi.Core.Model.DataTypes
 			}
 			if (type == "b") {
 				string[] rgbcomps = colorParts [1].Split (',');
-				this.R = int.Parse (rgbcomps [0]) / 255f;
-				this.G = int.Parse (rgbcomps [1]) / 255f;
-				this.B = int.Parse (rgbcomps [2]) / 255f;
+				this.R = int.Parse (rgbcomps [0], CultureInfo.InvariantCulture) / 255f;
+				this.G = int.Parse (rgbcomps [1], CultureInfo.InvariantCulture) / 255f;
+				this.B = int.Parse (rgbcomps [2], CultureInfo.InvariantCulture) / 255f;
 			}
 
 			if (type == "f") {
 				string[] rgbcomps = colorParts [1].Split (',');
-				this.R = float.Parse (rgbcomps [0]);
-				this.G = float.Parse (rgbcomps [1]);
-				this.B = float.Parse (rgbcomps [2]);
+				this.R = float.Parse (rgbcomps [0], CultureInfo.InvariantCulture);
+				this.G = float.Parse (rgbcomps [1], CultureInfo.InvariantCulture);
+				this.B = float.Parse (rgbcomps [2], CultureInfo.InvariantCulture);
 			}
 
 			if (type == "r") {
 				string[] rndValues = colorParts [1].Split (',');
 
-				float fromRed = float.Parse (rndValues [0].Split ('-') [0]);
-				float toRed = float.Parse (rndValues [0].Split ('-') [1]);
-				float fromGreen = float.Parse (rndValues [1].Split ('-') [0]);
-				float toGreen = float.Parse (rndValues [1].Split ('-') [1]);
-				float fromBlue = float.Parse (rndValues [2].Split ('-') [0]);
-				float toBlue = float.Parse (rndValues [2].Split ('-') [1]);
+				float fromRed = float.Parse (rndValues [0].Split ('-') [0], CultureInfo.InvariantCulture);
+				float toRed = float.Parse (rndValues [0].Split ('-') [1], CultureInfo.InvariantCulture);
+				float fromGreen = float.Parse (rndValues [1].Split ('-') [0], CultureInfo.InvariantCulture);
+				float toGreen = float.Parse (rndValues [1].Split ('-') [1], CultureInfo.InvariantCulture);
+				float fromBlue = float.Parse (rndValues [2].Split ('-') [0], CultureInfo.InvariantCulture);
+				float toBlue = float.Parse (rndValues [2].Split ('-') [1], CultureInfo.InvariantCulture);
 
 				Random rnd = new Random (); 
 				this.R = (float)rnd.NextDouble () * (toRed - fromRed) + fromRed;
@@ -151,9 +151,9 @@ namespace RGBPi.Core.Model.DataTypes
 			}
 			if (type == "hsv") {
 				string[] hsvcomps = colorParts [1].Split (',');
-				float h = float.Parse (hsvcomps [0]);
-				float s = float.Parse (hsvcomps [1]);
-				float v = float.Parse (hsvcomps [2]);
+				float h = float.Parse (hsvcomps [0], CultureInfo.InvariantCulture);
+				float s = float.Parse (hsvcomps [1], CultureInfo.InvariantCulture);
+				float v = float.Parse (hsvcomps [2], CultureInfo.InvariantCulture);
 
 				Color c = FromHSV (h, s, v);
 				this.R = c.R;
@@ -163,9 +163,9 @@ namespace RGBPi.Core.Model.DataTypes
 				
 			if (type == "hsl") {
 				string[] hslcomps = colorParts [1].Split (',');
-				float h = float.Parse (hslcomps [0]);
-				float s = float.Parse (hslcomps [1]);
-				float l = float.Parse (hslcomps [2]);
+				float h = float.Parse (hslcomps [0], CultureInfo.InvariantCulture);
+				float s = float.Parse (hslcomps [1], CultureInfo.InvariantCulture);
+				float l = float.Parse (hslcomps [2], CultureInfo.InvariantCulture);
 
 				throw new NotImplementedException ("TODO: C# HSL implementation");
 				////TODO: C# HSL implementation
@@ -305,7 +305,10 @@ namespace RGBPi.Core.Model.DataTypes
 			return color.ToString ();
 		}
 
-
+		public static implicit operator MvxColor (Color color)
+		{
+			return new MvxColor ((int)(color.R*255), (int)(color.G*255), (int)(color.B*255));
+		}
 
 		public static implicit operator Color (MvxColor col)
 		{
@@ -321,6 +324,7 @@ namespace RGBPi.Core.Model.DataTypes
 		{
 			return new Color (str);
 		}
+			
 
 		public override string ToString ()
 		{

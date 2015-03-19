@@ -7,6 +7,7 @@ using RGBPi.Core.Model.DataTypes;
 using System.Diagnostics;
 using Cirrious.CrossCore;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace RGBPi.Core.ViewModels
 {
@@ -19,7 +20,13 @@ namespace RGBPi.Core.ViewModels
 		{
 			settings = Mvx.Resolve<ISettings> ();
 			SetupCommands ();
-			LoadData ();
+			AddButtonVisible = false;
+		}
+
+		protected override async void InitFromBundle (IMvxBundle parameters)
+		{
+			base.InitFromBundle (parameters);
+			await LoadData ();
 		}
 
 		private ObservableCollection <HostViewModel> _hosts;
@@ -28,16 +35,20 @@ namespace RGBPi.Core.ViewModels
 			set{
 				_hosts = value;
 				RaisePropertyChanged (() => Hosts);
+				RaisePropertyChanged (() => NoHosts);
 			}
 		}
 
-		private void LoadData(){
+		private async Task LoadData(){
 			Hosts = new ObservableCollection <HostViewModel> ();
 			var hosts = settings.GetHosts();
 			foreach (var h in hosts) {
 				Hosts.Add (new HostViewModel(h, this));
 			}
 			RaiseAllPropertiesChanged ();
+
+			await Task.Delay (500);
+			AddButtonVisible = true;
 		}
 
 		public void ReloadActiveState(){
@@ -47,6 +58,17 @@ namespace RGBPi.Core.ViewModels
 				}
 			}
 		}
+
+		private bool _addButtonVisible = false;
+		public bool AddButtonVisible{
+			get{ return _addButtonVisible; }
+			set{ 
+				_addButtonVisible = value;
+				RaisePropertyChanged (()=>AddButtonVisible);
+			}
+		}
+
+		public bool NoHosts{get{ return Hosts.Count == 0; }}
 
 		private void SetupCommands(){
 			_toolbarGoBackCommand = new MvxCommand (() => GoBack());
