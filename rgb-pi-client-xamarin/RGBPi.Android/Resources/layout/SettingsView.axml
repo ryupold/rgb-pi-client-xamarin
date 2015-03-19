@@ -1,8 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:rgbpi="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px" />
+    android:minHeight="25px"
+    rgbpi:theme="@style/Theme.RGBPi">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <include
+            layout="@layout/Toolbar_settings"
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            style="@style/RGBPiActionBar" />
+        <Mvx.MvxListView
+            android:id="@+id/list_hosts"
+            android:background="@color/transparent"
+            style="@style/HostList"
+            android:descendantFocusability="beforeDescendants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            rgbpi:MvxBind="ItemsSource Hosts"
+            rgbpi:MvxItemTemplate="@layout/host_item" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:background="@color/transparent"
+        android:layout_marginTop="@dimen/action_bar_height"
+        rgbpi:MvxBind="Visible NoHosts">
+        <ImageView
+            android:layout_width="@dimen/action_bar_icon_size"
+            android:layout_height="@dimen/action_bar_icon_size"
+            android:src="@drawable/ic_arrow_up_white_36dp"
+            android:gravity="right"
+            android:background="@color/transparent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="add some hosts"
+            style="@style/settings_help_add_text" />
+    </LinearLayout>
+</FrameLayout>

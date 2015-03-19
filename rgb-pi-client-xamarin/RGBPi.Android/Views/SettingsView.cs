@@ -13,10 +13,20 @@ using Android.OS;
 using Cirrious.MvvmCross.Droid.Fragging;
 using Android.Content;
 using Android.Util;
+using Cirrious.MvvmCross.Binding.Droid.Views;
+using Cirrious.MvvmCross.Binding.Droid.BindingContext;
+using RGBPi.Core;
+using Android.Widget;
+
 
 namespace RGBPi.Android
 {
-	[Activity (Label = "Settings", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity (Label = "Settings"
+		, Icon = "@drawable/icon"
+		, Theme = "@style/Theme.RGBPi"
+		, ScreenOrientation = ScreenOrientation.Portrait
+		, WindowSoftInputMode = SoftInput.AdjustPan)
+	]
 	public class SettingsView : MvxActivity
 	{
 
@@ -29,9 +39,41 @@ namespace RGBPi.Android
 
 		protected override void OnViewModelSet ()
 		{
-			base.OnViewModelSet();
+			base.OnViewModelSet(); 
 			SetContentView (Resource.Layout.SettingsView);
+			MvxListView list = FindViewById<MvxListView> (Resource.Id.list_hosts);
+			list.Adapter = new HostViewAdapter (this, (IMvxAndroidBindingContext)this.BindingContext);
+		}
 
+
+	}
+
+	public class HostViewAdapter : MvxAdapter
+	{
+		public HostViewAdapter(Context context, IMvxAndroidBindingContext bindingContext)
+			: base(context, bindingContext)
+		{
+		}
+
+		public override int GetItemViewType(int position)
+		{
+			var item = GetRawItem(position);
+			if (item is Host)
+				return 0;
+			return 0;
+		}
+
+		public override int ViewTypeCount
+		{
+			get { return 1; }
+		}
+
+		protected override View GetBindableView(View convertView, object source, int templateId)
+		{
+			if (source is Host)
+				templateId = Resource.Layout.host_item;
+
+			return base.GetBindableView(convertView, source, templateId);
 		}
 	}
 }

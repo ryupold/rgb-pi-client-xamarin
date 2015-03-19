@@ -19,7 +19,6 @@ namespace RGBPi.Android
 		Label = "RGB-Pi Remote"
 		, MainLauncher = true
 		, Icon = "@drawable/icon"
-		, NoHistory = true
 		, Theme = "@style/Theme.RGBPi"
 		, ScreenOrientation = ScreenOrientation.Portrait)]
 	public class MainView : MvxTabActivity
@@ -37,11 +36,17 @@ namespace RGBPi.Android
 
 			//add tabs
 			CreateColorChooserTab ();
-			CreateCommandTestTab ();
+			CreateFaderTab ();
+			CreateDimTab ();
+			CreateCommandsTab ();
+			CreateCommandBuilderTab ();
+
+			//this is for testing purposes
+//			CreateCommandTestTab ();
 		}
 
 		private void CreateColorChooserTab(){
-			CreateTab(typeof(ColorChooserView), "cc", "Color Chooser", Resource.Drawable.Icon);
+			CreateTab(typeof(ColorChooserView), "cc", null, Resource.Drawable.ic_palette_white_36dp);
 			ColorChooserView ccv = (ColorChooserView)LocalActivityManager.GetActivity ("cc"); 
 			ViewModel.ColorChooser = ccv.ViewModel;
 			ccv.ColorChanged += (s, newColor) => {
@@ -56,10 +61,26 @@ namespace RGBPi.Android
 			};
 		}
 
-		private void CreateCommandTestTab(){
-			CreateTab(typeof(CommandTestView), "ct", "Command Test", Resource.Drawable.Icon);
-			CommandTestView ctv = (CommandTestView)LocalActivityManager.GetActivity ("ct"); 
+		private void CreateFaderTab(){
+			CreateTab(typeof(FaderView), "sf", null, Resource.Drawable.ic_swap_calls_white_36dp);
+		}
 
+		private void CreateDimTab(){
+			CreateTab(typeof(DimView), "dim", null, Resource.Drawable.ic_timelapse_white_36dp);
+
+		}
+
+		private void CreateCommandsTab(){
+			CreateTab(typeof(CommandsView), "favs", null, Resource.Drawable.ic_slideshow_white_36dp); //ic_apps_white_36dp
+		}
+
+		private void CreateCommandBuilderTab(){
+			CreateTab(typeof(CommandBuilderView), "cmd", null, Resource.Drawable.ic_extension_white_36dp);
+			//CreateTab(typeof(CommandBuilderView), "cmd", null, Resource.Drawable.ic_dehaze_white_36dp);
+		}
+
+		private void CreateCommandTestTab(){
+			CreateTab(typeof(CommandTestView), "ct", null, Resource.Drawable.icon_bw_invert);
 		}
 
 		private void CreateTab(Type activityType, string tag, string label, int drawableId )
@@ -69,19 +90,26 @@ namespace RGBPi.Android
 			intent.AddFlags(ActivityFlags.NewTask);
 
 			var spec = TabHost.NewTabSpec(tag);
-			var drawableIcon = Resources.GetDrawable(drawableId);
 
-			//spec.SetIndicator(label, drawableIcon);
-			spec.SetIndicator(createTabView(this.ApplicationContext, label));
+			//spec.SetIndicator(createTabView(this.ApplicationContext, drawableId));
+			spec.SetIndicator(createTabView(this.ApplicationContext, label, drawableId));
 			spec.SetContent(intent);
 
 			TabHost.AddTab(spec);
 		}
 
-		private static View createTabView(Context context, string text) {
-			View view = LayoutInflater.From(context).Inflate(RGBPi.Android.Resource.Layout.tabs_bg, null);
-			TextView tv = (TextView) view.FindViewById(Resource.Id.tabsText);
-			tv.Text = (text);
+		private static View createTabView(Context context, string text, int resDrawableID) {
+			LinearLayout view = (LinearLayout)LayoutInflater.From(context).Inflate(RGBPi.Android.Resource.Layout.tabs_bg, null);
+			ImageView img = view.FindViewById<ImageView>(Resource.Id.tabsIcon);
+			TextView tv = view.FindViewById<TextView>(Resource.Id.tabsText);
+
+			img.SetImageResource (resDrawableID);
+
+			if (string.IsNullOrWhiteSpace (text)) {
+				view.RemoveView (tv);
+			} else {
+				tv.Text = (text);
+			}
 			return view;
 		}
 

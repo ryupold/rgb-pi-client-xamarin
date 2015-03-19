@@ -37,7 +37,6 @@
     <Compile Include="Resources\CoreResources.Designer.cs">
       <DependentUpon>CoreResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Model\Message.cs" />
     <Compile Include="Model\Commands\Command.cs" />
     <Compile Include="Model\Commands\CC.cs" />
@@ -46,7 +45,6 @@
     <Compile Include="Model\Requests\Request.cs" />
     <Compile Include="Model\Triggers\Trigger.cs" />
     <Compile Include="Model\Answer.cs" />
-    <Compile Include="Helpers\Host.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Model\Commands\Fade.cs" />
     <Compile Include="Model\DataTypes\Time.cs" />
@@ -58,6 +56,13 @@
     <Compile Include="ViewModels\CommandTestViewModel.cs" />
     <Compile Include="ViewModels\ColorChooserViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\HostViewModel.cs" />
+    <Compile Include="Services\ISettings.cs" />
+    <Compile Include="Model\Host.cs" />
+    <Compile Include="ViewModels\FaderViewModel.cs" />
+    <Compile Include="ViewModels\DimViewModel.cs" />
+    <Compile Include="ViewModels\CommandsViewModel.cs" />
+    <Compile Include="ViewModels\CommandBuilderViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -73,11 +78,11 @@
     <Reference Include="Cirrious.MvvmCross">
       <HintPath>packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.0\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
-    <Reference Include="Refractored.MvxPlugins.Settings">
-      <HintPath>packages\Mvx.Plugins.Settings.1.4.1\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS10\Refractored.MvxPlugins.Settings.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color">
+      <HintPath>packages\MvvmCross.HotTuna.Plugin.Color.3.5.0\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +96,7 @@
     <Folder Include="Model\Requests\" />
     <Folder Include="Model\Filters\" />
     <Folder Include="Model\DataTypes\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\CoreResources.resx">
