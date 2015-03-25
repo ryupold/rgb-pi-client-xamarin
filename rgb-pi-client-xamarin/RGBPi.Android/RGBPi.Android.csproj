@@ -113,6 +113,7 @@
     <Compile Include="Views\DimView.cs" />
     <Compile Include="Views\CommandsView.cs" />
     <Compile Include="Views\CommandBuilderView.cs" />
+    <Compile Include="Views\ColorDialog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -677,6 +678,7 @@
     <AndroidResource Include="Resources\drawable\ic_favorite_outline_white_36dp.png" />
     <AndroidResource Include="Resources\drawable\ic_favorite_white_36dp.png" />
     <AndroidResource Include="Resources\drawable\ic_arrow_up_white_36dp.png" />
+    <AndroidResource Include="Resources\layout\ColorDialogView.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

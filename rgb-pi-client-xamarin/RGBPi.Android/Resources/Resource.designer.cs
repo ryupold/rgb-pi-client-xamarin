@@ -2938,56 +2938,59 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f080014
 			public const int beginning = 2131230740;
 			
-			// aapt resource value: 0x7f080058
-			public const int btn_active = 2131230808;
-			
-			// aapt resource value: 0x7f080056
-			public const int btn_circle = 2131230806;
-			
-			// aapt resource value: 0x7f080054
-			public const int btn_edit = 2131230804;
+			// aapt resource value: 0x7f080059
+			public const int btn_active = 2131230809;
 			
 			// aapt resource value: 0x7f080057
-			public const int btn_error = 2131230807;
-			
-			// aapt resource value: 0x7f080059
-			public const int btn_remove = 2131230809;
+			public const int btn_circle = 2131230807;
 			
 			// aapt resource value: 0x7f080055
-			public const int btn_save = 2131230805;
+			public const int btn_edit = 2131230805;
 			
-			// aapt resource value: 0x7f080045
-			public const int button1 = 2131230789;
+			// aapt resource value: 0x7f080058
+			public const int btn_error = 2131230808;
 			
-			// aapt resource value: 0x7f08004e
-			public const int button10 = 2131230798;
+			// aapt resource value: 0x7f08005a
+			public const int btn_remove = 2131230810;
 			
-			// aapt resource value: 0x7f080047
-			public const int button2 = 2131230791;
-			
-			// aapt resource value: 0x7f080048
-			public const int button3 = 2131230792;
-			
-			// aapt resource value: 0x7f080049
-			public const int button4 = 2131230793;
-			
-			// aapt resource value: 0x7f08004a
-			public const int button5 = 2131230794;
-			
-			// aapt resource value: 0x7f08004b
-			public const int button6 = 2131230795;
+			// aapt resource value: 0x7f080056
+			public const int btn_save = 2131230806;
 			
 			// aapt resource value: 0x7f080046
-			public const int button7 = 2131230790;
+			public const int button1 = 2131230790;
 			
-			// aapt resource value: 0x7f08004d
-			public const int button8 = 2131230797;
+			// aapt resource value: 0x7f08004f
+			public const int button10 = 2131230799;
+			
+			// aapt resource value: 0x7f080048
+			public const int button2 = 2131230792;
+			
+			// aapt resource value: 0x7f080049
+			public const int button3 = 2131230793;
+			
+			// aapt resource value: 0x7f08004a
+			public const int button4 = 2131230794;
+			
+			// aapt resource value: 0x7f08004b
+			public const int button5 = 2131230795;
 			
 			// aapt resource value: 0x7f08004c
-			public const int button9 = 2131230796;
+			public const int button6 = 2131230796;
+			
+			// aapt resource value: 0x7f080047
+			public const int button7 = 2131230791;
+			
+			// aapt resource value: 0x7f08004e
+			public const int button8 = 2131230798;
+			
+			// aapt resource value: 0x7f08004d
+			public const int button9 = 2131230797;
 			
 			// aapt resource value: 0x7f08002a
 			public const int checkbox = 2131230762;
+			
+			// aapt resource value: 0x7f080043
+			public const int chk_random = 2131230787;
 			
 			// aapt resource value: 0x7f080018
 			public const int collapseActionView = 2131230744;
@@ -2998,8 +3001,8 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f080040
 			public const int color_chooser_view = 2131230784;
 			
-			// aapt resource value: 0x7f080044
-			public const int commands_view = 2131230788;
+			// aapt resource value: 0x7f080045
+			public const int commands_view = 2131230789;
 			
 			// aapt resource value: 0x7f080030
 			public const int decor_content_parent = 2131230768;
@@ -3010,8 +3013,8 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f08001c
 			public const int dialog = 2131230748;
 			
-			// aapt resource value: 0x7f08004f
-			public const int dim_view = 2131230799;
+			// aapt resource value: 0x7f080050
+			public const int dim_view = 2131230800;
 			
 			// aapt resource value: 0x7f08000d
 			public const int disableHome = 2131230733;
@@ -3031,8 +3034,8 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f080029
 			public const int expanded_menu = 2131230761;
 			
-			// aapt resource value: 0x7f080043
-			public const int fader_view = 2131230787;
+			// aapt resource value: 0x7f080044
+			public const int fader_view = 2131230788;
 			
 			// aapt resource value: 0x7f080004
 			public const int home = 2131230724;
@@ -3049,14 +3052,14 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f080024
 			public const int image = 2131230756;
 			
-			// aapt resource value: 0x7f080050
-			public const int layout_container_edit = 2131230800;
+			// aapt resource value: 0x7f080051
+			public const int layout_container_edit = 2131230801;
 			
 			// aapt resource value: 0x7f08000a
 			public const int listMode = 2131230730;
 			
-			// aapt resource value: 0x7f08005c
-			public const int list_hosts = 2131230812;
+			// aapt resource value: 0x7f08005d
+			public const int list_hosts = 2131230813;
 			
 			// aapt resource value: 0x7f080026
 			public const int list_item = 2131230758;
@@ -3136,56 +3139,56 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f08000c
 			public const int tabMode = 2131230732;
 			
-			// aapt resource value: 0x7f08005e
-			public const int tabsIcon = 2131230814;
-			
-			// aapt resource value: 0x7f08005d
-			public const int tabsLayout = 2131230813;
-			
 			// aapt resource value: 0x7f08005f
-			public const int tabsText = 2131230815;
+			public const int tabsIcon = 2131230815;
 			
-			// aapt resource value: 0x7f080067
-			public const int tb_add = 2131230823;
-			
-			// aapt resource value: 0x7f080066
-			public const int tb_back = 2131230822;
-			
-			// aapt resource value: 0x7f080062
-			public const int tb_brighter = 2131230818;
-			
-			// aapt resource value: 0x7f080063
-			public const int tb_darker = 2131230819;
+			// aapt resource value: 0x7f08005e
+			public const int tabsLayout = 2131230814;
 			
 			// aapt resource value: 0x7f080060
-			public const int tb_left = 2131230816;
+			public const int tabsText = 2131230816;
 			
-			// aapt resource value: 0x7f080061
-			public const int tb_logo = 2131230817;
+			// aapt resource value: 0x7f080068
+			public const int tb_add = 2131230824;
 			
-			// aapt resource value: 0x7f080065
-			public const int tb_off = 2131230821;
+			// aapt resource value: 0x7f080067
+			public const int tb_back = 2131230823;
+			
+			// aapt resource value: 0x7f080063
+			public const int tb_brighter = 2131230819;
 			
 			// aapt resource value: 0x7f080064
-			public const int tb_right = 2131230820;
+			public const int tb_darker = 2131230820;
 			
-			// aapt resource value: 0x7f08005b
-			public const int tb_settings = 2131230811;
+			// aapt resource value: 0x7f080061
+			public const int tb_left = 2131230817;
+			
+			// aapt resource value: 0x7f080062
+			public const int tb_logo = 2131230818;
+			
+			// aapt resource value: 0x7f080066
+			public const int tb_off = 2131230822;
+			
+			// aapt resource value: 0x7f080065
+			public const int tb_right = 2131230821;
+			
+			// aapt resource value: 0x7f08005c
+			public const int tb_settings = 2131230812;
 			
 			// aapt resource value: 0x7f080028
 			public const int title = 2131230760;
 			
-			// aapt resource value: 0x7f08005a
-			public const int toolbar = 2131230810;
-			
-			// aapt resource value: 0x7f080052
-			public const int txt_ip_edit = 2131230802;
-			
-			// aapt resource value: 0x7f080051
-			public const int txt_name_edit = 2131230801;
+			// aapt resource value: 0x7f08005b
+			public const int toolbar = 2131230811;
 			
 			// aapt resource value: 0x7f080053
-			public const int txt_port_edit = 2131230803;
+			public const int txt_ip_edit = 2131230803;
+			
+			// aapt resource value: 0x7f080052
+			public const int txt_name_edit = 2131230802;
+			
+			// aapt resource value: 0x7f080054
+			public const int txt_port_edit = 2131230804;
 			
 			// aapt resource value: 0x7f080008
 			public const int up = 2131230728;
@@ -3301,43 +3304,46 @@ namespace RGBPi.Android
 			public const int ColorChooserView = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int CommandBuilderView = 2130903064;
+			public const int ColorDialogView = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int CommandsView = 2130903065;
+			public const int CommandBuilderView = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int CommandTestView = 2130903066;
+			public const int CommandsView = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int DimView = 2130903067;
+			public const int CommandTestView = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int FaderView = 2130903068;
+			public const int DimView = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int host_item = 2130903069;
+			public const int FaderView = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int MainView = 2130903070;
+			public const int host_item = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int menu_toolbar = 2130903071;
+			public const int MainView = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int SettingsView = 2130903072;
+			public const int menu_toolbar = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int support_simple_spinner_dropdown_item = 2130903073;
+			public const int SettingsView = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int tabs_bg = 2130903074;
+			public const int support_simple_spinner_dropdown_item = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int Toolbar = 2130903075;
+			public const int tabs_bg = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int Toolbar_settings = 2130903076;
+			public const int Toolbar = 2130903076;
+			
+			// aapt resource value: 0x7f030025
+			public const int Toolbar_settings = 2130903077;
 			
 			static Layout()
 			{
