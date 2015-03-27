@@ -8,14 +8,14 @@ namespace RGBPi.Core.ViewModels
 {
 	public class ColorDialogViewModel : RemoteControlViewModel
 	{
-		private Color _currentColor = new Color(0,0,0);
+		protected Color _currentColor = new Color(0,0,0);
 		public Color CurrentColor{ get { return _currentColor; } set{ 
 				_currentColor = value; 
 				BackgroundColor = MakePastel (_currentColor);
 				RaisePropertyChanged( () => CurrentColor);
 			}}
 
-		private Color _backgroundColor = new Color(0,0,0);
+		protected Color _backgroundColor = new Color(0,0,0);
 		public Color BackgroundColor{ get { return _backgroundColor; } set{ 
 				_backgroundColor = value; 
 				RaisePropertyChanged( () => BackgroundColor);
@@ -27,7 +27,7 @@ namespace RGBPi.Core.ViewModels
 		}
 
 		#region Random Color properties
-		private readonly float[] _randomColor = new float[]{0,1,0,1,0,1}; //initialize value:  full random
+		protected readonly float[] _randomColor = new float[]{0,1,0,1,0,1}; //initialize value:  full random
 
 		public float RandomRedMin{
 			get{ return _randomColor[0]; }
@@ -89,7 +89,7 @@ namespace RGBPi.Core.ViewModels
 			}
 		}
 
-		private bool _isRandom = false;
+		protected bool _isRandom = false;
 		public bool IsRandom{
 			get{ return _isRandom; }
 			set{ 
@@ -100,7 +100,7 @@ namespace RGBPi.Core.ViewModels
 		#endregion
 
 
-		private Color MakePastel(Color col){
+		protected Color MakePastel(Color col){
 			return new Color (
 				MakePastel(col.R),
 				MakePastel(col.G),
@@ -108,7 +108,7 @@ namespace RGBPi.Core.ViewModels
 			);
 		}
 
-		private float MakePastel(float col){
+		protected float MakePastel(float col){
 			return Math.Max(col * 0.5f, 0.3f);
 		}
 	}

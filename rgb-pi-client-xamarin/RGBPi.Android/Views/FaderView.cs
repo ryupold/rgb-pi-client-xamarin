@@ -34,9 +34,35 @@ namespace RGBPi.Android
 
 			Button btn = FindViewById<Button> (Resource.Id.button1);
 			btn.Click += (sender, e) => {
-				var dialogactivity = new ColorDialog();
-
+				ShowDialog(1);
 			};
+		}
+
+		protected override Dialog OnCreateDialog (int id)
+		{
+			Console.WriteLine ("Opening Color Dialog");
+
+			AlertDialog.Builder builder = new AlertDialog.Builder (Application.Context);
+			LayoutInflater inflater = LayoutInflater.FromContext(Application.Context);
+
+			ViewGroup layout = (ViewGroup)inflater.Inflate (Resource.Layout.ColorDialogView, null);
+			builder.SetView (layout);
+
+			var colorPicker = layout.FindViewById<ColorPicker> (Resource.Id.color_picker);
+
+			SVBar sv = layout.FindViewById<SVBar> (Resource.Id.sv_bar);
+			sv.SetBackgroundColor (global::Android.Graphics.Color.Transparent);
+			colorPicker.SetBackgroundColor (global::Android.Graphics.Color.Transparent);
+			colorPicker.addSVBar (sv);
+//			ColorChanged += (s, c) => {
+//				ViewModel.SetCurrentColor (c);
+//				global::Android.Graphics.Color cd = new global::Android.Graphics.Color ((int)ViewModel.BackgroundColor);
+//				layout.SetBackgroundColor (cd);
+//				sv.SetBackgroundColor (cd);
+//				colorPicker.SetBackgroundColor (cd);
+//			};
+
+			return builder.Create ();
 		}
 	}
 }
