@@ -26,6 +26,48 @@ namespace RGBPi.Android
 		
 		public static void UpdateIdValues()
 		{
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Drawable.dialog_disclosure = global::RGBPi.Android.Resource.Drawable.dialog_disclosure;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Drawable.dialog_expander_ic_minimized = global::RGBPi.Android.Resource.Drawable.dialog_expander_ic_minimized;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Drawable.dialog_icon = global::RGBPi.Android.Resource.Drawable.dialog_icon;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Drawable.dialog_spinner_default_holo_dark = global::RGBPi.Android.Resource.Drawable.dialog_spinner_default_holo_dark;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Drawable.dialog_spinner_default_holo_light = global::RGBPi.Android.Resource.Drawable.dialog_spinner_default_holo_light;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_BoolField = global::RGBPi.Android.Resource.Id.dialog_BoolField;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_Button = global::RGBPi.Android.Resource.Id.dialog_Button;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_DisclosureField = global::RGBPi.Android.Resource.Id.dialog_DisclosureField;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_HtmlField = global::RGBPi.Android.Resource.Id.dialog_HtmlField;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_ImageLeft = global::RGBPi.Android.Resource.Id.dialog_ImageLeft;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_ImageRight = global::RGBPi.Android.Resource.Id.dialog_ImageRight;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_LabelField = global::RGBPi.Android.Resource.Id.dialog_LabelField;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_LabelPercentageField = global::RGBPi.Android.Resource.Id.dialog_LabelPercentageField;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_LabelSubtextField = global::RGBPi.Android.Resource.Id.dialog_LabelSubtextField;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_Panel = global::RGBPi.Android.Resource.Id.dialog_Panel;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_RadioButtonList = global::RGBPi.Android.Resource.Id.dialog_RadioButtonList;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_SliderField = global::RGBPi.Android.Resource.Id.dialog_SliderField;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_Spinner = global::RGBPi.Android.Resource.Id.dialog_Spinner;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.dialog_ValueField = global::RGBPi.Android.Resource.Id.dialog_ValueField;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Id.iFormFieldValue = global::RGBPi.Android.Resource.Id.iFormFieldValue;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_achievements = global::RGBPi.Android.Resource.Layout.dialog_achievements;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_boolfieldleft = global::RGBPi.Android.Resource.Layout.dialog_boolfieldleft;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_boolfieldright = global::RGBPi.Android.Resource.Layout.dialog_boolfieldright;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_boolfieldsubleft = global::RGBPi.Android.Resource.Layout.dialog_boolfieldsubleft;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_boolfieldsubright = global::RGBPi.Android.Resource.Layout.dialog_boolfieldsubright;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_button = global::RGBPi.Android.Resource.Layout.dialog_button;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_datefield = global::RGBPi.Android.Resource.Layout.dialog_datefield;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_fieldsetlabel = global::RGBPi.Android.Resource.Layout.dialog_fieldsetlabel;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_floatimage = global::RGBPi.Android.Resource.Layout.dialog_floatimage;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_html = global::RGBPi.Android.Resource.Layout.dialog_html;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_labeldisclosure = global::RGBPi.Android.Resource.Layout.dialog_labeldisclosure;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_labelfieldbelow = global::RGBPi.Android.Resource.Layout.dialog_labelfieldbelow;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_labelfieldright = global::RGBPi.Android.Resource.Layout.dialog_labelfieldright;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_multiline_labelfieldbelow = global::RGBPi.Android.Resource.Layout.dialog_multiline_labelfieldbelow;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_onofffieldright = global::RGBPi.Android.Resource.Layout.dialog_onofffieldright;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_panel = global::RGBPi.Android.Resource.Layout.dialog_panel;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_root = global::RGBPi.Android.Resource.Layout.dialog_root;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_selectlist = global::RGBPi.Android.Resource.Layout.dialog_selectlist;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_selectlistfield = global::RGBPi.Android.Resource.Layout.dialog_selectlistfield;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_textarea = global::RGBPi.Android.Resource.Layout.dialog_textarea;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_textfieldbelow = global::RGBPi.Android.Resource.Layout.dialog_textfieldbelow;
+			global::Cirrious.MvvmCross.Dialog.Droid.Resource.Layout.dialog_textfieldright = global::RGBPi.Android.Resource.Layout.dialog_textfieldright;
 		}
 		
 		public partial class Animation
@@ -1285,1594 +1327,1609 @@ namespace RGBPi.Android
 			public const int abc_textfield_search_material = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int host_item_bg = 2130837555;
+			public const int dialog_disclosure = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int ic_add_box_black_36dp = 2130837556;
+			public const int dialog_expander_ic_minimized = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int ic_add_box_grey600_36dp = 2130837557;
+			public const int dialog_icon = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int ic_add_box_white_36dp = 2130837558;
+			public const int dialog_spinner_default_holo_dark = 2130837558;
 			
 			// aapt resource value: 0x7f020037
-			public const int ic_add_circle_black_36dp = 2130837559;
+			public const int dialog_spinner_default_holo_light = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int ic_add_circle_grey600_36dp = 2130837560;
+			public const int host_item_bg = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int ic_add_circle_outline_black_36dp = 2130837561;
+			public const int ic_add_box_black_36dp = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int ic_add_circle_outline_grey600_36dp = 2130837562;
+			public const int ic_add_box_grey600_36dp = 2130837562;
 			
 			// aapt resource value: 0x7f02003b
-			public const int ic_add_circle_outline_white_36dp = 2130837563;
+			public const int ic_add_box_white_36dp = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int ic_add_circle_white_36dp = 2130837564;
+			public const int ic_add_circle_black_36dp = 2130837564;
 			
 			// aapt resource value: 0x7f02003d
-			public const int ic_add_grey600_36dp = 2130837565;
+			public const int ic_add_circle_grey600_36dp = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int ic_add_to_photos_black_36dp = 2130837566;
+			public const int ic_add_circle_outline_black_36dp = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int ic_add_to_photos_grey600_36dp = 2130837567;
+			public const int ic_add_circle_outline_grey600_36dp = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int ic_add_to_photos_white_36dp = 2130837568;
+			public const int ic_add_circle_outline_white_36dp = 2130837568;
 			
 			// aapt resource value: 0x7f020041
-			public const int ic_add_white_36dp = 2130837569;
+			public const int ic_add_circle_white_36dp = 2130837569;
 			
 			// aapt resource value: 0x7f020042
-			public const int ic_adjust_black_36dp = 2130837570;
+			public const int ic_add_grey600_36dp = 2130837570;
 			
 			// aapt resource value: 0x7f020043
-			public const int ic_adjust_grey600_36dp = 2130837571;
+			public const int ic_add_to_photos_black_36dp = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int ic_adjust_white_36dp = 2130837572;
+			public const int ic_add_to_photos_grey600_36dp = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int ic_apps_black_36dp = 2130837573;
+			public const int ic_add_to_photos_white_36dp = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int ic_apps_grey600_36dp = 2130837574;
+			public const int ic_add_white_36dp = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int ic_apps_white_36dp = 2130837575;
+			public const int ic_adjust_black_36dp = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int ic_arrow_back_black_36dp = 2130837576;
+			public const int ic_adjust_grey600_36dp = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int ic_arrow_back_grey600_36dp = 2130837577;
+			public const int ic_adjust_white_36dp = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int ic_arrow_back_white_36dp = 2130837578;
+			public const int ic_apps_black_36dp = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int ic_arrow_drop_down_black_36dp = 2130837579;
+			public const int ic_apps_grey600_36dp = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int ic_arrow_drop_down_circle_black_36dp = 2130837580;
+			public const int ic_apps_white_36dp = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int ic_arrow_drop_down_circle_grey600_36dp = 2130837581;
+			public const int ic_arrow_back_black_36dp = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int ic_arrow_drop_down_circle_white_36dp = 2130837582;
+			public const int ic_arrow_back_grey600_36dp = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int ic_arrow_drop_down_grey600_36dp = 2130837583;
+			public const int ic_arrow_back_white_36dp = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int ic_arrow_drop_down_white_36dp = 2130837584;
+			public const int ic_arrow_drop_down_black_36dp = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int ic_arrow_drop_up_black_36dp = 2130837585;
+			public const int ic_arrow_drop_down_circle_black_36dp = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int ic_arrow_drop_up_grey600_36dp = 2130837586;
+			public const int ic_arrow_drop_down_circle_grey600_36dp = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int ic_arrow_drop_up_white_36dp = 2130837587;
+			public const int ic_arrow_drop_down_circle_white_36dp = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int ic_arrow_forward_black_36dp = 2130837588;
+			public const int ic_arrow_drop_down_grey600_36dp = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int ic_arrow_forward_grey600_36dp = 2130837589;
+			public const int ic_arrow_drop_down_white_36dp = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int ic_arrow_forward_white_36dp = 2130837590;
+			public const int ic_arrow_drop_up_black_36dp = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int ic_arrow_up_white_36dp = 2130837591;
+			public const int ic_arrow_drop_up_grey600_36dp = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int ic_assistant_photo_black_36dp = 2130837592;
+			public const int ic_arrow_drop_up_white_36dp = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int ic_assistant_photo_grey600_36dp = 2130837593;
+			public const int ic_arrow_forward_black_36dp = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int ic_assistant_photo_white_36dp = 2130837594;
+			public const int ic_arrow_forward_grey600_36dp = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int ic_audiotrack_black_36dp = 2130837595;
+			public const int ic_arrow_forward_white_36dp = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int ic_audiotrack_grey600_36dp = 2130837596;
+			public const int ic_arrow_up_white_36dp = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int ic_audiotrack_white_36dp = 2130837597;
+			public const int ic_assistant_photo_black_36dp = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int ic_blur_circular_black_36dp = 2130837598;
+			public const int ic_assistant_photo_grey600_36dp = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ic_blur_circular_grey600_36dp = 2130837599;
+			public const int ic_assistant_photo_white_36dp = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ic_blur_circular_white_36dp = 2130837600;
+			public const int ic_audiotrack_black_36dp = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int ic_blur_linear_black_36dp = 2130837601;
+			public const int ic_audiotrack_grey600_36dp = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int ic_blur_linear_grey600_36dp = 2130837602;
+			public const int ic_audiotrack_white_36dp = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int ic_blur_linear_white_36dp = 2130837603;
+			public const int ic_blur_circular_black_36dp = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int ic_blur_off_black_36dp = 2130837604;
+			public const int ic_blur_circular_grey600_36dp = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int ic_blur_off_grey600_36dp = 2130837605;
+			public const int ic_blur_circular_white_36dp = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int ic_blur_off_white_36dp = 2130837606;
+			public const int ic_blur_linear_black_36dp = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int ic_blur_on_black_36dp = 2130837607;
+			public const int ic_blur_linear_grey600_36dp = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int ic_blur_on_grey600_36dp = 2130837608;
+			public const int ic_blur_linear_white_36dp = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int ic_blur_on_white_36dp = 2130837609;
+			public const int ic_blur_off_black_36dp = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int ic_brightness_1_black_36dp = 2130837610;
+			public const int ic_blur_off_grey600_36dp = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int ic_brightness_1_grey600_36dp = 2130837611;
+			public const int ic_blur_off_white_36dp = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int ic_brightness_1_white_36dp = 2130837612;
+			public const int ic_blur_on_black_36dp = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int ic_brightness_2_black_36dp = 2130837613;
+			public const int ic_blur_on_grey600_36dp = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_brightness_2_grey600_36dp = 2130837614;
+			public const int ic_blur_on_white_36dp = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_brightness_2_white_36dp = 2130837615;
+			public const int ic_brightness_1_black_36dp = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_brightness_3_black_36dp = 2130837616;
+			public const int ic_brightness_1_grey600_36dp = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_brightness_3_grey600_36dp = 2130837617;
+			public const int ic_brightness_1_white_36dp = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_brightness_3_white_36dp = 2130837618;
+			public const int ic_brightness_2_black_36dp = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_brightness_4_black_36dp = 2130837619;
+			public const int ic_brightness_2_grey600_36dp = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int ic_brightness_4_grey600_36dp = 2130837620;
+			public const int ic_brightness_2_white_36dp = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_brightness_4_white_36dp = 2130837621;
+			public const int ic_brightness_3_black_36dp = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int ic_brightness_5_black_36dp = 2130837622;
+			public const int ic_brightness_3_grey600_36dp = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int ic_brightness_5_grey600_36dp = 2130837623;
+			public const int ic_brightness_3_white_36dp = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int ic_brightness_5_white_36dp = 2130837624;
+			public const int ic_brightness_4_black_36dp = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int ic_brightness_6_black_36dp = 2130837625;
+			public const int ic_brightness_4_grey600_36dp = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int ic_brightness_6_grey600_36dp = 2130837626;
+			public const int ic_brightness_4_white_36dp = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int ic_brightness_6_white_36dp = 2130837627;
+			public const int ic_brightness_5_black_36dp = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int ic_brightness_7_black_36dp = 2130837628;
+			public const int ic_brightness_5_grey600_36dp = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int ic_brightness_7_grey600_36dp = 2130837629;
+			public const int ic_brightness_5_white_36dp = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int ic_brightness_7_white_36dp = 2130837630;
+			public const int ic_brightness_6_black_36dp = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int ic_brush_black_36dp = 2130837631;
+			public const int ic_brightness_6_grey600_36dp = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int ic_brush_grey600_36dp = 2130837632;
+			public const int ic_brightness_6_white_36dp = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int ic_brush_white_36dp = 2130837633;
+			public const int ic_brightness_7_black_36dp = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int ic_camera_alt_black_36dp = 2130837634;
+			public const int ic_brightness_7_grey600_36dp = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int ic_camera_alt_grey600_36dp = 2130837635;
+			public const int ic_brightness_7_white_36dp = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int ic_camera_alt_white_36dp = 2130837636;
+			public const int ic_brush_black_36dp = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int ic_camera_black_36dp = 2130837637;
+			public const int ic_brush_grey600_36dp = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int ic_camera_front_black_36dp = 2130837638;
+			public const int ic_brush_white_36dp = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int ic_camera_front_grey600_36dp = 2130837639;
+			public const int ic_camera_alt_black_36dp = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int ic_camera_front_white_36dp = 2130837640;
+			public const int ic_camera_alt_grey600_36dp = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int ic_camera_grey600_36dp = 2130837641;
+			public const int ic_camera_alt_white_36dp = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int ic_camera_rear_black_36dp = 2130837642;
+			public const int ic_camera_black_36dp = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int ic_camera_rear_grey600_36dp = 2130837643;
+			public const int ic_camera_front_black_36dp = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int ic_camera_rear_white_36dp = 2130837644;
+			public const int ic_camera_front_grey600_36dp = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int ic_camera_roll_black_36dp = 2130837645;
+			public const int ic_camera_front_white_36dp = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int ic_camera_roll_grey600_36dp = 2130837646;
+			public const int ic_camera_grey600_36dp = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int ic_camera_roll_white_36dp = 2130837647;
+			public const int ic_camera_rear_black_36dp = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int ic_camera_white_36dp = 2130837648;
+			public const int ic_camera_rear_grey600_36dp = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int ic_cancel_black_36dp = 2130837649;
+			public const int ic_camera_rear_white_36dp = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int ic_cancel_grey600_36dp = 2130837650;
+			public const int ic_camera_roll_black_36dp = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int ic_cancel_white_36dp = 2130837651;
+			public const int ic_camera_roll_grey600_36dp = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int ic_center_focus_strong_black_36dp = 2130837652;
+			public const int ic_camera_roll_white_36dp = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int ic_center_focus_strong_grey600_36dp = 2130837653;
+			public const int ic_camera_white_36dp = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int ic_center_focus_strong_white_36dp = 2130837654;
+			public const int ic_cancel_black_36dp = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int ic_center_focus_weak_black_36dp = 2130837655;
+			public const int ic_cancel_grey600_36dp = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int ic_center_focus_weak_grey600_36dp = 2130837656;
+			public const int ic_cancel_white_36dp = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int ic_center_focus_weak_white_36dp = 2130837657;
+			public const int ic_center_focus_strong_black_36dp = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int ic_check_black_36dp = 2130837658;
+			public const int ic_center_focus_strong_grey600_36dp = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int ic_check_grey600_36dp = 2130837659;
+			public const int ic_center_focus_strong_white_36dp = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int ic_check_white_36dp = 2130837660;
+			public const int ic_center_focus_weak_black_36dp = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int ic_chevron_left_black_36dp = 2130837661;
+			public const int ic_center_focus_weak_grey600_36dp = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int ic_chevron_left_grey600_36dp = 2130837662;
+			public const int ic_center_focus_weak_white_36dp = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int ic_chevron_left_white_36dp = 2130837663;
+			public const int ic_check_black_36dp = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int ic_chevron_right_black_36dp = 2130837664;
+			public const int ic_check_grey600_36dp = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int ic_chevron_right_grey600_36dp = 2130837665;
+			public const int ic_check_white_36dp = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int ic_chevron_right_white_36dp = 2130837666;
+			public const int ic_chevron_left_black_36dp = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int ic_close_black_36dp = 2130837667;
+			public const int ic_chevron_left_grey600_36dp = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int ic_close_grey600_36dp = 2130837668;
+			public const int ic_chevron_left_white_36dp = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int ic_close_white_36dp = 2130837669;
+			public const int ic_chevron_right_black_36dp = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int ic_collections_black_36dp = 2130837670;
+			public const int ic_chevron_right_grey600_36dp = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int ic_collections_grey600_36dp = 2130837671;
+			public const int ic_chevron_right_white_36dp = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int ic_collections_white_36dp = 2130837672;
+			public const int ic_close_black_36dp = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int ic_color_lens_black_36dp = 2130837673;
+			public const int ic_close_grey600_36dp = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int ic_color_lens_grey600_36dp = 2130837674;
+			public const int ic_close_white_36dp = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ic_color_lens_white_36dp = 2130837675;
+			public const int ic_collections_black_36dp = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int ic_colorize_black_36dp = 2130837676;
+			public const int ic_collections_grey600_36dp = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int ic_colorize_grey600_36dp = 2130837677;
+			public const int ic_collections_white_36dp = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int ic_colorize_white_36dp = 2130837678;
+			public const int ic_color_lens_black_36dp = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int ic_compare_black_36dp = 2130837679;
+			public const int ic_color_lens_grey600_36dp = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int ic_compare_grey600_36dp = 2130837680;
+			public const int ic_color_lens_white_36dp = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int ic_compare_white_36dp = 2130837681;
+			public const int ic_colorize_black_36dp = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int ic_control_point_black_36dp = 2130837682;
+			public const int ic_colorize_grey600_36dp = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int ic_control_point_duplicate_black_36dp = 2130837683;
+			public const int ic_colorize_white_36dp = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int ic_control_point_duplicate_grey600_36dp = 2130837684;
+			public const int ic_compare_black_36dp = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int ic_control_point_duplicate_white_36dp = 2130837685;
+			public const int ic_compare_grey600_36dp = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int ic_control_point_grey600_36dp = 2130837686;
+			public const int ic_compare_white_36dp = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int ic_control_point_white_36dp = 2130837687;
+			public const int ic_control_point_black_36dp = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int ic_crop_16_9_black_36dp = 2130837688;
+			public const int ic_control_point_duplicate_black_36dp = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int ic_crop_16_9_grey600_36dp = 2130837689;
+			public const int ic_control_point_duplicate_grey600_36dp = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int ic_crop_16_9_white_36dp = 2130837690;
+			public const int ic_control_point_duplicate_white_36dp = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int ic_crop_3_2_black_36dp = 2130837691;
+			public const int ic_control_point_grey600_36dp = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int ic_crop_3_2_grey600_36dp = 2130837692;
+			public const int ic_control_point_white_36dp = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int ic_crop_3_2_white_36dp = 2130837693;
+			public const int ic_crop_16_9_black_36dp = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int ic_crop_5_4_black_36dp = 2130837694;
+			public const int ic_crop_16_9_grey600_36dp = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int ic_crop_5_4_grey600_36dp = 2130837695;
+			public const int ic_crop_16_9_white_36dp = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int ic_crop_5_4_white_36dp = 2130837696;
+			public const int ic_crop_3_2_black_36dp = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int ic_crop_7_5_black_36dp = 2130837697;
+			public const int ic_crop_3_2_grey600_36dp = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int ic_crop_7_5_grey600_36dp = 2130837698;
+			public const int ic_crop_3_2_white_36dp = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int ic_crop_7_5_white_36dp = 2130837699;
+			public const int ic_crop_5_4_black_36dp = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int ic_crop_black_36dp = 2130837700;
+			public const int ic_crop_5_4_grey600_36dp = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int ic_crop_din_black_36dp = 2130837701;
+			public const int ic_crop_5_4_white_36dp = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int ic_crop_din_grey600_36dp = 2130837702;
+			public const int ic_crop_7_5_black_36dp = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int ic_crop_din_white_36dp = 2130837703;
+			public const int ic_crop_7_5_grey600_36dp = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int ic_crop_free_black_36dp = 2130837704;
+			public const int ic_crop_7_5_white_36dp = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int ic_crop_free_grey600_36dp = 2130837705;
+			public const int ic_crop_black_36dp = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int ic_crop_free_white_36dp = 2130837706;
+			public const int ic_crop_din_black_36dp = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int ic_crop_grey600_36dp = 2130837707;
+			public const int ic_crop_din_grey600_36dp = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int ic_crop_landscape_black_36dp = 2130837708;
+			public const int ic_crop_din_white_36dp = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int ic_crop_landscape_grey600_36dp = 2130837709;
+			public const int ic_crop_free_black_36dp = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int ic_crop_landscape_white_36dp = 2130837710;
+			public const int ic_crop_free_grey600_36dp = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int ic_crop_original_black_36dp = 2130837711;
+			public const int ic_crop_free_white_36dp = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int ic_crop_original_grey600_36dp = 2130837712;
+			public const int ic_crop_grey600_36dp = 2130837712;
 			
 			// aapt resource value: 0x7f0200d1
-			public const int ic_crop_original_white_36dp = 2130837713;
+			public const int ic_crop_landscape_black_36dp = 2130837713;
 			
 			// aapt resource value: 0x7f0200d2
-			public const int ic_crop_portrait_black_36dp = 2130837714;
+			public const int ic_crop_landscape_grey600_36dp = 2130837714;
 			
 			// aapt resource value: 0x7f0200d3
-			public const int ic_crop_portrait_grey600_36dp = 2130837715;
+			public const int ic_crop_landscape_white_36dp = 2130837715;
 			
 			// aapt resource value: 0x7f0200d4
-			public const int ic_crop_portrait_white_36dp = 2130837716;
+			public const int ic_crop_original_black_36dp = 2130837716;
 			
 			// aapt resource value: 0x7f0200d5
-			public const int ic_crop_square_black_36dp = 2130837717;
+			public const int ic_crop_original_grey600_36dp = 2130837717;
 			
 			// aapt resource value: 0x7f0200d6
-			public const int ic_crop_square_grey600_36dp = 2130837718;
+			public const int ic_crop_original_white_36dp = 2130837718;
 			
 			// aapt resource value: 0x7f0200d7
-			public const int ic_crop_square_white_36dp = 2130837719;
+			public const int ic_crop_portrait_black_36dp = 2130837719;
 			
 			// aapt resource value: 0x7f0200d8
-			public const int ic_crop_white_36dp = 2130837720;
+			public const int ic_crop_portrait_grey600_36dp = 2130837720;
 			
 			// aapt resource value: 0x7f0200d9
-			public const int ic_dehaze_black_36dp = 2130837721;
+			public const int ic_crop_portrait_white_36dp = 2130837721;
 			
 			// aapt resource value: 0x7f0200da
-			public const int ic_dehaze_grey600_36dp = 2130837722;
+			public const int ic_crop_square_black_36dp = 2130837722;
 			
 			// aapt resource value: 0x7f0200db
-			public const int ic_dehaze_white_36dp = 2130837723;
+			public const int ic_crop_square_grey600_36dp = 2130837723;
 			
 			// aapt resource value: 0x7f0200dc
-			public const int ic_delete_black_36dp = 2130837724;
+			public const int ic_crop_square_white_36dp = 2130837724;
 			
 			// aapt resource value: 0x7f0200dd
-			public const int ic_delete_grey600_36dp = 2130837725;
+			public const int ic_crop_white_36dp = 2130837725;
 			
 			// aapt resource value: 0x7f0200de
-			public const int ic_delete_white_36dp = 2130837726;
+			public const int ic_dehaze_black_36dp = 2130837726;
 			
 			// aapt resource value: 0x7f0200df
-			public const int ic_details_black_36dp = 2130837727;
+			public const int ic_dehaze_grey600_36dp = 2130837727;
 			
 			// aapt resource value: 0x7f0200e0
-			public const int ic_details_grey600_36dp = 2130837728;
+			public const int ic_dehaze_white_36dp = 2130837728;
 			
 			// aapt resource value: 0x7f0200e1
-			public const int ic_details_white_36dp = 2130837729;
+			public const int ic_delete_black_36dp = 2130837729;
 			
 			// aapt resource value: 0x7f0200e2
-			public const int ic_dns_black_36dp = 2130837730;
+			public const int ic_delete_grey600_36dp = 2130837730;
 			
 			// aapt resource value: 0x7f0200e3
-			public const int ic_dns_grey600_36dp = 2130837731;
+			public const int ic_delete_white_36dp = 2130837731;
 			
 			// aapt resource value: 0x7f0200e4
-			public const int ic_dns_white_36dp = 2130837732;
+			public const int ic_details_black_36dp = 2130837732;
 			
 			// aapt resource value: 0x7f0200e5
-			public const int ic_edit_black_36dp = 2130837733;
+			public const int ic_details_grey600_36dp = 2130837733;
 			
 			// aapt resource value: 0x7f0200e6
-			public const int ic_edit_grey600_36dp = 2130837734;
+			public const int ic_details_white_36dp = 2130837734;
 			
 			// aapt resource value: 0x7f0200e7
-			public const int ic_edit_white_36dp = 2130837735;
+			public const int ic_dns_black_36dp = 2130837735;
 			
 			// aapt resource value: 0x7f0200e8
-			public const int ic_error_circle = 2130837736;
+			public const int ic_dns_grey600_36dp = 2130837736;
 			
 			// aapt resource value: 0x7f0200e9
-			public const int ic_expand_less_black_36dp = 2130837737;
+			public const int ic_dns_white_36dp = 2130837737;
 			
 			// aapt resource value: 0x7f0200ea
-			public const int ic_expand_less_grey600_36dp = 2130837738;
+			public const int ic_edit_black_36dp = 2130837738;
 			
 			// aapt resource value: 0x7f0200eb
-			public const int ic_expand_less_white_36dp = 2130837739;
+			public const int ic_edit_grey600_36dp = 2130837739;
 			
 			// aapt resource value: 0x7f0200ec
-			public const int ic_expand_more_black_36dp = 2130837740;
+			public const int ic_edit_white_36dp = 2130837740;
 			
 			// aapt resource value: 0x7f0200ed
-			public const int ic_expand_more_grey600_36dp = 2130837741;
+			public const int ic_error_circle = 2130837741;
 			
 			// aapt resource value: 0x7f0200ee
-			public const int ic_expand_more_white_36dp = 2130837742;
+			public const int ic_expand_less_black_36dp = 2130837742;
 			
 			// aapt resource value: 0x7f0200ef
-			public const int ic_exposure_black_36dp = 2130837743;
+			public const int ic_expand_less_grey600_36dp = 2130837743;
 			
 			// aapt resource value: 0x7f0200f0
-			public const int ic_exposure_grey600_36dp = 2130837744;
+			public const int ic_expand_less_white_36dp = 2130837744;
 			
 			// aapt resource value: 0x7f0200f1
-			public const int ic_exposure_minus_1_black_36dp = 2130837745;
+			public const int ic_expand_more_black_36dp = 2130837745;
 			
 			// aapt resource value: 0x7f0200f2
-			public const int ic_exposure_minus_1_grey600_36dp = 2130837746;
+			public const int ic_expand_more_grey600_36dp = 2130837746;
 			
 			// aapt resource value: 0x7f0200f3
-			public const int ic_exposure_minus_1_white_36dp = 2130837747;
+			public const int ic_expand_more_white_36dp = 2130837747;
 			
 			// aapt resource value: 0x7f0200f4
-			public const int ic_exposure_minus_2_black_36dp = 2130837748;
+			public const int ic_exposure_black_36dp = 2130837748;
 			
 			// aapt resource value: 0x7f0200f5
-			public const int ic_exposure_minus_2_grey600_36dp = 2130837749;
+			public const int ic_exposure_grey600_36dp = 2130837749;
 			
 			// aapt resource value: 0x7f0200f6
-			public const int ic_exposure_minus_2_white_36dp = 2130837750;
+			public const int ic_exposure_minus_1_black_36dp = 2130837750;
 			
 			// aapt resource value: 0x7f0200f7
-			public const int ic_exposure_plus_1_black_36dp = 2130837751;
+			public const int ic_exposure_minus_1_grey600_36dp = 2130837751;
 			
 			// aapt resource value: 0x7f0200f8
-			public const int ic_exposure_plus_1_grey600_36dp = 2130837752;
+			public const int ic_exposure_minus_1_white_36dp = 2130837752;
 			
 			// aapt resource value: 0x7f0200f9
-			public const int ic_exposure_plus_1_white_36dp = 2130837753;
+			public const int ic_exposure_minus_2_black_36dp = 2130837753;
 			
 			// aapt resource value: 0x7f0200fa
-			public const int ic_exposure_plus_2_black_36dp = 2130837754;
+			public const int ic_exposure_minus_2_grey600_36dp = 2130837754;
 			
 			// aapt resource value: 0x7f0200fb
-			public const int ic_exposure_plus_2_grey600_36dp = 2130837755;
+			public const int ic_exposure_minus_2_white_36dp = 2130837755;
 			
 			// aapt resource value: 0x7f0200fc
-			public const int ic_exposure_plus_2_white_36dp = 2130837756;
+			public const int ic_exposure_plus_1_black_36dp = 2130837756;
 			
 			// aapt resource value: 0x7f0200fd
-			public const int ic_exposure_white_36dp = 2130837757;
+			public const int ic_exposure_plus_1_grey600_36dp = 2130837757;
 			
 			// aapt resource value: 0x7f0200fe
-			public const int ic_exposure_zero_black_36dp = 2130837758;
+			public const int ic_exposure_plus_1_white_36dp = 2130837758;
 			
 			// aapt resource value: 0x7f0200ff
-			public const int ic_exposure_zero_grey600_36dp = 2130837759;
+			public const int ic_exposure_plus_2_black_36dp = 2130837759;
 			
 			// aapt resource value: 0x7f020100
-			public const int ic_exposure_zero_white_36dp = 2130837760;
+			public const int ic_exposure_plus_2_grey600_36dp = 2130837760;
 			
 			// aapt resource value: 0x7f020101
-			public const int ic_extension_black_36dp = 2130837761;
+			public const int ic_exposure_plus_2_white_36dp = 2130837761;
 			
 			// aapt resource value: 0x7f020102
-			public const int ic_extension_grey600_36dp = 2130837762;
+			public const int ic_exposure_white_36dp = 2130837762;
 			
 			// aapt resource value: 0x7f020103
-			public const int ic_extension_white_36dp = 2130837763;
+			public const int ic_exposure_zero_black_36dp = 2130837763;
 			
 			// aapt resource value: 0x7f020104
-			public const int ic_favorite_black_36dp = 2130837764;
+			public const int ic_exposure_zero_grey600_36dp = 2130837764;
 			
 			// aapt resource value: 0x7f020105
-			public const int ic_favorite_grey600_36dp = 2130837765;
+			public const int ic_exposure_zero_white_36dp = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int ic_favorite_outline_black_36dp = 2130837766;
+			public const int ic_extension_black_36dp = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int ic_favorite_outline_grey600_36dp = 2130837767;
+			public const int ic_extension_grey600_36dp = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int ic_favorite_outline_white_36dp = 2130837768;
+			public const int ic_extension_white_36dp = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int ic_favorite_white_36dp = 2130837769;
+			public const int ic_favorite_black_36dp = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int ic_filter_1_black_36dp = 2130837770;
+			public const int ic_favorite_grey600_36dp = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int ic_filter_1_grey600_36dp = 2130837771;
+			public const int ic_favorite_outline_black_36dp = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int ic_filter_1_white_36dp = 2130837772;
+			public const int ic_favorite_outline_grey600_36dp = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int ic_filter_2_black_36dp = 2130837773;
+			public const int ic_favorite_outline_white_36dp = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int ic_filter_2_grey600_36dp = 2130837774;
+			public const int ic_favorite_white_36dp = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int ic_filter_2_white_36dp = 2130837775;
+			public const int ic_filter_1_black_36dp = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int ic_filter_3_black_36dp = 2130837776;
+			public const int ic_filter_1_grey600_36dp = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int ic_filter_3_grey600_36dp = 2130837777;
+			public const int ic_filter_1_white_36dp = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int ic_filter_3_white_36dp = 2130837778;
+			public const int ic_filter_2_black_36dp = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int ic_filter_4_black_36dp = 2130837779;
+			public const int ic_filter_2_grey600_36dp = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int ic_filter_4_grey600_36dp = 2130837780;
+			public const int ic_filter_2_white_36dp = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int ic_filter_4_white_36dp = 2130837781;
+			public const int ic_filter_3_black_36dp = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int ic_filter_5_black_36dp = 2130837782;
+			public const int ic_filter_3_grey600_36dp = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int ic_filter_5_grey600_36dp = 2130837783;
+			public const int ic_filter_3_white_36dp = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int ic_filter_5_white_36dp = 2130837784;
+			public const int ic_filter_4_black_36dp = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int ic_filter_6_black_36dp = 2130837785;
+			public const int ic_filter_4_grey600_36dp = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int ic_filter_6_grey600_36dp = 2130837786;
+			public const int ic_filter_4_white_36dp = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int ic_filter_6_white_36dp = 2130837787;
+			public const int ic_filter_5_black_36dp = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int ic_filter_7_black_36dp = 2130837788;
+			public const int ic_filter_5_grey600_36dp = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int ic_filter_7_grey600_36dp = 2130837789;
+			public const int ic_filter_5_white_36dp = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int ic_filter_7_white_36dp = 2130837790;
+			public const int ic_filter_6_black_36dp = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int ic_filter_8_black_36dp = 2130837791;
+			public const int ic_filter_6_grey600_36dp = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int ic_filter_8_grey600_36dp = 2130837792;
+			public const int ic_filter_6_white_36dp = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int ic_filter_8_white_36dp = 2130837793;
+			public const int ic_filter_7_black_36dp = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int ic_filter_9_black_36dp = 2130837794;
+			public const int ic_filter_7_grey600_36dp = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int ic_filter_9_grey600_36dp = 2130837795;
+			public const int ic_filter_7_white_36dp = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int ic_filter_9_plus_black_36dp = 2130837796;
+			public const int ic_filter_8_black_36dp = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int ic_filter_9_plus_grey600_36dp = 2130837797;
+			public const int ic_filter_8_grey600_36dp = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int ic_filter_9_plus_white_36dp = 2130837798;
+			public const int ic_filter_8_white_36dp = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int ic_filter_9_white_36dp = 2130837799;
+			public const int ic_filter_9_black_36dp = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int ic_filter_b_and_w_black_36dp = 2130837800;
+			public const int ic_filter_9_grey600_36dp = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int ic_filter_b_and_w_grey600_36dp = 2130837801;
+			public const int ic_filter_9_plus_black_36dp = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int ic_filter_b_and_w_white_36dp = 2130837802;
+			public const int ic_filter_9_plus_grey600_36dp = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int ic_filter_black_36dp = 2130837803;
+			public const int ic_filter_9_plus_white_36dp = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
-			public const int ic_filter_center_focus_black_36dp = 2130837804;
+			public const int ic_filter_9_white_36dp = 2130837804;
 			
 			// aapt resource value: 0x7f02012d
-			public const int ic_filter_center_focus_grey600_36dp = 2130837805;
+			public const int ic_filter_b_and_w_black_36dp = 2130837805;
 			
 			// aapt resource value: 0x7f02012e
-			public const int ic_filter_center_focus_white_36dp = 2130837806;
+			public const int ic_filter_b_and_w_grey600_36dp = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-			public const int ic_filter_drama_black_36dp = 2130837807;
+			public const int ic_filter_b_and_w_white_36dp = 2130837807;
 			
 			// aapt resource value: 0x7f020130
-			public const int ic_filter_drama_grey600_36dp = 2130837808;
+			public const int ic_filter_black_36dp = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int ic_filter_drama_white_36dp = 2130837809;
+			public const int ic_filter_center_focus_black_36dp = 2130837809;
 			
 			// aapt resource value: 0x7f020132
-			public const int ic_filter_frames_black_36dp = 2130837810;
+			public const int ic_filter_center_focus_grey600_36dp = 2130837810;
 			
 			// aapt resource value: 0x7f020133
-			public const int ic_filter_frames_grey600_36dp = 2130837811;
+			public const int ic_filter_center_focus_white_36dp = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int ic_filter_frames_white_36dp = 2130837812;
+			public const int ic_filter_drama_black_36dp = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int ic_filter_grey600_36dp = 2130837813;
+			public const int ic_filter_drama_grey600_36dp = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int ic_filter_hdr_black_36dp = 2130837814;
+			public const int ic_filter_drama_white_36dp = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int ic_filter_hdr_grey600_36dp = 2130837815;
+			public const int ic_filter_frames_black_36dp = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int ic_filter_hdr_white_36dp = 2130837816;
+			public const int ic_filter_frames_grey600_36dp = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int ic_filter_none_black_36dp = 2130837817;
+			public const int ic_filter_frames_white_36dp = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int ic_filter_none_grey600_36dp = 2130837818;
+			public const int ic_filter_grey600_36dp = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int ic_filter_none_white_36dp = 2130837819;
+			public const int ic_filter_hdr_black_36dp = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int ic_filter_tilt_shift_black_36dp = 2130837820;
+			public const int ic_filter_hdr_grey600_36dp = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int ic_filter_tilt_shift_grey600_36dp = 2130837821;
+			public const int ic_filter_hdr_white_36dp = 2130837821;
 			
 			// aapt resource value: 0x7f02013e
-			public const int ic_filter_tilt_shift_white_36dp = 2130837822;
+			public const int ic_filter_none_black_36dp = 2130837822;
 			
 			// aapt resource value: 0x7f02013f
-			public const int ic_filter_vintage_black_36dp = 2130837823;
+			public const int ic_filter_none_grey600_36dp = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int ic_filter_vintage_grey600_36dp = 2130837824;
+			public const int ic_filter_none_white_36dp = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int ic_filter_vintage_white_36dp = 2130837825;
+			public const int ic_filter_tilt_shift_black_36dp = 2130837825;
 			
 			// aapt resource value: 0x7f020142
-			public const int ic_filter_white_36dp = 2130837826;
+			public const int ic_filter_tilt_shift_grey600_36dp = 2130837826;
 			
 			// aapt resource value: 0x7f020143
-			public const int ic_flare_black_36dp = 2130837827;
+			public const int ic_filter_tilt_shift_white_36dp = 2130837827;
 			
 			// aapt resource value: 0x7f020144
-			public const int ic_flare_grey600_36dp = 2130837828;
+			public const int ic_filter_vintage_black_36dp = 2130837828;
 			
 			// aapt resource value: 0x7f020145
-			public const int ic_flare_white_36dp = 2130837829;
+			public const int ic_filter_vintage_grey600_36dp = 2130837829;
 			
 			// aapt resource value: 0x7f020146
-			public const int ic_flash_auto_black_36dp = 2130837830;
+			public const int ic_filter_vintage_white_36dp = 2130837830;
 			
 			// aapt resource value: 0x7f020147
-			public const int ic_flash_auto_grey600_36dp = 2130837831;
+			public const int ic_filter_white_36dp = 2130837831;
 			
 			// aapt resource value: 0x7f020148
-			public const int ic_flash_auto_white_36dp = 2130837832;
+			public const int ic_flare_black_36dp = 2130837832;
 			
 			// aapt resource value: 0x7f020149
-			public const int ic_flash_off_black_36dp = 2130837833;
+			public const int ic_flare_grey600_36dp = 2130837833;
 			
 			// aapt resource value: 0x7f02014a
-			public const int ic_flash_off_grey600_36dp = 2130837834;
+			public const int ic_flare_white_36dp = 2130837834;
 			
 			// aapt resource value: 0x7f02014b
-			public const int ic_flash_off_white_36dp = 2130837835;
+			public const int ic_flash_auto_black_36dp = 2130837835;
 			
 			// aapt resource value: 0x7f02014c
-			public const int ic_flash_on_black_36dp = 2130837836;
+			public const int ic_flash_auto_grey600_36dp = 2130837836;
 			
 			// aapt resource value: 0x7f02014d
-			public const int ic_flash_on_grey600_36dp = 2130837837;
+			public const int ic_flash_auto_white_36dp = 2130837837;
 			
 			// aapt resource value: 0x7f02014e
-			public const int ic_flash_on_white_36dp = 2130837838;
+			public const int ic_flash_off_black_36dp = 2130837838;
 			
 			// aapt resource value: 0x7f02014f
-			public const int ic_flip_black_36dp = 2130837839;
+			public const int ic_flash_off_grey600_36dp = 2130837839;
 			
 			// aapt resource value: 0x7f020150
-			public const int ic_flip_grey600_36dp = 2130837840;
+			public const int ic_flash_off_white_36dp = 2130837840;
 			
 			// aapt resource value: 0x7f020151
-			public const int ic_flip_white_36dp = 2130837841;
+			public const int ic_flash_on_black_36dp = 2130837841;
 			
 			// aapt resource value: 0x7f020152
-			public const int ic_format_list_bulleted_black_36dp = 2130837842;
+			public const int ic_flash_on_grey600_36dp = 2130837842;
 			
 			// aapt resource value: 0x7f020153
-			public const int ic_format_list_bulleted_grey600_36dp = 2130837843;
+			public const int ic_flash_on_white_36dp = 2130837843;
 			
 			// aapt resource value: 0x7f020154
-			public const int ic_format_list_bulleted_white_36dp = 2130837844;
+			public const int ic_flip_black_36dp = 2130837844;
 			
 			// aapt resource value: 0x7f020155
-			public const int ic_fullscreen_black_36dp = 2130837845;
+			public const int ic_flip_grey600_36dp = 2130837845;
 			
 			// aapt resource value: 0x7f020156
-			public const int ic_fullscreen_exit_black_36dp = 2130837846;
+			public const int ic_flip_white_36dp = 2130837846;
 			
 			// aapt resource value: 0x7f020157
-			public const int ic_fullscreen_exit_grey600_36dp = 2130837847;
+			public const int ic_format_list_bulleted_black_36dp = 2130837847;
 			
 			// aapt resource value: 0x7f020158
-			public const int ic_fullscreen_exit_white_36dp = 2130837848;
+			public const int ic_format_list_bulleted_grey600_36dp = 2130837848;
 			
 			// aapt resource value: 0x7f020159
-			public const int ic_fullscreen_grey600_36dp = 2130837849;
+			public const int ic_format_list_bulleted_white_36dp = 2130837849;
 			
 			// aapt resource value: 0x7f02015a
-			public const int ic_fullscreen_white_36dp = 2130837850;
+			public const int ic_fullscreen_black_36dp = 2130837850;
 			
 			// aapt resource value: 0x7f02015b
-			public const int ic_gradient_black_36dp = 2130837851;
+			public const int ic_fullscreen_exit_black_36dp = 2130837851;
 			
 			// aapt resource value: 0x7f02015c
-			public const int ic_gradient_grey600_36dp = 2130837852;
+			public const int ic_fullscreen_exit_grey600_36dp = 2130837852;
 			
 			// aapt resource value: 0x7f02015d
-			public const int ic_gradient_white_36dp = 2130837853;
+			public const int ic_fullscreen_exit_white_36dp = 2130837853;
 			
 			// aapt resource value: 0x7f02015e
-			public const int ic_grain_black_36dp = 2130837854;
+			public const int ic_fullscreen_grey600_36dp = 2130837854;
 			
 			// aapt resource value: 0x7f02015f
-			public const int ic_grain_grey600_36dp = 2130837855;
+			public const int ic_fullscreen_white_36dp = 2130837855;
 			
 			// aapt resource value: 0x7f020160
-			public const int ic_grain_white_36dp = 2130837856;
+			public const int ic_gradient_black_36dp = 2130837856;
 			
 			// aapt resource value: 0x7f020161
-			public const int ic_grid_off_black_36dp = 2130837857;
+			public const int ic_gradient_grey600_36dp = 2130837857;
 			
 			// aapt resource value: 0x7f020162
-			public const int ic_grid_off_grey600_36dp = 2130837858;
+			public const int ic_gradient_white_36dp = 2130837858;
 			
 			// aapt resource value: 0x7f020163
-			public const int ic_grid_off_white_36dp = 2130837859;
+			public const int ic_grain_black_36dp = 2130837859;
 			
 			// aapt resource value: 0x7f020164
-			public const int ic_grid_on_black_36dp = 2130837860;
+			public const int ic_grain_grey600_36dp = 2130837860;
 			
 			// aapt resource value: 0x7f020165
-			public const int ic_grid_on_grey600_36dp = 2130837861;
+			public const int ic_grain_white_36dp = 2130837861;
 			
 			// aapt resource value: 0x7f020166
-			public const int ic_grid_on_white_36dp = 2130837862;
+			public const int ic_grid_off_black_36dp = 2130837862;
 			
 			// aapt resource value: 0x7f020167
-			public const int ic_hdr_off_black_36dp = 2130837863;
+			public const int ic_grid_off_grey600_36dp = 2130837863;
 			
 			// aapt resource value: 0x7f020168
-			public const int ic_hdr_off_grey600_36dp = 2130837864;
+			public const int ic_grid_off_white_36dp = 2130837864;
 			
 			// aapt resource value: 0x7f020169
-			public const int ic_hdr_off_white_36dp = 2130837865;
+			public const int ic_grid_on_black_36dp = 2130837865;
 			
 			// aapt resource value: 0x7f02016a
-			public const int ic_hdr_on_black_36dp = 2130837866;
+			public const int ic_grid_on_grey600_36dp = 2130837866;
 			
 			// aapt resource value: 0x7f02016b
-			public const int ic_hdr_on_grey600_36dp = 2130837867;
+			public const int ic_grid_on_white_36dp = 2130837867;
 			
 			// aapt resource value: 0x7f02016c
-			public const int ic_hdr_on_white_36dp = 2130837868;
+			public const int ic_hdr_off_black_36dp = 2130837868;
 			
 			// aapt resource value: 0x7f02016d
-			public const int ic_hdr_strong_black_36dp = 2130837869;
+			public const int ic_hdr_off_grey600_36dp = 2130837869;
 			
 			// aapt resource value: 0x7f02016e
-			public const int ic_hdr_strong_grey600_36dp = 2130837870;
+			public const int ic_hdr_off_white_36dp = 2130837870;
 			
 			// aapt resource value: 0x7f02016f
-			public const int ic_hdr_strong_white_36dp = 2130837871;
+			public const int ic_hdr_on_black_36dp = 2130837871;
 			
 			// aapt resource value: 0x7f020170
-			public const int ic_hdr_weak_black_36dp = 2130837872;
+			public const int ic_hdr_on_grey600_36dp = 2130837872;
 			
 			// aapt resource value: 0x7f020171
-			public const int ic_hdr_weak_grey600_36dp = 2130837873;
+			public const int ic_hdr_on_white_36dp = 2130837873;
 			
 			// aapt resource value: 0x7f020172
-			public const int ic_hdr_weak_white_36dp = 2130837874;
+			public const int ic_hdr_strong_black_36dp = 2130837874;
 			
 			// aapt resource value: 0x7f020173
-			public const int ic_healing_black_36dp = 2130837875;
+			public const int ic_hdr_strong_grey600_36dp = 2130837875;
 			
 			// aapt resource value: 0x7f020174
-			public const int ic_healing_grey600_36dp = 2130837876;
+			public const int ic_hdr_strong_white_36dp = 2130837876;
 			
 			// aapt resource value: 0x7f020175
-			public const int ic_healing_white_36dp = 2130837877;
+			public const int ic_hdr_weak_black_36dp = 2130837877;
 			
 			// aapt resource value: 0x7f020176
-			public const int ic_image_aspect_ratio_black_36dp = 2130837878;
+			public const int ic_hdr_weak_grey600_36dp = 2130837878;
 			
 			// aapt resource value: 0x7f020177
-			public const int ic_image_aspect_ratio_grey600_36dp = 2130837879;
+			public const int ic_hdr_weak_white_36dp = 2130837879;
 			
 			// aapt resource value: 0x7f020178
-			public const int ic_image_aspect_ratio_white_36dp = 2130837880;
+			public const int ic_healing_black_36dp = 2130837880;
 			
 			// aapt resource value: 0x7f020179
-			public const int ic_image_black_36dp = 2130837881;
+			public const int ic_healing_grey600_36dp = 2130837881;
 			
 			// aapt resource value: 0x7f02017a
-			public const int ic_image_grey600_36dp = 2130837882;
+			public const int ic_healing_white_36dp = 2130837882;
 			
 			// aapt resource value: 0x7f02017b
-			public const int ic_image_white_36dp = 2130837883;
+			public const int ic_image_aspect_ratio_black_36dp = 2130837883;
 			
 			// aapt resource value: 0x7f02017c
-			public const int ic_iso_black_36dp = 2130837884;
+			public const int ic_image_aspect_ratio_grey600_36dp = 2130837884;
 			
 			// aapt resource value: 0x7f02017d
-			public const int ic_iso_grey600_36dp = 2130837885;
+			public const int ic_image_aspect_ratio_white_36dp = 2130837885;
 			
 			// aapt resource value: 0x7f02017e
-			public const int ic_iso_white_36dp = 2130837886;
+			public const int ic_image_black_36dp = 2130837886;
 			
 			// aapt resource value: 0x7f02017f
-			public const int ic_landscape_black_36dp = 2130837887;
+			public const int ic_image_grey600_36dp = 2130837887;
 			
 			// aapt resource value: 0x7f020180
-			public const int ic_landscape_grey600_36dp = 2130837888;
+			public const int ic_image_white_36dp = 2130837888;
 			
 			// aapt resource value: 0x7f020181
-			public const int ic_landscape_white_36dp = 2130837889;
+			public const int ic_iso_black_36dp = 2130837889;
 			
 			// aapt resource value: 0x7f020182
-			public const int ic_leak_add_black_36dp = 2130837890;
+			public const int ic_iso_grey600_36dp = 2130837890;
 			
 			// aapt resource value: 0x7f020183
-			public const int ic_leak_add_grey600_36dp = 2130837891;
+			public const int ic_iso_white_36dp = 2130837891;
 			
 			// aapt resource value: 0x7f020184
-			public const int ic_leak_add_white_36dp = 2130837892;
+			public const int ic_landscape_black_36dp = 2130837892;
 			
 			// aapt resource value: 0x7f020185
-			public const int ic_leak_remove_black_36dp = 2130837893;
+			public const int ic_landscape_grey600_36dp = 2130837893;
 			
 			// aapt resource value: 0x7f020186
-			public const int ic_leak_remove_grey600_36dp = 2130837894;
+			public const int ic_landscape_white_36dp = 2130837894;
 			
 			// aapt resource value: 0x7f020187
-			public const int ic_leak_remove_white_36dp = 2130837895;
+			public const int ic_leak_add_black_36dp = 2130837895;
 			
 			// aapt resource value: 0x7f020188
-			public const int ic_lens_grey_36dp = 2130837896;
+			public const int ic_leak_add_grey600_36dp = 2130837896;
 			
 			// aapt resource value: 0x7f020189
-			public const int ic_lens_orange600_36dp = 2130837897;
+			public const int ic_leak_add_white_36dp = 2130837897;
 			
 			// aapt resource value: 0x7f02018a
-			public const int ic_looks_3_black_36dp = 2130837898;
+			public const int ic_leak_remove_black_36dp = 2130837898;
 			
 			// aapt resource value: 0x7f02018b
-			public const int ic_looks_3_grey600_36dp = 2130837899;
+			public const int ic_leak_remove_grey600_36dp = 2130837899;
 			
 			// aapt resource value: 0x7f02018c
-			public const int ic_looks_3_white_36dp = 2130837900;
+			public const int ic_leak_remove_white_36dp = 2130837900;
 			
 			// aapt resource value: 0x7f02018d
-			public const int ic_looks_4_black_36dp = 2130837901;
+			public const int ic_lens_grey_36dp = 2130837901;
 			
 			// aapt resource value: 0x7f02018e
-			public const int ic_looks_4_grey600_36dp = 2130837902;
+			public const int ic_lens_orange600_36dp = 2130837902;
 			
 			// aapt resource value: 0x7f02018f
-			public const int ic_looks_4_white_36dp = 2130837903;
+			public const int ic_looks_3_black_36dp = 2130837903;
 			
 			// aapt resource value: 0x7f020190
-			public const int ic_looks_5_black_36dp = 2130837904;
+			public const int ic_looks_3_grey600_36dp = 2130837904;
 			
 			// aapt resource value: 0x7f020191
-			public const int ic_looks_5_grey600_36dp = 2130837905;
+			public const int ic_looks_3_white_36dp = 2130837905;
 			
 			// aapt resource value: 0x7f020192
-			public const int ic_looks_5_white_36dp = 2130837906;
+			public const int ic_looks_4_black_36dp = 2130837906;
 			
 			// aapt resource value: 0x7f020193
-			public const int ic_looks_6_black_36dp = 2130837907;
+			public const int ic_looks_4_grey600_36dp = 2130837907;
 			
 			// aapt resource value: 0x7f020194
-			public const int ic_looks_6_grey600_36dp = 2130837908;
+			public const int ic_looks_4_white_36dp = 2130837908;
 			
 			// aapt resource value: 0x7f020195
-			public const int ic_looks_6_white_36dp = 2130837909;
+			public const int ic_looks_5_black_36dp = 2130837909;
 			
 			// aapt resource value: 0x7f020196
-			public const int ic_looks_black_36dp = 2130837910;
+			public const int ic_looks_5_grey600_36dp = 2130837910;
 			
 			// aapt resource value: 0x7f020197
-			public const int ic_looks_grey600_36dp = 2130837911;
+			public const int ic_looks_5_white_36dp = 2130837911;
 			
 			// aapt resource value: 0x7f020198
-			public const int ic_looks_one_black_36dp = 2130837912;
+			public const int ic_looks_6_black_36dp = 2130837912;
 			
 			// aapt resource value: 0x7f020199
-			public const int ic_looks_one_grey600_36dp = 2130837913;
+			public const int ic_looks_6_grey600_36dp = 2130837913;
 			
 			// aapt resource value: 0x7f02019a
-			public const int ic_looks_one_white_36dp = 2130837914;
+			public const int ic_looks_6_white_36dp = 2130837914;
 			
 			// aapt resource value: 0x7f02019b
-			public const int ic_looks_two_black_36dp = 2130837915;
+			public const int ic_looks_black_36dp = 2130837915;
 			
 			// aapt resource value: 0x7f02019c
-			public const int ic_looks_two_grey600_36dp = 2130837916;
+			public const int ic_looks_grey600_36dp = 2130837916;
 			
 			// aapt resource value: 0x7f02019d
-			public const int ic_looks_two_white_36dp = 2130837917;
+			public const int ic_looks_one_black_36dp = 2130837917;
 			
 			// aapt resource value: 0x7f02019e
-			public const int ic_looks_white_36dp = 2130837918;
+			public const int ic_looks_one_grey600_36dp = 2130837918;
 			
 			// aapt resource value: 0x7f02019f
-			public const int ic_loupe_black_36dp = 2130837919;
+			public const int ic_looks_one_white_36dp = 2130837919;
 			
 			// aapt resource value: 0x7f0201a0
-			public const int ic_loupe_grey600_36dp = 2130837920;
+			public const int ic_looks_two_black_36dp = 2130837920;
 			
 			// aapt resource value: 0x7f0201a1
-			public const int ic_loupe_white_36dp = 2130837921;
+			public const int ic_looks_two_grey600_36dp = 2130837921;
 			
 			// aapt resource value: 0x7f0201a2
-			public const int ic_menu_black_36dp = 2130837922;
+			public const int ic_looks_two_white_36dp = 2130837922;
 			
 			// aapt resource value: 0x7f0201a3
-			public const int ic_menu_grey600_36dp = 2130837923;
+			public const int ic_looks_white_36dp = 2130837923;
 			
 			// aapt resource value: 0x7f0201a4
-			public const int ic_menu_white_36dp = 2130837924;
+			public const int ic_loupe_black_36dp = 2130837924;
 			
 			// aapt resource value: 0x7f0201a5
-			public const int ic_more_horiz_black_36dp = 2130837925;
+			public const int ic_loupe_grey600_36dp = 2130837925;
 			
 			// aapt resource value: 0x7f0201a6
-			public const int ic_more_horiz_grey600_36dp = 2130837926;
+			public const int ic_loupe_white_36dp = 2130837926;
 			
 			// aapt resource value: 0x7f0201a7
-			public const int ic_more_horiz_white_36dp = 2130837927;
+			public const int ic_menu_black_36dp = 2130837927;
 			
 			// aapt resource value: 0x7f0201a8
-			public const int ic_more_vert_black_36dp = 2130837928;
+			public const int ic_menu_grey600_36dp = 2130837928;
 			
 			// aapt resource value: 0x7f0201a9
-			public const int ic_more_vert_grey600_36dp = 2130837929;
+			public const int ic_menu_white_36dp = 2130837929;
 			
 			// aapt resource value: 0x7f0201aa
-			public const int ic_more_vert_white_36dp = 2130837930;
+			public const int ic_more_horiz_black_36dp = 2130837930;
 			
 			// aapt resource value: 0x7f0201ab
-			public const int ic_movie_creation_black_36dp = 2130837931;
+			public const int ic_more_horiz_grey600_36dp = 2130837931;
 			
 			// aapt resource value: 0x7f0201ac
-			public const int ic_movie_creation_grey600_36dp = 2130837932;
+			public const int ic_more_horiz_white_36dp = 2130837932;
 			
 			// aapt resource value: 0x7f0201ad
-			public const int ic_movie_creation_white_36dp = 2130837933;
+			public const int ic_more_vert_black_36dp = 2130837933;
 			
 			// aapt resource value: 0x7f0201ae
-			public const int ic_nature_black_36dp = 2130837934;
+			public const int ic_more_vert_grey600_36dp = 2130837934;
 			
 			// aapt resource value: 0x7f0201af
-			public const int ic_nature_grey600_36dp = 2130837935;
+			public const int ic_more_vert_white_36dp = 2130837935;
 			
 			// aapt resource value: 0x7f0201b0
-			public const int ic_nature_people_black_36dp = 2130837936;
+			public const int ic_movie_creation_black_36dp = 2130837936;
 			
 			// aapt resource value: 0x7f0201b1
-			public const int ic_nature_people_grey600_36dp = 2130837937;
+			public const int ic_movie_creation_grey600_36dp = 2130837937;
 			
 			// aapt resource value: 0x7f0201b2
-			public const int ic_nature_people_white_36dp = 2130837938;
+			public const int ic_movie_creation_white_36dp = 2130837938;
 			
 			// aapt resource value: 0x7f0201b3
-			public const int ic_nature_white_36dp = 2130837939;
+			public const int ic_nature_black_36dp = 2130837939;
 			
 			// aapt resource value: 0x7f0201b4
-			public const int ic_navigate_before_black_36dp = 2130837940;
+			public const int ic_nature_grey600_36dp = 2130837940;
 			
 			// aapt resource value: 0x7f0201b5
-			public const int ic_navigate_before_grey600_36dp = 2130837941;
+			public const int ic_nature_people_black_36dp = 2130837941;
 			
 			// aapt resource value: 0x7f0201b6
-			public const int ic_navigate_before_white_36dp = 2130837942;
+			public const int ic_nature_people_grey600_36dp = 2130837942;
 			
 			// aapt resource value: 0x7f0201b7
-			public const int ic_navigate_next_black_36dp = 2130837943;
+			public const int ic_nature_people_white_36dp = 2130837943;
 			
 			// aapt resource value: 0x7f0201b8
-			public const int ic_navigate_next_grey600_36dp = 2130837944;
+			public const int ic_nature_white_36dp = 2130837944;
 			
 			// aapt resource value: 0x7f0201b9
-			public const int ic_navigate_next_white_36dp = 2130837945;
+			public const int ic_navigate_before_black_36dp = 2130837945;
 			
 			// aapt resource value: 0x7f0201ba
-			public const int ic_palette_black_36dp = 2130837946;
+			public const int ic_navigate_before_grey600_36dp = 2130837946;
 			
 			// aapt resource value: 0x7f0201bb
-			public const int ic_palette_grey600_36dp = 2130837947;
+			public const int ic_navigate_before_white_36dp = 2130837947;
 			
 			// aapt resource value: 0x7f0201bc
-			public const int ic_palette_white_36dp = 2130837948;
+			public const int ic_navigate_next_black_36dp = 2130837948;
 			
 			// aapt resource value: 0x7f0201bd
-			public const int ic_panorama_black_36dp = 2130837949;
+			public const int ic_navigate_next_grey600_36dp = 2130837949;
 			
 			// aapt resource value: 0x7f0201be
-			public const int ic_panorama_fisheye_black_36dp = 2130837950;
+			public const int ic_navigate_next_white_36dp = 2130837950;
 			
 			// aapt resource value: 0x7f0201bf
-			public const int ic_panorama_fisheye_grey600_36dp = 2130837951;
+			public const int ic_palette_black_36dp = 2130837951;
 			
 			// aapt resource value: 0x7f0201c0
-			public const int ic_panorama_fisheye_white_36dp = 2130837952;
+			public const int ic_palette_grey600_36dp = 2130837952;
 			
 			// aapt resource value: 0x7f0201c1
-			public const int ic_panorama_grey600_36dp = 2130837953;
+			public const int ic_palette_white_36dp = 2130837953;
 			
 			// aapt resource value: 0x7f0201c2
-			public const int ic_panorama_horizontal_black_36dp = 2130837954;
+			public const int ic_panorama_black_36dp = 2130837954;
 			
 			// aapt resource value: 0x7f0201c3
-			public const int ic_panorama_horizontal_grey600_36dp = 2130837955;
+			public const int ic_panorama_fisheye_black_36dp = 2130837955;
 			
 			// aapt resource value: 0x7f0201c4
-			public const int ic_panorama_horizontal_white_36dp = 2130837956;
+			public const int ic_panorama_fisheye_grey600_36dp = 2130837956;
 			
 			// aapt resource value: 0x7f0201c5
-			public const int ic_panorama_vertical_black_36dp = 2130837957;
+			public const int ic_panorama_fisheye_white_36dp = 2130837957;
 			
 			// aapt resource value: 0x7f0201c6
-			public const int ic_panorama_vertical_grey600_36dp = 2130837958;
+			public const int ic_panorama_grey600_36dp = 2130837958;
 			
 			// aapt resource value: 0x7f0201c7
-			public const int ic_panorama_vertical_white_36dp = 2130837959;
+			public const int ic_panorama_horizontal_black_36dp = 2130837959;
 			
 			// aapt resource value: 0x7f0201c8
-			public const int ic_panorama_white_36dp = 2130837960;
+			public const int ic_panorama_horizontal_grey600_36dp = 2130837960;
 			
 			// aapt resource value: 0x7f0201c9
-			public const int ic_panorama_wide_angle_black_36dp = 2130837961;
+			public const int ic_panorama_horizontal_white_36dp = 2130837961;
 			
 			// aapt resource value: 0x7f0201ca
-			public const int ic_panorama_wide_angle_grey600_36dp = 2130837962;
+			public const int ic_panorama_vertical_black_36dp = 2130837962;
 			
 			// aapt resource value: 0x7f0201cb
-			public const int ic_panorama_wide_angle_white_36dp = 2130837963;
+			public const int ic_panorama_vertical_grey600_36dp = 2130837963;
 			
 			// aapt resource value: 0x7f0201cc
-			public const int ic_photo_album_black_36dp = 2130837964;
+			public const int ic_panorama_vertical_white_36dp = 2130837964;
 			
 			// aapt resource value: 0x7f0201cd
-			public const int ic_photo_album_grey600_36dp = 2130837965;
+			public const int ic_panorama_white_36dp = 2130837965;
 			
 			// aapt resource value: 0x7f0201ce
-			public const int ic_photo_album_white_36dp = 2130837966;
+			public const int ic_panorama_wide_angle_black_36dp = 2130837966;
 			
 			// aapt resource value: 0x7f0201cf
-			public const int ic_photo_black_36dp = 2130837967;
+			public const int ic_panorama_wide_angle_grey600_36dp = 2130837967;
 			
 			// aapt resource value: 0x7f0201d0
-			public const int ic_photo_camera_black_36dp = 2130837968;
+			public const int ic_panorama_wide_angle_white_36dp = 2130837968;
 			
 			// aapt resource value: 0x7f0201d1
-			public const int ic_photo_camera_grey600_36dp = 2130837969;
+			public const int ic_photo_album_black_36dp = 2130837969;
 			
 			// aapt resource value: 0x7f0201d2
-			public const int ic_photo_camera_white_36dp = 2130837970;
+			public const int ic_photo_album_grey600_36dp = 2130837970;
 			
 			// aapt resource value: 0x7f0201d3
-			public const int ic_photo_grey600_36dp = 2130837971;
+			public const int ic_photo_album_white_36dp = 2130837971;
 			
 			// aapt resource value: 0x7f0201d4
-			public const int ic_photo_library_black_36dp = 2130837972;
+			public const int ic_photo_black_36dp = 2130837972;
 			
 			// aapt resource value: 0x7f0201d5
-			public const int ic_photo_library_grey600_36dp = 2130837973;
+			public const int ic_photo_camera_black_36dp = 2130837973;
 			
 			// aapt resource value: 0x7f0201d6
-			public const int ic_photo_library_white_36dp = 2130837974;
+			public const int ic_photo_camera_grey600_36dp = 2130837974;
 			
 			// aapt resource value: 0x7f0201d7
-			public const int ic_photo_white_36dp = 2130837975;
+			public const int ic_photo_camera_white_36dp = 2130837975;
 			
 			// aapt resource value: 0x7f0201d8
-			public const int ic_portable_wifi_off_black_36dp = 2130837976;
+			public const int ic_photo_grey600_36dp = 2130837976;
 			
 			// aapt resource value: 0x7f0201d9
-			public const int ic_portable_wifi_off_grey600_36dp = 2130837977;
+			public const int ic_photo_library_black_36dp = 2130837977;
 			
 			// aapt resource value: 0x7f0201da
-			public const int ic_portable_wifi_off_white_36dp = 2130837978;
+			public const int ic_photo_library_grey600_36dp = 2130837978;
 			
 			// aapt resource value: 0x7f0201db
-			public const int ic_portrait_black_36dp = 2130837979;
+			public const int ic_photo_library_white_36dp = 2130837979;
 			
 			// aapt resource value: 0x7f0201dc
-			public const int ic_portrait_grey600_36dp = 2130837980;
+			public const int ic_photo_white_36dp = 2130837980;
 			
 			// aapt resource value: 0x7f0201dd
-			public const int ic_portrait_white_36dp = 2130837981;
+			public const int ic_portable_wifi_off_black_36dp = 2130837981;
 			
 			// aapt resource value: 0x7f0201de
-			public const int ic_query_builder_black_36dp = 2130837982;
+			public const int ic_portable_wifi_off_grey600_36dp = 2130837982;
 			
 			// aapt resource value: 0x7f0201df
-			public const int ic_query_builder_grey600_36dp = 2130837983;
+			public const int ic_portable_wifi_off_white_36dp = 2130837983;
 			
 			// aapt resource value: 0x7f0201e0
-			public const int ic_query_builder_white_36dp = 2130837984;
+			public const int ic_portrait_black_36dp = 2130837984;
 			
 			// aapt resource value: 0x7f0201e1
-			public const int ic_refresh_black_36dp = 2130837985;
+			public const int ic_portrait_grey600_36dp = 2130837985;
 			
 			// aapt resource value: 0x7f0201e2
-			public const int ic_refresh_grey600_36dp = 2130837986;
+			public const int ic_portrait_white_36dp = 2130837986;
 			
 			// aapt resource value: 0x7f0201e3
-			public const int ic_refresh_white_36dp = 2130837987;
+			public const int ic_query_builder_black_36dp = 2130837987;
 			
 			// aapt resource value: 0x7f0201e4
-			public const int ic_remove_black_36dp = 2130837988;
+			public const int ic_query_builder_grey600_36dp = 2130837988;
 			
 			// aapt resource value: 0x7f0201e5
-			public const int ic_remove_circle_black_36dp = 2130837989;
+			public const int ic_query_builder_white_36dp = 2130837989;
 			
 			// aapt resource value: 0x7f0201e6
-			public const int ic_remove_circle_grey600_36dp = 2130837990;
+			public const int ic_refresh_black_36dp = 2130837990;
 			
 			// aapt resource value: 0x7f0201e7
-			public const int ic_remove_circle_outline_black_36dp = 2130837991;
+			public const int ic_refresh_grey600_36dp = 2130837991;
 			
 			// aapt resource value: 0x7f0201e8
-			public const int ic_remove_circle_outline_grey600_36dp = 2130837992;
+			public const int ic_refresh_white_36dp = 2130837992;
 			
 			// aapt resource value: 0x7f0201e9
-			public const int ic_remove_circle_outline_white_36dp = 2130837993;
+			public const int ic_remove_black_36dp = 2130837993;
 			
 			// aapt resource value: 0x7f0201ea
-			public const int ic_remove_circle_white_36dp = 2130837994;
+			public const int ic_remove_circle_black_36dp = 2130837994;
 			
 			// aapt resource value: 0x7f0201eb
-			public const int ic_remove_grey600_36dp = 2130837995;
+			public const int ic_remove_circle_grey600_36dp = 2130837995;
 			
 			// aapt resource value: 0x7f0201ec
-			public const int ic_remove_red_eye_black_36dp = 2130837996;
+			public const int ic_remove_circle_outline_black_36dp = 2130837996;
 			
 			// aapt resource value: 0x7f0201ed
-			public const int ic_remove_red_eye_grey600_36dp = 2130837997;
+			public const int ic_remove_circle_outline_grey600_36dp = 2130837997;
 			
 			// aapt resource value: 0x7f0201ee
-			public const int ic_remove_red_eye_white_36dp = 2130837998;
+			public const int ic_remove_circle_outline_white_36dp = 2130837998;
 			
 			// aapt resource value: 0x7f0201ef
-			public const int ic_remove_white_36dp = 2130837999;
+			public const int ic_remove_circle_white_36dp = 2130837999;
 			
 			// aapt resource value: 0x7f0201f0
-			public const int ic_rotate_left_black_36dp = 2130838000;
+			public const int ic_remove_grey600_36dp = 2130838000;
 			
 			// aapt resource value: 0x7f0201f1
-			public const int ic_rotate_left_grey600_36dp = 2130838001;
+			public const int ic_remove_red_eye_black_36dp = 2130838001;
 			
 			// aapt resource value: 0x7f0201f2
-			public const int ic_rotate_left_white_36dp = 2130838002;
+			public const int ic_remove_red_eye_grey600_36dp = 2130838002;
 			
 			// aapt resource value: 0x7f0201f3
-			public const int ic_rotate_right_black_36dp = 2130838003;
+			public const int ic_remove_red_eye_white_36dp = 2130838003;
 			
 			// aapt resource value: 0x7f0201f4
-			public const int ic_rotate_right_grey600_36dp = 2130838004;
+			public const int ic_remove_white_36dp = 2130838004;
 			
 			// aapt resource value: 0x7f0201f5
-			public const int ic_rotate_right_white_36dp = 2130838005;
+			public const int ic_rotate_left_black_36dp = 2130838005;
 			
 			// aapt resource value: 0x7f0201f6
-			public const int ic_settings_applications_black_36dp = 2130838006;
+			public const int ic_rotate_left_grey600_36dp = 2130838006;
 			
 			// aapt resource value: 0x7f0201f7
-			public const int ic_settings_applications_grey600_36dp = 2130838007;
+			public const int ic_rotate_left_white_36dp = 2130838007;
 			
 			// aapt resource value: 0x7f0201f8
-			public const int ic_settings_applications_white_36dp = 2130838008;
+			public const int ic_rotate_right_black_36dp = 2130838008;
 			
 			// aapt resource value: 0x7f0201f9
-			public const int ic_slideshow_black_36dp = 2130838009;
+			public const int ic_rotate_right_grey600_36dp = 2130838009;
 			
 			// aapt resource value: 0x7f0201fa
-			public const int ic_slideshow_grey600_36dp = 2130838010;
+			public const int ic_rotate_right_white_36dp = 2130838010;
 			
 			// aapt resource value: 0x7f0201fb
-			public const int ic_slideshow_white_36dp = 2130838011;
+			public const int ic_settings_applications_black_36dp = 2130838011;
 			
 			// aapt resource value: 0x7f0201fc
-			public const int ic_straighten_black_36dp = 2130838012;
+			public const int ic_settings_applications_grey600_36dp = 2130838012;
 			
 			// aapt resource value: 0x7f0201fd
-			public const int ic_straighten_grey600_36dp = 2130838013;
+			public const int ic_settings_applications_white_36dp = 2130838013;
 			
 			// aapt resource value: 0x7f0201fe
-			public const int ic_straighten_white_36dp = 2130838014;
+			public const int ic_slideshow_black_36dp = 2130838014;
 			
 			// aapt resource value: 0x7f0201ff
-			public const int ic_style_black_36dp = 2130838015;
+			public const int ic_slideshow_grey600_36dp = 2130838015;
 			
 			// aapt resource value: 0x7f020200
-			public const int ic_style_grey600_36dp = 2130838016;
+			public const int ic_slideshow_white_36dp = 2130838016;
 			
 			// aapt resource value: 0x7f020201
-			public const int ic_style_white_36dp = 2130838017;
+			public const int ic_straighten_black_36dp = 2130838017;
 			
 			// aapt resource value: 0x7f020202
-			public const int ic_swap_calls_black_36dp = 2130838018;
+			public const int ic_straighten_grey600_36dp = 2130838018;
 			
 			// aapt resource value: 0x7f020203
-			public const int ic_swap_calls_grey600_36dp = 2130838019;
+			public const int ic_straighten_white_36dp = 2130838019;
 			
 			// aapt resource value: 0x7f020204
-			public const int ic_swap_calls_white_36dp = 2130838020;
+			public const int ic_style_black_36dp = 2130838020;
 			
 			// aapt resource value: 0x7f020205
-			public const int ic_switch_camera_black_36dp = 2130838021;
+			public const int ic_style_grey600_36dp = 2130838021;
 			
 			// aapt resource value: 0x7f020206
-			public const int ic_switch_camera_grey600_36dp = 2130838022;
+			public const int ic_style_white_36dp = 2130838022;
 			
 			// aapt resource value: 0x7f020207
-			public const int ic_switch_camera_white_36dp = 2130838023;
+			public const int ic_swap_calls_black_36dp = 2130838023;
 			
 			// aapt resource value: 0x7f020208
-			public const int ic_switch_video_black_36dp = 2130838024;
+			public const int ic_swap_calls_grey600_36dp = 2130838024;
 			
 			// aapt resource value: 0x7f020209
-			public const int ic_switch_video_grey600_36dp = 2130838025;
+			public const int ic_swap_calls_white_36dp = 2130838025;
 			
 			// aapt resource value: 0x7f02020a
-			public const int ic_switch_video_white_36dp = 2130838026;
+			public const int ic_switch_camera_black_36dp = 2130838026;
 			
 			// aapt resource value: 0x7f02020b
-			public const int ic_tag_faces_black_36dp = 2130838027;
+			public const int ic_switch_camera_grey600_36dp = 2130838027;
 			
 			// aapt resource value: 0x7f02020c
-			public const int ic_tag_faces_grey600_36dp = 2130838028;
+			public const int ic_switch_camera_white_36dp = 2130838028;
 			
 			// aapt resource value: 0x7f02020d
-			public const int ic_tag_faces_white_36dp = 2130838029;
+			public const int ic_switch_video_black_36dp = 2130838029;
 			
 			// aapt resource value: 0x7f02020e
-			public const int ic_texture_black_36dp = 2130838030;
+			public const int ic_switch_video_grey600_36dp = 2130838030;
 			
 			// aapt resource value: 0x7f02020f
-			public const int ic_texture_grey600_36dp = 2130838031;
+			public const int ic_switch_video_white_36dp = 2130838031;
 			
 			// aapt resource value: 0x7f020210
-			public const int ic_texture_white_36dp = 2130838032;
+			public const int ic_tag_faces_black_36dp = 2130838032;
 			
 			// aapt resource value: 0x7f020211
-			public const int ic_timelapse_black_36dp = 2130838033;
+			public const int ic_tag_faces_grey600_36dp = 2130838033;
 			
 			// aapt resource value: 0x7f020212
-			public const int ic_timelapse_grey600_36dp = 2130838034;
+			public const int ic_tag_faces_white_36dp = 2130838034;
 			
 			// aapt resource value: 0x7f020213
-			public const int ic_timelapse_white_36dp = 2130838035;
+			public const int ic_texture_black_36dp = 2130838035;
 			
 			// aapt resource value: 0x7f020214
-			public const int ic_timer_10_black_36dp = 2130838036;
+			public const int ic_texture_grey600_36dp = 2130838036;
 			
 			// aapt resource value: 0x7f020215
-			public const int ic_timer_10_grey600_36dp = 2130838037;
+			public const int ic_texture_white_36dp = 2130838037;
 			
 			// aapt resource value: 0x7f020216
-			public const int ic_timer_10_white_36dp = 2130838038;
+			public const int ic_timelapse_black_36dp = 2130838038;
 			
 			// aapt resource value: 0x7f020217
-			public const int ic_timer_3_black_36dp = 2130838039;
+			public const int ic_timelapse_grey600_36dp = 2130838039;
 			
 			// aapt resource value: 0x7f020218
-			public const int ic_timer_3_grey600_36dp = 2130838040;
+			public const int ic_timelapse_white_36dp = 2130838040;
 			
 			// aapt resource value: 0x7f020219
-			public const int ic_timer_3_white_36dp = 2130838041;
+			public const int ic_timer_10_black_36dp = 2130838041;
 			
 			// aapt resource value: 0x7f02021a
-			public const int ic_timer_auto_black_36dp = 2130838042;
+			public const int ic_timer_10_grey600_36dp = 2130838042;
 			
 			// aapt resource value: 0x7f02021b
-			public const int ic_timer_auto_grey600_36dp = 2130838043;
+			public const int ic_timer_10_white_36dp = 2130838043;
 			
 			// aapt resource value: 0x7f02021c
-			public const int ic_timer_auto_white_36dp = 2130838044;
+			public const int ic_timer_3_black_36dp = 2130838044;
 			
 			// aapt resource value: 0x7f02021d
-			public const int ic_timer_black_36dp = 2130838045;
+			public const int ic_timer_3_grey600_36dp = 2130838045;
 			
 			// aapt resource value: 0x7f02021e
-			public const int ic_timer_grey600_36dp = 2130838046;
+			public const int ic_timer_3_white_36dp = 2130838046;
 			
 			// aapt resource value: 0x7f02021f
-			public const int ic_timer_off_black_36dp = 2130838047;
+			public const int ic_timer_auto_black_36dp = 2130838047;
 			
 			// aapt resource value: 0x7f020220
-			public const int ic_timer_off_grey600_36dp = 2130838048;
+			public const int ic_timer_auto_grey600_36dp = 2130838048;
 			
 			// aapt resource value: 0x7f020221
-			public const int ic_timer_off_white_36dp = 2130838049;
+			public const int ic_timer_auto_white_36dp = 2130838049;
 			
 			// aapt resource value: 0x7f020222
-			public const int ic_timer_white_36dp = 2130838050;
+			public const int ic_timer_black_36dp = 2130838050;
 			
 			// aapt resource value: 0x7f020223
-			public const int ic_tonality_black_36dp = 2130838051;
+			public const int ic_timer_grey600_36dp = 2130838051;
 			
 			// aapt resource value: 0x7f020224
-			public const int ic_tonality_grey600_36dp = 2130838052;
+			public const int ic_timer_off_black_36dp = 2130838052;
 			
 			// aapt resource value: 0x7f020225
-			public const int ic_tonality_white_36dp = 2130838053;
+			public const int ic_timer_off_grey600_36dp = 2130838053;
 			
 			// aapt resource value: 0x7f020226
-			public const int ic_transform_black_36dp = 2130838054;
+			public const int ic_timer_off_white_36dp = 2130838054;
 			
 			// aapt resource value: 0x7f020227
-			public const int ic_transform_grey600_36dp = 2130838055;
+			public const int ic_timer_white_36dp = 2130838055;
 			
 			// aapt resource value: 0x7f020228
-			public const int ic_transform_white_36dp = 2130838056;
+			public const int ic_tonality_black_36dp = 2130838056;
 			
 			// aapt resource value: 0x7f020229
-			public const int ic_tune_black_36dp = 2130838057;
+			public const int ic_tonality_grey600_36dp = 2130838057;
 			
 			// aapt resource value: 0x7f02022a
-			public const int ic_tune_grey600_36dp = 2130838058;
+			public const int ic_tonality_white_36dp = 2130838058;
 			
 			// aapt resource value: 0x7f02022b
-			public const int ic_tune_white_36dp = 2130838059;
+			public const int ic_transform_black_36dp = 2130838059;
 			
 			// aapt resource value: 0x7f02022c
-			public const int ic_unfold_less_black_36dp = 2130838060;
+			public const int ic_transform_grey600_36dp = 2130838060;
 			
 			// aapt resource value: 0x7f02022d
-			public const int ic_unfold_less_grey600_36dp = 2130838061;
+			public const int ic_transform_white_36dp = 2130838061;
 			
 			// aapt resource value: 0x7f02022e
-			public const int ic_unfold_less_white_36dp = 2130838062;
+			public const int ic_tune_black_36dp = 2130838062;
 			
 			// aapt resource value: 0x7f02022f
-			public const int ic_unfold_more_black_36dp = 2130838063;
+			public const int ic_tune_grey600_36dp = 2130838063;
 			
 			// aapt resource value: 0x7f020230
-			public const int ic_unfold_more_grey600_36dp = 2130838064;
+			public const int ic_tune_white_36dp = 2130838064;
 			
 			// aapt resource value: 0x7f020231
-			public const int ic_unfold_more_white_36dp = 2130838065;
+			public const int ic_unfold_less_black_36dp = 2130838065;
 			
 			// aapt resource value: 0x7f020232
-			public const int ic_wb_auto_black_36dp = 2130838066;
+			public const int ic_unfold_less_grey600_36dp = 2130838066;
 			
 			// aapt resource value: 0x7f020233
-			public const int ic_wb_auto_grey600_36dp = 2130838067;
+			public const int ic_unfold_less_white_36dp = 2130838067;
 			
 			// aapt resource value: 0x7f020234
-			public const int ic_wb_auto_white_36dp = 2130838068;
+			public const int ic_unfold_more_black_36dp = 2130838068;
 			
 			// aapt resource value: 0x7f020235
-			public const int ic_wb_cloudy_black_36dp = 2130838069;
+			public const int ic_unfold_more_grey600_36dp = 2130838069;
 			
 			// aapt resource value: 0x7f020236
-			public const int ic_wb_cloudy_grey600_36dp = 2130838070;
+			public const int ic_unfold_more_white_36dp = 2130838070;
 			
 			// aapt resource value: 0x7f020237
-			public const int ic_wb_cloudy_white_36dp = 2130838071;
+			public const int ic_wb_auto_black_36dp = 2130838071;
 			
 			// aapt resource value: 0x7f020238
-			public const int ic_wb_incandescent_black_36dp = 2130838072;
+			public const int ic_wb_auto_grey600_36dp = 2130838072;
 			
 			// aapt resource value: 0x7f020239
-			public const int ic_wb_incandescent_grey600_36dp = 2130838073;
+			public const int ic_wb_auto_white_36dp = 2130838073;
 			
 			// aapt resource value: 0x7f02023a
-			public const int ic_wb_incandescent_white_36dp = 2130838074;
+			public const int ic_wb_cloudy_black_36dp = 2130838074;
 			
 			// aapt resource value: 0x7f02023b
-			public const int ic_wb_irradescent_black_36dp = 2130838075;
+			public const int ic_wb_cloudy_grey600_36dp = 2130838075;
 			
 			// aapt resource value: 0x7f02023c
-			public const int ic_wb_irradescent_grey600_36dp = 2130838076;
+			public const int ic_wb_cloudy_white_36dp = 2130838076;
 			
 			// aapt resource value: 0x7f02023d
-			public const int ic_wb_irradescent_white_36dp = 2130838077;
+			public const int ic_wb_incandescent_black_36dp = 2130838077;
 			
 			// aapt resource value: 0x7f02023e
-			public const int ic_wb_sunny_black_36dp = 2130838078;
+			public const int ic_wb_incandescent_grey600_36dp = 2130838078;
 			
 			// aapt resource value: 0x7f02023f
-			public const int ic_wb_sunny_grey600_36dp = 2130838079;
+			public const int ic_wb_incandescent_white_36dp = 2130838079;
 			
 			// aapt resource value: 0x7f020240
-			public const int ic_wb_sunny_white_36dp = 2130838080;
+			public const int ic_wb_irradescent_black_36dp = 2130838080;
 			
 			// aapt resource value: 0x7f020241
-			public const int Icon = 2130838081;
+			public const int ic_wb_irradescent_grey600_36dp = 2130838081;
 			
 			// aapt resource value: 0x7f020242
-			public const int icon_bw = 2130838082;
+			public const int ic_wb_irradescent_white_36dp = 2130838082;
 			
 			// aapt resource value: 0x7f020243
-			public const int icon_bw_invert = 2130838083;
+			public const int ic_wb_sunny_black_36dp = 2130838083;
 			
 			// aapt resource value: 0x7f020244
-			public const int splash = 2130838084;
+			public const int ic_wb_sunny_grey600_36dp = 2130838084;
+			
+			// aapt resource value: 0x7f020245
+			public const int ic_wb_sunny_white_36dp = 2130838085;
+			
+			// aapt resource value: 0x7f020246
+			public const int Icon = 2130838086;
+			
+			// aapt resource value: 0x7f020247
+			public const int icon_bw = 2130838087;
+			
+			// aapt resource value: 0x7f020248
+			public const int icon_bw_invert = 2130838088;
+			
+			// aapt resource value: 0x7f020249
+			public const int splash = 2130838089;
 			
 			static Drawable()
 			{
@@ -2938,59 +2995,59 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f080014
 			public const int beginning = 2131230740;
 			
-			// aapt resource value: 0x7f080059
-			public const int btn_active = 2131230809;
+			// aapt resource value: 0x7f08006b
+			public const int btn_active = 2131230827;
 			
-			// aapt resource value: 0x7f080057
-			public const int btn_circle = 2131230807;
+			// aapt resource value: 0x7f080069
+			public const int btn_circle = 2131230825;
 			
-			// aapt resource value: 0x7f080055
-			public const int btn_edit = 2131230805;
+			// aapt resource value: 0x7f080067
+			public const int btn_edit = 2131230823;
 			
-			// aapt resource value: 0x7f080058
-			public const int btn_error = 2131230808;
+			// aapt resource value: 0x7f08006a
+			public const int btn_error = 2131230826;
 			
-			// aapt resource value: 0x7f08005a
-			public const int btn_remove = 2131230810;
+			// aapt resource value: 0x7f08006c
+			public const int btn_remove = 2131230828;
 			
-			// aapt resource value: 0x7f080056
-			public const int btn_save = 2131230806;
-			
-			// aapt resource value: 0x7f080046
-			public const int button1 = 2131230790;
-			
-			// aapt resource value: 0x7f08004f
-			public const int button10 = 2131230799;
-			
-			// aapt resource value: 0x7f080048
-			public const int button2 = 2131230792;
+			// aapt resource value: 0x7f080068
+			public const int btn_save = 2131230824;
 			
 			// aapt resource value: 0x7f080049
-			public const int button3 = 2131230793;
+			public const int button1 = 2131230793;
 			
-			// aapt resource value: 0x7f08004a
-			public const int button4 = 2131230794;
+			// aapt resource value: 0x7f080052
+			public const int button10 = 2131230802;
 			
 			// aapt resource value: 0x7f08004b
-			public const int button5 = 2131230795;
+			public const int button2 = 2131230795;
 			
 			// aapt resource value: 0x7f08004c
-			public const int button6 = 2131230796;
-			
-			// aapt resource value: 0x7f080047
-			public const int button7 = 2131230791;
-			
-			// aapt resource value: 0x7f08004e
-			public const int button8 = 2131230798;
+			public const int button3 = 2131230796;
 			
 			// aapt resource value: 0x7f08004d
-			public const int button9 = 2131230797;
+			public const int button4 = 2131230797;
+			
+			// aapt resource value: 0x7f08004e
+			public const int button5 = 2131230798;
+			
+			// aapt resource value: 0x7f08004f
+			public const int button6 = 2131230799;
+			
+			// aapt resource value: 0x7f08004a
+			public const int button7 = 2131230794;
+			
+			// aapt resource value: 0x7f080051
+			public const int button8 = 2131230801;
+			
+			// aapt resource value: 0x7f080050
+			public const int button9 = 2131230800;
 			
 			// aapt resource value: 0x7f08002a
 			public const int checkbox = 2131230762;
 			
-			// aapt resource value: 0x7f080043
-			public const int chk_random = 2131230787;
+			// aapt resource value: 0x7f080044
+			public const int chk_random = 2131230788;
 			
 			// aapt resource value: 0x7f080018
 			public const int collapseActionView = 2131230744;
@@ -2998,11 +3055,17 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f080041
 			public const int colorPicker = 2131230785;
 			
+			// aapt resource value: 0x7f080043
+			public const int color_chooser_dialog = 2131230787;
+			
 			// aapt resource value: 0x7f080040
 			public const int color_chooser_view = 2131230784;
 			
 			// aapt resource value: 0x7f080045
-			public const int commands_view = 2131230789;
+			public const int color_picker = 2131230789;
+			
+			// aapt resource value: 0x7f080048
+			public const int commands_view = 2131230792;
 			
 			// aapt resource value: 0x7f080030
 			public const int decor_content_parent = 2131230768;
@@ -3013,8 +3076,50 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f08001c
 			public const int dialog = 2131230748;
 			
-			// aapt resource value: 0x7f080050
-			public const int dim_view = 2131230800;
+			// aapt resource value: 0x7f080057
+			public const int dialog_BoolField = 2131230807;
+			
+			// aapt resource value: 0x7f080058
+			public const int dialog_Button = 2131230808;
+			
+			// aapt resource value: 0x7f08005d
+			public const int dialog_DisclosureField = 2131230813;
+			
+			// aapt resource value: 0x7f08005c
+			public const int dialog_HtmlField = 2131230812;
+			
+			// aapt resource value: 0x7f08005a
+			public const int dialog_ImageLeft = 2131230810;
+			
+			// aapt resource value: 0x7f080055
+			public const int dialog_ImageRight = 2131230805;
+			
+			// aapt resource value: 0x7f080053
+			public const int dialog_LabelField = 2131230803;
+			
+			// aapt resource value: 0x7f080056
+			public const int dialog_LabelPercentageField = 2131230806;
+			
+			// aapt resource value: 0x7f080054
+			public const int dialog_LabelSubtextField = 2131230804;
+			
+			// aapt resource value: 0x7f08005e
+			public const int dialog_Panel = 2131230814;
+			
+			// aapt resource value: 0x7f08005f
+			public const int dialog_RadioButtonList = 2131230815;
+			
+			// aapt resource value: 0x7f08005b
+			public const int dialog_SliderField = 2131230811;
+			
+			// aapt resource value: 0x7f080060
+			public const int dialog_Spinner = 2131230816;
+			
+			// aapt resource value: 0x7f080059
+			public const int dialog_ValueField = 2131230809;
+			
+			// aapt resource value: 0x7f080062
+			public const int dim_view = 2131230818;
 			
 			// aapt resource value: 0x7f08000d
 			public const int disableHome = 2131230733;
@@ -3034,14 +3139,17 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f080029
 			public const int expanded_menu = 2131230761;
 			
-			// aapt resource value: 0x7f080044
-			public const int fader_view = 2131230788;
+			// aapt resource value: 0x7f080047
+			public const int fader_view = 2131230791;
 			
 			// aapt resource value: 0x7f080004
 			public const int home = 2131230724;
 			
 			// aapt resource value: 0x7f08000e
 			public const int homeAsUp = 2131230734;
+			
+			// aapt resource value: 0x7f080061
+			public const int iFormFieldValue = 2131230817;
 			
 			// aapt resource value: 0x7f080027
 			public const int icon = 2131230759;
@@ -3052,14 +3160,14 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f080024
 			public const int image = 2131230756;
 			
-			// aapt resource value: 0x7f080051
-			public const int layout_container_edit = 2131230801;
+			// aapt resource value: 0x7f080063
+			public const int layout_container_edit = 2131230819;
 			
 			// aapt resource value: 0x7f08000a
 			public const int listMode = 2131230730;
 			
-			// aapt resource value: 0x7f08005d
-			public const int list_hosts = 2131230813;
+			// aapt resource value: 0x7f08006f
+			public const int list_hosts = 2131230831;
 			
 			// aapt resource value: 0x7f080026
 			public const int list_item = 2131230758;
@@ -3136,59 +3244,62 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f080042
 			public const int svBar = 2131230786;
 			
+			// aapt resource value: 0x7f080046
+			public const int sv_bar = 2131230790;
+			
 			// aapt resource value: 0x7f08000c
 			public const int tabMode = 2131230732;
 			
-			// aapt resource value: 0x7f08005f
-			public const int tabsIcon = 2131230815;
+			// aapt resource value: 0x7f080071
+			public const int tabsIcon = 2131230833;
 			
-			// aapt resource value: 0x7f08005e
-			public const int tabsLayout = 2131230814;
+			// aapt resource value: 0x7f080070
+			public const int tabsLayout = 2131230832;
 			
-			// aapt resource value: 0x7f080060
-			public const int tabsText = 2131230816;
+			// aapt resource value: 0x7f080072
+			public const int tabsText = 2131230834;
 			
-			// aapt resource value: 0x7f080068
-			public const int tb_add = 2131230824;
+			// aapt resource value: 0x7f08007a
+			public const int tb_add = 2131230842;
 			
-			// aapt resource value: 0x7f080067
-			public const int tb_back = 2131230823;
+			// aapt resource value: 0x7f080079
+			public const int tb_back = 2131230841;
 			
-			// aapt resource value: 0x7f080063
-			public const int tb_brighter = 2131230819;
+			// aapt resource value: 0x7f080075
+			public const int tb_brighter = 2131230837;
 			
-			// aapt resource value: 0x7f080064
-			public const int tb_darker = 2131230820;
+			// aapt resource value: 0x7f080076
+			public const int tb_darker = 2131230838;
 			
-			// aapt resource value: 0x7f080061
-			public const int tb_left = 2131230817;
+			// aapt resource value: 0x7f080073
+			public const int tb_left = 2131230835;
 			
-			// aapt resource value: 0x7f080062
-			public const int tb_logo = 2131230818;
+			// aapt resource value: 0x7f080074
+			public const int tb_logo = 2131230836;
 			
-			// aapt resource value: 0x7f080066
-			public const int tb_off = 2131230822;
+			// aapt resource value: 0x7f080078
+			public const int tb_off = 2131230840;
 			
-			// aapt resource value: 0x7f080065
-			public const int tb_right = 2131230821;
+			// aapt resource value: 0x7f080077
+			public const int tb_right = 2131230839;
 			
-			// aapt resource value: 0x7f08005c
-			public const int tb_settings = 2131230812;
+			// aapt resource value: 0x7f08006e
+			public const int tb_settings = 2131230830;
 			
 			// aapt resource value: 0x7f080028
 			public const int title = 2131230760;
 			
-			// aapt resource value: 0x7f08005b
-			public const int toolbar = 2131230811;
+			// aapt resource value: 0x7f08006d
+			public const int toolbar = 2131230829;
 			
-			// aapt resource value: 0x7f080053
-			public const int txt_ip_edit = 2131230803;
+			// aapt resource value: 0x7f080065
+			public const int txt_ip_edit = 2131230821;
 			
-			// aapt resource value: 0x7f080052
-			public const int txt_name_edit = 2131230802;
+			// aapt resource value: 0x7f080064
+			public const int txt_name_edit = 2131230820;
 			
-			// aapt resource value: 0x7f080054
-			public const int txt_port_edit = 2131230804;
+			// aapt resource value: 0x7f080066
+			public const int txt_port_edit = 2131230822;
 			
 			// aapt resource value: 0x7f080008
 			public const int up = 2131230728;
@@ -3316,34 +3427,100 @@ namespace RGBPi.Android
 			public const int CommandTestView = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int DimView = 2130903068;
+			public const int dialog_achievements = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int FaderView = 2130903069;
+			public const int dialog_boolfieldleft = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int host_item = 2130903070;
+			public const int dialog_boolfieldright = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int MainView = 2130903071;
+			public const int dialog_boolfieldsubleft = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int menu_toolbar = 2130903072;
+			public const int dialog_boolfieldsubright = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int SettingsView = 2130903073;
+			public const int dialog_button = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int support_simple_spinner_dropdown_item = 2130903074;
+			public const int dialog_datefield = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int tabs_bg = 2130903075;
+			public const int dialog_fieldsetlabel = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int Toolbar = 2130903076;
+			public const int dialog_floatimage = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int Toolbar_settings = 2130903077;
+			public const int dialog_html = 2130903077;
+			
+			// aapt resource value: 0x7f030026
+			public const int dialog_labeldisclosure = 2130903078;
+			
+			// aapt resource value: 0x7f030027
+			public const int dialog_labelfieldbelow = 2130903079;
+			
+			// aapt resource value: 0x7f030028
+			public const int dialog_labelfieldright = 2130903080;
+			
+			// aapt resource value: 0x7f030029
+			public const int dialog_multiline_labelfieldbelow = 2130903081;
+			
+			// aapt resource value: 0x7f03002a
+			public const int dialog_onofffieldright = 2130903082;
+			
+			// aapt resource value: 0x7f03002b
+			public const int dialog_panel = 2130903083;
+			
+			// aapt resource value: 0x7f03002c
+			public const int dialog_root = 2130903084;
+			
+			// aapt resource value: 0x7f03002d
+			public const int dialog_selectlist = 2130903085;
+			
+			// aapt resource value: 0x7f03002e
+			public const int dialog_selectlistfield = 2130903086;
+			
+			// aapt resource value: 0x7f03002f
+			public const int dialog_textarea = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int dialog_textfieldbelow = 2130903088;
+			
+			// aapt resource value: 0x7f030031
+			public const int dialog_textfieldright = 2130903089;
+			
+			// aapt resource value: 0x7f030032
+			public const int DimView = 2130903090;
+			
+			// aapt resource value: 0x7f030033
+			public const int FaderView = 2130903091;
+			
+			// aapt resource value: 0x7f030034
+			public const int host_item = 2130903092;
+			
+			// aapt resource value: 0x7f030035
+			public const int MainView = 2130903093;
+			
+			// aapt resource value: 0x7f030036
+			public const int menu_toolbar = 2130903094;
+			
+			// aapt resource value: 0x7f030037
+			public const int SettingsView = 2130903095;
+			
+			// aapt resource value: 0x7f030038
+			public const int support_simple_spinner_dropdown_item = 2130903096;
+			
+			// aapt resource value: 0x7f030039
+			public const int tabs_bg = 2130903097;
+			
+			// aapt resource value: 0x7f03003a
+			public const int Toolbar = 2130903098;
+			
+			// aapt resource value: 0x7f03003b
+			public const int Toolbar_settings = 2130903099;
 			
 			static Layout()
 			{
