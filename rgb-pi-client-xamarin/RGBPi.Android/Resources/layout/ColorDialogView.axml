@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rgbpi="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:id="@+id/color_chooser_dialog"
+    android:background="#4c4c4c">
+    <CheckBox
+        android:text="Random"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chk_random" />
+    <RGBPi.Android.Views.HolorColorPicker.ColorPicker
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#4c4c4c"
+        rgbpi:MvxBind="CurrentColor CurrentColor"
+        android:id="@+id/color_picker" />
+    <RGBPi.Android.Views.HolorColorPicker.SVBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/sv_bar"
+        android:background="#4c4c4c" />
+</LinearLayout>

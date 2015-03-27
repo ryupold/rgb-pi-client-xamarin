@@ -1,15 +1,17 @@
 ﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.CB5A241HD2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Properties\AssemblyInfo.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Views\ColorDialog.cs">
     <Files>
-      <File FileName="RGBPi.Android\Resources\values\style.xml" Line="38" Column="38" />
-      <File FileName="ViewModels\SettingsViewModel.cs" Line="24" Column="24" />
-      <File FileName="RGBPi.Android\Properties\AssemblyInfo.cs" Line="14" Column="14" />
+      <File FileName="ViewModels\SettingsViewModel.cs" Line="1" Column="1" />
+      <File FileName="RGBPi.Android\Views\MainView.cs" Line="1" Column="1" />
+      <File FileName="RGBPi.Android\Views\ColorDialog.cs" Line="4" Column="4" />
+      <File FileName="RGBPi.Android\Views\ColorChooserView.cs" Line="1" Column="1" />
+      <File FileName="ViewModels\ColorDialogViewModel.cs" Line="1" Column="1" />
+      <File FileName="RGBPi.Android\Views\FaderView.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="D:\Stuff\Proggen\rgb-pi-client-xamarin\rgb-pi-client-xamarin\RGBPi.Android\Views\HostView.cs" line="31" column="42" />
       <Breakpoint file="D:\Stuff\Proggen\rgb-pi-client-xamarin\rgb-pi-client-xamarin\RGBPi.Android\Converter\ColorConverter.cs" line="26" column="1" />
       <Breakpoint hitAction="PrintExpression" traceExpression="{i}" file="D:\Stuff\Proggen\rgb-pi-client-xamarin\rgb-pi-client-xamarin\RGBPi.Android\Converter\ColorConverter.cs" line="18" column="1" />
       <Breakpoint file="D:\Stuff\Proggen\rgb-pi-client-xamarin\rgb-pi-client-xamarin\RGBPi.Android\Converter\ColorConverter.cs" line="16" column="1" />
@@ -19,5 +21,5 @@
     <Watch file="Services\ISocket.cs" line="44" offsetX="935" offsetY="688" expression="answer" liveUpdate="False" />
     <Watch file="RGBPi.Android\Services\AndroidSettings.cs" line="50" offsetX="676" offsetY="784" expression="hosts" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.RGBPi.Android MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.RGBPi" AndroidDesignerPreferredDevice="Nexus S" AndroidDesignerPreferredTheme="Theme.RGBPi" />
+  <MonoDevelop.Ide.ItemProperties.RGBPi.Android MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.RGBPi" AndroidDesignerPreferredDevice="Nexus S" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
 </Properties>

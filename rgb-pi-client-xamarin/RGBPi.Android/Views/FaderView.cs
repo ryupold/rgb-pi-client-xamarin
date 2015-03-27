@@ -24,12 +24,19 @@ namespace RGBPi.Android
 			get { return (FaderViewModel) base.ViewModel; }
 			set { base.ViewModel = value; }
 		}
-			
+
+
 
 		protected override void OnViewModelSet ()
 		{
 			base.OnViewModelSet();
 			SetContentView (Resource.Layout.FaderView);
+
+			Button btn = FindViewById<Button> (Resource.Id.button1);
+			btn.Click += (sender, e) => {
+				var dialogactivity = new ColorDialog();
+
+			};
 		}
 	}
 }

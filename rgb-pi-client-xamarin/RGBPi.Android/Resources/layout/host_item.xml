@@ -65,7 +65,7 @@
             android:layout_weight="1"
             android:id="@+id/txt_name_edit"
             android:layout_gravity="center_horizontal|top"
-            android:inputType="text"
+            android:inputType="none"
             android:hint="host name"
             rgbpi:MvxBind="Text Name; Enabled IsInEditMode" />
         <EditText
