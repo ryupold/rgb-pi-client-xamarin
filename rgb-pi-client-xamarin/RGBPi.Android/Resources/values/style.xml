@@ -49,6 +49,14 @@
     </style>
 
 
+    <!-- Fader -->
+     <style name="FaderItem">
+		<item name="android:background">@color/transparent</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">@dimen/host_item_height</item>
+		<item name="android:layout_margin">@dimen/host_item_margin</item>
+	</style>
+
     <!-- Host -->
     <color name="host_item_background_active">#b76</color>
     <color name="host_item_background_selected">#b76</color>

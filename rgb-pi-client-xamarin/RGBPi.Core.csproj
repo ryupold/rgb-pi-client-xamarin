@@ -63,7 +63,8 @@
     <Compile Include="ViewModels\DimViewModel.cs" />
     <Compile Include="ViewModels\CommandsViewModel.cs" />
     <Compile Include="ViewModels\CommandBuilderViewModel.cs" />
-    <Compile Include="ViewModels\ColorDialogViewModel.cs" />
+    <Compile Include="Helpers\Util.cs" />
+    <Compile Include="ViewModels\FaderItemViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

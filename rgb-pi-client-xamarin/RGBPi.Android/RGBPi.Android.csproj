@@ -122,7 +122,7 @@
     <Compile Include="Views\DimView.cs" />
     <Compile Include="Views\CommandsView.cs" />
     <Compile Include="Views\CommandBuilderView.cs" />
-    <Compile Include="Views\ColorDialog.cs" />
+    <Compile Include="Views\VerticalSeekBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -688,6 +688,8 @@
     <AndroidResource Include="Resources\drawable\ic_favorite_white_36dp.png" />
     <AndroidResource Include="Resources\drawable\ic_arrow_up_white_36dp.png" />
     <AndroidResource Include="Resources\layout\ColorDialogView.axml" />
+    <AndroidResource Include="Resources\layout\fader_item.xml" />
+    <AndroidResource Include="Resources\drawable\ic_arrow_drop_up_circle_white_36dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

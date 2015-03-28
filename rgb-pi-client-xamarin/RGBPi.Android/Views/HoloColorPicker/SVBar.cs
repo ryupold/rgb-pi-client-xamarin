@@ -559,5 +559,10 @@ namespace RGBPi.Android.Views.HolorColorPicker
 				setValue (savedState.GetFloat (STATE_VALUE));
 			}
 		}
+
+		public bool HorizontalOrientation{
+			get{ return mOrientation;}
+			set{ mOrientation = value; Invalidate ();}
+		}
 	}
 }
