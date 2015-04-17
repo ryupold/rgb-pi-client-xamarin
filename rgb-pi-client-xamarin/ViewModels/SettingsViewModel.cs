@@ -78,16 +78,17 @@ namespace RGBPi.Core.ViewModels
 		#region Commands
 
 		private MvxCommand _toolbarGoBackCommand;
-		public IMvxCommand ToolbarGoBackCommand{get{ return _toolbarGoBackCommand;}}
+		public IMvxCommand ToolbarGoBackCommand{get{ return _toolbarGoBackCommand; }}
 
 		private void GoBack (){
 			Close (this);
 		}
 
 		private MvxCommand _toolbarAddHostCommand;
-		public IMvxCommand ToolbarAddHostCommand{get{ return _toolbarAddHostCommand;}}
+		public IMvxCommand ToolbarAddHostCommand{get{return _toolbarAddHostCommand;}}
 
-		private void AddHost (Host host=null){
+		private void AddHost (Host host=null)
+		{
 			host = host ?? new Host ();
 			Debug.WriteLine ("adding host "+host);
 			HostViewModel hvm = new HostViewModel (host, this);
@@ -96,7 +97,8 @@ namespace RGBPi.Core.ViewModels
 			RaiseAllPropertiesChanged ();
 		}
 
-		public bool RemoveHost(HostViewModel hvm){
+		public bool RemoveHost(HostViewModel hvm)
+		{
 			bool success = Hosts.Remove (hvm);
 			RaiseAllPropertiesChanged ();
 			return success;

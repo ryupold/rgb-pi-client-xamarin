@@ -9,15 +9,14 @@ namespace RGBPi.Core
 	public abstract class RemoteControlViewModel : MvxViewModel
 	{
 		ISocket socket;
-		public EventHandler<Answer> OnResponse { get{ return socket.OnResponse; } set{ socket.OnResponse = value; }}
 
 		public RemoteControlViewModel ()
 		{
 			socket = Mvx.Resolve<ISocket> ();
 		}
 
-		public void SendMessage(Message command){
-			socket.Send (command);
+		public void SendMessage(Message command, Action<Answer> answerCallback=null){
+			socket.Send (command, answerCallback);
 		}
 	}
 }
