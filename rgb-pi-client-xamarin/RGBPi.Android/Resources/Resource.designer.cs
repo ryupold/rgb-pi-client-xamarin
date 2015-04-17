@@ -3286,6 +3286,9 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f08000c
 			public const int tabMode = 2131230732;
 			
+			// aapt resource value: 0x7f08007f
+			public const int tabsHighlight = 2131230847;
+			
 			// aapt resource value: 0x7f08007d
 			public const int tabsIcon = 2131230845;
 			
@@ -3295,29 +3298,23 @@ namespace RGBPi.Android
 			// aapt resource value: 0x7f08007e
 			public const int tabsText = 2131230846;
 			
-			// aapt resource value: 0x7f080086
-			public const int tb_add = 2131230854;
-			
 			// aapt resource value: 0x7f080085
-			public const int tb_back = 2131230853;
-			
-			// aapt resource value: 0x7f080081
-			public const int tb_brighter = 2131230849;
-			
-			// aapt resource value: 0x7f080082
-			public const int tb_darker = 2131230850;
-			
-			// aapt resource value: 0x7f08007f
-			public const int tb_left = 2131230847;
-			
-			// aapt resource value: 0x7f080080
-			public const int tb_logo = 2131230848;
+			public const int tb_add = 2131230853;
 			
 			// aapt resource value: 0x7f080084
-			public const int tb_off = 2131230852;
+			public const int tb_back = 2131230852;
+			
+			// aapt resource value: 0x7f080080
+			public const int tb_left = 2131230848;
+			
+			// aapt resource value: 0x7f080081
+			public const int tb_logo = 2131230849;
 			
 			// aapt resource value: 0x7f080083
-			public const int tb_right = 2131230851;
+			public const int tb_off = 2131230851;
+			
+			// aapt resource value: 0x7f080082
+			public const int tb_right = 2131230850;
 			
 			// aapt resource value: 0x7f08007a
 			public const int tb_settings = 2131230842;

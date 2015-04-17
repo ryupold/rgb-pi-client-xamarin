@@ -1,12 +1,9 @@
 ﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A241HD2" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.CB5A241HD2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Views\MainView.cs">
     <Files>
-      <File FileName="RGBPi.Android\Views\FaderView.cs" Line="38" Column="36" />
-      <File FileName="ViewModels\FaderViewModel.cs" Line="83" Column="38" />
-      <File FileName="ViewModels\FaderItemViewModel.cs" Line="79" Column="35" />
-      <File FileName="RGBPi.Android\Views\VerticalSeekBar.cs" Line="10" Column="30" />
-      <File FileName="RGBPi.Android\Resources\values\style.xml" Line="54" Column="53" />
+      <File FileName="ViewModels\MainViewModel.cs" Line="39" Column="21" />
+      <File FileName="RGBPi.Android\Views\MainView.cs" Line="93" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

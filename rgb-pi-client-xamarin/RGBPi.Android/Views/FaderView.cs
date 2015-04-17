@@ -28,8 +28,6 @@ namespace RGBPi.Android
 			set { base.ViewModel = value; }
 		}
 
-
-
 		protected override void OnViewModelSet ()
 		{
 			base.OnViewModelSet();
@@ -38,6 +36,17 @@ namespace RGBPi.Android
 			var btn = FindViewById<ImageView> (Resource.Id.btn_add);
 			btn.Click += (sender, e) => {
 				RunOnUiThread(()=>ShowDialog(1));
+			};
+
+			//error toast
+			ViewModel.OnResponse += (sender, answer) => {
+				if(answer.error != null && answer.error.Length > 0){
+					string errorString = "";
+					foreach (var e in answer.error) {
+						errorString += e+" \n";
+					}
+					Toast.MakeText(this, errorString, ToastLength.Long).Show();
+				}
 			};
 		}
 

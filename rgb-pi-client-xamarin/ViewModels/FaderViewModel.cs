@@ -33,7 +33,7 @@ namespace RGBPi.Core.ViewModels
 		private int _time = 5;
 		public int Time{
 			get{ return _time;}
-			set{ _time = value; RaisePropertyChanged (()=>TimeText);}
+			set{ _time = Math.Max(value, 1); RaisePropertyChanged (()=>TimeText);}
 		}
 
 		public string TimeText{get{ return Time+" s"; }}
