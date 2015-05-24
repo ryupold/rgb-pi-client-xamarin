@@ -8,11 +8,12 @@ using System.Collections.Generic;
 using System.Reflection;
 using Cirrious.CrossCore.Converters;
 using System;
+using Cirrious.MvvmCross.Dialog.Droid;
 
 
 namespace RGBPi.Android
 {
-    public class Setup : MvxAndroidSetup
+    public class Setup : MvxAndroidDialogSetup
     {
 		public Setup(Context applicationContext) : base(applicationContext)
         {
@@ -22,6 +23,7 @@ namespace RGBPi.Android
         {
 			Mvx.RegisterSingleton<ISettings> (new AndroidSettings(this.ApplicationContext));
 			Mvx.RegisterSingleton<ISocket>(new Socket());
+			Mvx.RegisterSingleton<IToaster>(new Toaster());
             return new Core.App();
         }
 

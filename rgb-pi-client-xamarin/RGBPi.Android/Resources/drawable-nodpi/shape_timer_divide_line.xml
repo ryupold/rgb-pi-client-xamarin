@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+    <solid
+        android:color="#f00" />
+        <stroke
+	        android:width="2dp"
+	        android:color="#555"/>
+        <padding
+	        android:left="@dimen/timer_dividing_line_padding"
+	        android:top="@dimen/timer_dividing_line_padding"
+	        android:right="@dimen/timer_dividing_line_padding"
+	        android:bottom="@dimen/timer_dividing_line_padding" />
+</shape>

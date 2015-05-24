@@ -15,5 +15,9 @@
     <dimen name="bar_pointer_halo_radius">14dp</dimen>
     <item name="bar_corner_radius" type="string" format="float">15</item>
 
-   
+    <!-- TIMER Component -->
+    <dimen name="timer_outline_width">3dp</dimen>
+    <dimen name="timer_ring_width">20dp</dimen>
+    <dimen name="timer_outline_inner_offset">23dp</dimen>
+    <dimen name="timer_dividing_line_padding">25dp</dimen>
 </resources>

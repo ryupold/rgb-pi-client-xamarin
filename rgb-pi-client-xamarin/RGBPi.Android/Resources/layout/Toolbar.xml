@@ -17,16 +17,6 @@
             android:src="@drawable/Icon"
             style="@style/TabbarIcon_left"
             android:id="@+id/tb_logo" />
-        <ImageView
-            android:src="@drawable/ic_arrow_drop_up_white_36dp"
-            style="@style/TabbarIcon_left"
-            android:id="@+id/tb_brighter"
-            rgbpi:MvxBind="Click ToolbarBrighterCommand" />
-        <ImageView
-            android:src="@drawable/ic_arrow_drop_down_black_36dp"
-            style="@style/TabbarIcon_left"
-            android:id="@+id/tb_darker"
-            rgbpi:MvxBind="Click ToolbarDarkerCommand" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"

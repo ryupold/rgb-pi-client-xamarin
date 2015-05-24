@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rgbpi="http://schemas.android.com/apk/res-auto"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    style="@style/FaderItem">
+    <FrameLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background_layout"
+        android:layout_margin="@dimen/default_margin"
+        android:background="@color/host_item_background" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_container"
+        android:background="@color/transparent">
+        <TextView
+            android:text="Hex"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/lbl_hex"
+            android:layout_gravity="center"
+            rgbpi:MvxBind="Text HexColorString; Visible IsNotRandom"
+            android:textAlignment="center"
+            android:background="@color/transparent"
+            android:layout_margin="@dimen/default_margin" />
+        <TextView
+            android:text="Rgb"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/lbl_hex"
+            android:layout_gravity="center"
+            rgbpi:MvxBind="Text RgbColorString; Visible IsNotRandom"
+            android:textAlignment="center"
+            android:background="@color/transparent"
+            android:layout_margin="@dimen/default_margin" />
+    </LinearLayout>
+    <ImageView
+        android:src="@drawable/ic_arrow_drop_up_circle_white_36dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/btn_up"
+        android:layout_gravity="right|top"
+        android:background="@color/transparent"
+        rgbpi:MvxBind="Click ChangeOrderUpCommand; Visible CanMoveUp" />
+    <ImageView
+        android:src="@drawable/ic_arrow_drop_down_circle_white_36dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/btn_up"
+        android:layout_gravity="left|bottom"
+        android:background="@color/transparent"
+        rgbpi:MvxBind="Click ChangeOrderDownCommand; Visible CanMoveDown" />
+    <ImageView
+        android:src="@drawable/ic_remove_circle_outline_white_36dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/btn_remove"
+        android:layout_gravity="left|top"
+        android:background="@color/transparent"
+        rgbpi:MvxBind="Click RemoveCommand"
+        android:layout_margin="@dimen/default_margin" />
+    <ImageView
+        android:src="@drawable/icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/img_random"
+        android:background="@color/transparent"
+        rgbpi:MvxBind="Visible IsRandom"
+        android:layout_margin="@dimen/default_margin_big" />
+</FrameLayout>
