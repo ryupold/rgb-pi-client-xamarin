@@ -12,126 +12,20 @@ using System.Threading;
 using Coding4Fun.Toolkit.Controls;
 using RGBPi;
 using System.IO.IsolatedStorage;
+using RGB.Services;
+using RGBPi.Core.Model;
+using RGBPi.Core.Model.Commands;
 
 namespace RGB
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        private SocketClient client = new SocketClient();
-        private Thread worker;
+        private IWP8Socket client = new WP8Socket();
         private ColorPicker copickDimColor;
         private ColorPicker colorPicker;
         private ColorPicker copickPulseStart, copickPulseEnd;
 
-        private readonly Queue<string> commandQ = new Queue<string>();
-
-        private IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
-
-
-        public string IP { get; set; }
-        public int Port { get; set; }
-
-        public enum RGBCommandType
-        {
-            ChangeColor = 1,
-            RandomFader = 2,
-            FadeColor = 3,
-            Specials = 4,
-            Pulse = 5
-        }
-
-        /// <summary>
-        /// returns json object as string for the given command.
-        /// cc      - 0=color
-        /// fade    - 0=time 1=end [2=start]
-        /// pulse   - 0=time 1=color1 2=color2
-        /// rndfade - 0=minTime 1=maxTime 2=minColor 3=maxColor
-        /// 
-        /// </summary>
-        /// <param name="cmdType"></param>
-        /// <param name="p"></param>
-        /// <returns></returns>
-        public static string GetJSON(RGBCommandType cmdType, params object[] p)
-        {
-            string json = "{}";
-            switch (cmdType)
-            {
-                case RGBCommandType.ChangeColor:
-                    //json = "{'commands':[{'type':'cc', 'color':'"+p[0]+"'}]}";
-                    json = "{'commands':[{'type':'fade', 'time':'0.1', 'end':'" + p[0] + "'}]}";
-                    break;
-
-                case RGBCommandType.FadeColor:
-                    if(p.Length > 2)
-                        json = "{'commands':[{'type':'fade', 'time':'" + p[0] + "', 'start':'" + p[2] + "', 'end':'" + p[1] + "'}]}";
-                    else
-                        json = "{'commands':[{'type':'fade', 'time':'" + p[0] + "', 'end':'" + p[1] + "'}]}";
-                    break;
-
-                case RGBCommandType.Pulse:
-                    json = @"{
-                        'commands':[
-                            {
-                                'type':'loop',
-                                'condition':'{b:1}',
-                                'commands':
-                                [
-                                    {
-                                        'type':'fade',
-                                        'time':'"+p[0]+@"',
-                                        'end':'" + p[1] + @"'
-                                    },
-
-                                    {
-                                        'type':'fade',
-                                        'time':'" + p[0] + @"',
-                                        'end':'" + p[2] + @"'
-                                    }
-                                ]
-                            }
-                        ]
-                    }";
-                    break;
-
-                case RGBCommandType.RandomFader:
-                    string mCmC = "{r:" + p[2] + "-" + p[3] + "," + p[2] + "-" + p[3] + "," + p[2] + "-" + p[3] + "}";
-
-                    json = @"{
-                        'commands':[
-                            {
-                                'type':'loop',
-                                'condition':'{b:1}',
-                                'commands':
-                                [
-                                    {
-                                        'type':'fade',
-                                        'time':'{r:"+p[0]+@","+p[1]+@"}',
-                                        'end':'" + mCmC + @"'
-                                    },
-
-                                    {
-                                        'type':'fade',
-                                        'time':'{r:" + p[0] + @"," + p[1] + @"}',
-                                        'end':'" + mCmC + @"'
-                                    }
-                                ]
-                            }
-                        ]
-                    }";
-                    break;
-
-                case RGBCommandType.Specials:
-
-                    break;
-
-                
-            }
-
-           //TODO: workaround to be able to set '' instead of "" for strings and keys
-            json = json.Replace("'", "\"");
-
-            return json;
-        }
+        
 
        
         // Constructor
@@ -157,35 +51,13 @@ namespace RGB
             gridPulseStartColor.Children.Add(copickPulseStart);
             gridPulseEndColor.Children.Add(copickPulseEnd);
 
-
-            worker = new Thread(rgbWorking);
-            worker.IsBackground = true;
-            worker.Start();
-
-
+            
             LoadSettings();
         }
 
         private void LoadSettings()
         {
-            settings = IsolatedStorageSettings.ApplicationSettings;
-            if (settings.Contains("ip"))
-            {
-                IP = (string)settings["ip"];
-            }
-            else
-            {
-                settings.Add("ip", IP = "192.168.0.10");
-            }
-
-            if (settings.Contains("port"))
-            {
-                Port = int.Parse(settings["port"].ToString());
-            }
-            else
-            {
-                settings.Add("port", Port = 4321);
-            }
+            
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -202,46 +74,12 @@ namespace RGB
 
         void colorPicker_ColorChanged(object sender, System.Windows.Media.Color color)
         {
-            lock (commandQ)
-            {
-                if (commandQ.Count > 0) commandQ.Clear();
-                commandQ.Enqueue(GetJSON(RGBCommandType.ChangeColor, new LEDColor(color)));
-                Monitor.PulseAll(commandQ);
-            }
+            Message cmd = new Message(new List<RGBPi.Core.Model.Commands.Command>());
+            cmd.commands.Add(new CC(new RGBPi.Core.Model.DataTypes.Color(color.R /255f, color.G / 255f, color.B / 255f)));
+            client.Send(cmd);
         }
 
-
-        private void rgbWorking()
-        {
-            while (true)
-            {
-                try
-                {
-                    string cmd;
-                    lock (commandQ)
-                    {
-
-                        while (commandQ.Count == 0)
-                        {
-                            Monitor.Wait(commandQ, 1000);
-                        }
-
-
-                        cmd = commandQ.Dequeue();
-                    }
-
-
-                    client.Connect(IP, Port);
-                    client.Send(cmd);
-                    string answer = client.Receive();
-                    client.Close();
-                    
-                }
-                catch { }
-            }
-        }
-
-
+        
         // Load data for the ViewModel Items
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -264,11 +102,9 @@ namespace RGB
             abbOn.Text = "On";
             abbOn.Click += delegate(object s, EventArgs ea)
             {
-                lock (commandQ)
-                {
-                    commandQ.Enqueue(GetJSON(RGBCommandType.FadeColor, 2, new LEDColor(1f, 1f, 1f)));
-                    Monitor.PulseAll(commandQ);
-                }
+                Message cmd = new Message(new List<RGBPi.Core.Model.Commands.Command>());
+                cmd.commands.Add(new Fade(2f, new RGBPi.Core.Model.DataTypes.Color(1f, 1f, 1f)));
+                client.Send(cmd);
             };
             ApplicationBar.Buttons.Add(abbOn);
 
@@ -276,12 +112,9 @@ namespace RGB
             abbOff.Text = "Off";
             abbOff.Click += delegate(object s, EventArgs ea)
             {
-                lock (commandQ)
-                {
-                    commandQ.Enqueue(GetJSON(RGBCommandType.FadeColor, 2, new LEDColor()));
-                    
-                    Monitor.PulseAll(commandQ);
-                }
+                Message cmd = new Message(new List<RGBPi.Core.Model.Commands.Command>());
+                cmd.commands.Add(new Fade(2f, new RGBPi.Core.Model.DataTypes.Color(0f, 0f, 0f)));
+                client.Send(cmd);
             };
             ApplicationBar.Buttons.Add(abbOff);
 
@@ -298,40 +131,14 @@ namespace RGB
 
         private void btnDim_Click(object sender, RoutedEventArgs e)
         {
-            lock (commandQ)
-            {
-                if (!(bool)cbDim.IsChecked)
-                    commandQ.Enqueue(GetJSON(RGBCommandType.FadeColor, (slideDimTime.Value >= 60 ? (int)slideDimTime.Value - (((int)slideDimTime.Value) % 60) : (int)slideDimTime.Value), new LEDColor(), new LEDColor(copickDimColor.Color)));
-                else
-                {
-
-                    string json = @"{
-                        'filters':[
-                            {
-                                'type':'dim',
-                                'finish':'{t:" + (slideDimTime.Value >= 60 ? (int)slideDimTime.Value - (((int)slideDimTime.Value) % 60) : (int)slideDimTime.Value) + @"}'
-                            }
-                        ]
-                    }";
-                    
-                    json.Replace("'", "\"");
-
-                    commandQ.Enqueue(
-                        json
-                    );
-                }
-                
-                Monitor.PulseAll(commandQ);
-            }
+            Message cmd = new Message(new List<RGBPi.Core.Model.Commands.Command>());
+            cmd.commands.Add(new Fade((slideDimTime.Value >= 60 ? (int)slideDimTime.Value - (((int)slideDimTime.Value) % 60) : (int)slideDimTime.Value), new RGBPi.Core.Model.DataTypes.Color(0f, 0f, 0f), new RGBPi.Core.Model.DataTypes.Color(copickDimColor.Color.R / 255f, copickDimColor.Color.G/255f, copickDimColor.Color.B/255f)));
+            client.Send(cmd);
         }
 
         private void btnSpecialsJamaica_Click(object sender, RoutedEventArgs e)
         {
-            lock (commandQ)
-            {
-                //commandQ.Enqueue(new RGBCommand(RGBCommandType.Specials, "jamaica 2"));
-                Monitor.PulseAll(commandQ);
-            }
+           
         }
 
         private void slideDimTime_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -356,12 +163,12 @@ namespace RGB
 
         private void btnPulseStart_Click(object sender, RoutedEventArgs e)
         {
-            lock (commandQ)
-            {
-                commandQ.Enqueue(GetJSON(RGBCommandType.Pulse, (int)sliderPulseTime.Value, new LEDColor(copickPulseStart.Color), new LEDColor(copickPulseEnd.Color)));
-                //commandQ.Enqueue(new RGBCommand(RGBCommandType.Pulse, ((int)sliderPulseTime.Value)+" "+new LEDColor(copickPulseStart.Color)+" "+new LEDColor(copickPulseEnd.Color)));
-                Monitor.PulseAll(commandQ);
-            }
+            Message cmd = new Message(new List<RGBPi.Core.Model.Commands.Command>());
+            Loop loop = new Loop(new RGBPi.Core.Model.DataTypes.Condition(true), new List<Command>());
+            loop.commands.Add(new Fade((float)sliderPulseTime.Value, new RGBPi.Core.Model.DataTypes.Color(copickPulseStart.Color.R / 255f, copickPulseStart.Color.G / 255f, copickPulseStart.Color.B / 255f)));
+            loop.commands.Add(new Fade((float)sliderPulseTime.Value, new RGBPi.Core.Model.DataTypes.Color(copickPulseEnd.Color.R / 255f, copickPulseEnd.Color.G / 255f, copickPulseEnd.Color.B / 255f)));
+            cmd.commands.Add(loop);
+            client.Send(cmd);
         }
 
         
@@ -373,12 +180,11 @@ namespace RGB
 
         private void btnRF_Click(object sender, RoutedEventArgs e)
         {
-            lock (commandQ)
-            {
-                commandQ.Enqueue(GetJSON(RGBCommandType.RandomFader, ((int)slideMinTime.Value), ((int)slideMaxTime.Value), (slideMinBrightness.Value / 100f).ToString("F3").Replace(",", "."), (slideMaxBrightness.Value / 100f).ToString("F3").Replace(",", ".")));
-                //commandQ.Enqueue(new RGBCommand(RGBCommandType.RandomFader, ((int)slideMinTime.Value) + " " + ((int)slideMaxTime.Value) + " " + (slideMinBrightness.Value / 100f).ToString("F3").Replace(",", ".") + " " + (slideMaxBrightness.Value / 100f).ToString("F3").Replace(",", ".")));
-                Monitor.PulseAll(commandQ);
-            }
+            Message cmd = new Message(new List<RGBPi.Core.Model.Commands.Command>());
+            Loop loop = new Loop(new RGBPi.Core.Model.DataTypes.Condition(true), new List<Command>());
+            loop.commands.Add(new Fade(new RGBPi.Core.Model.DataTypes.Time(((float)slideMinTime.Value), ((float)slideMaxTime.Value)), new RGBPi.Core.Model.DataTypes.Color(((float)slideMinBrightness.Value / 100f), ((float)slideMaxBrightness.Value / 100f), ((float)slideMinBrightness.Value / 100f), ((float)slideMaxBrightness.Value / 100f), ((float)slideMinBrightness.Value / 100f), ((float)slideMaxBrightness.Value / 100f))));
+            cmd.commands.Add(loop);
+            client.Send(cmd);
         }
 
         private void cbDim_Checked(object sender, RoutedEventArgs e)

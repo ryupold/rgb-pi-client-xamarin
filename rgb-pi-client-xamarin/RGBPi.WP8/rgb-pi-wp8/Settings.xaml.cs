@@ -8,6 +8,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.IO.IsolatedStorage;
+using RGBPi.Core;
+using RGB.Services;
 
 namespace RGB
 {
@@ -15,10 +17,12 @@ namespace RGB
     {
         public string IP { get; set; }
         public int Port { get; set; }
-        private IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
+        private ISettings settings;
 
         public Settings()
         {
+            settings = new WP8Settings();
+
             InitializeComponent();
 
             LoadSettings();
@@ -28,27 +32,27 @@ namespace RGB
 
         private void LoadSettings()
         {
-            settings = IsolatedStorageSettings.ApplicationSettings;
-            if (settings.Contains("ip"))
-            {
-                IP = (string)settings["ip"];
-            }
-            else
-            {
-                settings.Add("ip", IP = "192.168.0.10");
-            }
+            Host activeHost = settings.ActiveHost;
 
-            if (settings.Contains("port"))
+            if (activeHost == null)
             {
-                Port = int.Parse(settings["port"].ToString());
+                var hosts = settings.GetHosts();
+                if (hosts.Count == 0)
+                {
+                    activeHost = new Host("default", "192.168.0.10", 4321);
+                    settings.AddHost(activeHost);
+                }
+                else
+                {
+                    hosts[0] = activeHost = new Host("default", "192.168.0.10", 4321);
+                    settings.UpdateHost(activeHost.name, activeHost);
+                    settings.ActiveHost = activeHost;
+                }
+                
             }
-            else
-            {
-                settings.Add("port", Port = 4321);
-            }
-
-            txtSettingsIP.Text = IP;
-            txtSettingsPort.Text = Port + "";
+            
+            txtSettingsIP.Text = activeHost.ip;
+            txtSettingsPort.Text = activeHost.port + string.Empty;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -75,9 +79,14 @@ namespace RGB
                     e++;
                     Port = int.Parse(txtSettingsPort.Text);
                     e++;
-                    settings["ip"] = IP;
-                    settings["port"] = Port;
-                    settings.Save();
+
+                    var activeHost = settings.ActiveHost;
+                    activeHost.ip = IP;
+                    activeHost.port = Port;
+                    settings.UpdateHost(activeHost.name, activeHost);
+                    settings.ActiveHost = activeHost;
+
+                    settings.ActiveHost = activeHost;
                     e++;
                     NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
                     ShellToast toast = new ShellToast();
