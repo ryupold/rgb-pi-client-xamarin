@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -28,6 +28,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'WP8 Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\WP8 Debug\</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +72,9 @@
     <Compile Include="ViewModels\DimViewModel.cs" />
     <Compile Include="ViewModels\CommandsViewModel.cs" />
     <Compile Include="ViewModels\CommandBuilderViewModel.cs" />
+    <Compile Include="Helpers\Util.cs" />
+    <Compile Include="ViewModels\FaderItemViewModel.cs" />
+    <Compile Include="Services\IToaster.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -86,17 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Model\" />
     <Folder Include="Services\Abstract\" />
-    <Folder Include="Resources\" />
-    <Folder Include="Model\Commands\" />
-    <Folder Include="Model\Triggers\" />
-    <Folder Include="Model\Requests\" />
-    <Folder Include="Model\Filters\" />
-    <Folder Include="Model\DataTypes\" />
-    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\CoreResources.resx">

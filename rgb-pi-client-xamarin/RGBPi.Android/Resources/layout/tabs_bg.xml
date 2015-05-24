@@ -3,7 +3,6 @@
     android:id="@+id/tabsLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dip"
     android:gravity="center"
     android:orientation="vertical">
     <ImageView
@@ -18,4 +17,9 @@
         android:text="Title"
         android:textSize="15dip"
         android:textColor="@color/maintabs" />
+    <ImageView
+        android:src="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:id="@+id/tabsHighlight" />
 </LinearLayout>

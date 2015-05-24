@@ -15,9 +15,7 @@ namespace RGBPi.Core
 {
 	public abstract class ISocket
 	{
-		public EventHandler<Answer> OnResponse;
-
-		protected Queue<Message> commandQ = new Queue<Message> ();
+		protected Queue<MessageAndAnswer> commandQ = new Queue<MessageAndAnswer> ();
 		protected bool stop = false;
 		protected Task task;
 		protected Action worker;
@@ -36,19 +34,19 @@ namespace RGBPi.Core
 						if (commandQ.Count > 0 && settings.ActiveHost != null) {							
 							while (commandQ.Count > 0) {
 								try {
-									Message cmd;
+									MessageAndAnswer cmd;
 									lock (commandQ) {
-										cmd = commandQ.Dequeue ();
+										cmd = commandQ.Dequeue();
 									}
 
 									ConnectNative(settings.ActiveHost);
 
-									SendNative(JsonConvert.SerializeObject(cmd, serializationSettings));
+									SendNative(JsonConvert.SerializeObject(cmd.message, serializationSettings));
 
 									Answer answer = JsonConvert.DeserializeObject<Answer>(ReceiveNative(), serializationSettings);
 
-									if (OnResponse != null)
-										OnResponse (this, answer);
+									if (cmd.answerCallback != null)
+										cmd.answerCallback (answer);
 
 								} catch (Exception ex) {
 									Debug.WriteLine("ERROR: " + ex + ": " + ex.Message);
@@ -74,14 +72,25 @@ namespace RGBPi.Core
 			task = Task.Factory.StartNew (worker);
 		}
 
-		public virtual void Send (Message command)
+		public virtual void Send (Message command, Action<Answer> answerCallback=null)
 		{
 			lock (commandQ) {
 				commandQ.Clear ();
 				if(settings.ActiveHost != null){
-					commandQ.Enqueue (command);
+					commandQ.Enqueue (new MessageAndAnswer(command, answerCallback));
 					Monitor.Pulse (commandQ);
 				}
+			}
+		}
+
+		public class MessageAndAnswer{
+			public readonly Message message;
+			public readonly Action<Answer> answerCallback;
+
+			public MessageAndAnswer(Message m, Action<Answer> a)
+			{
+				message = m;
+				answerCallback = a;
 			}
 		}
 

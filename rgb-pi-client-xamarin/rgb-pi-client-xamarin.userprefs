@@ -1,10 +1,12 @@
 ﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.CB5A241HD2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Properties\AssemblyInfo.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus_5_API_21_x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Resources\drawable-nodpi\shape_timer_divide_line.xml">
     <Files>
-      <File FileName="RGBPi.Android\Resources\values\style.xml" Line="38" Column="38" />
-      <File FileName="ViewModels\SettingsViewModel.cs" Line="24" Column="24" />
-      <File FileName="RGBPi.Android\Properties\AssemblyInfo.cs" Line="14" Column="14" />
+      <File FileName="RGBPi.Android\Resources\values\dimens.xml" Line="13" Column="43" />
+      <File FileName="RGBPi.Android\Resources\drawable-nodpi\shape_timer_layers.xml" Line="12" Column="106" />
+      <File FileName="RGBPi.Android\Resources\drawable-nodpi\shape_timer_circle_outer.xml" Line="6" Column="32" />
+      <File FileName="RGBPi.Android\Resources\drawable-nodpi\shape_timer_circle_middle.xml" Line="6" Column="27" />
+      <File FileName="RGBPi.Android\Resources\drawable-nodpi\shape_timer_divide_line.xml" Line="15" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -19,5 +21,5 @@
     <Watch file="Services\ISocket.cs" line="44" offsetX="935" offsetY="688" expression="answer" liveUpdate="False" />
     <Watch file="RGBPi.Android\Services\AndroidSettings.cs" line="50" offsetX="676" offsetY="784" expression="hosts" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.RGBPi.Android MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.RGBPi" AndroidDesignerPreferredDevice="Nexus S" AndroidDesignerPreferredTheme="Theme.RGBPi" />
+  <MonoDevelop.Ide.ItemProperties.RGBPi.Android AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.RGBPi" />
 </Properties>

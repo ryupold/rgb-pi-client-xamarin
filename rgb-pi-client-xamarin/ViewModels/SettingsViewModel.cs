@@ -88,6 +88,12 @@ namespace RGBPi.Core.ViewModels
 		public IMvxCommand ToolbarAddHostCommand{get{ return _toolbarAddHostCommand;}}
 
 		private void AddHost (Host host=null){
+			for(int i=0; i<Hosts.Count; i++){
+				if(Hosts[i].IsNew){
+					return;
+				}
+			}
+
 			host = host ?? new Host ();
 			Debug.WriteLine ("adding host "+host);
 			HostViewModel hvm = new HostViewModel (host, this);

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rgbpi="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:id="@+id/color_chooser_dialog"
+    android:background="@color/transparent">
+    <CheckBox
+        android:text="random color"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chk_random" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/linearLayout1"
+        android:layout_weight="1">
+        <RGBPi.Android.Views.HolorColorPicker.ColorPicker
+            rgbpi:MvxBind="CurrentColor CurrentColor"
+            rgbpi:color_pointer_radius="7dp"
+            rgbpi:color_pointer_halo_radius="9dp"
+            android:id="@+id/color_picker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical" />
+        <RGBPi.Android.Views.HolorColorPicker.SVBar
+            android:id="@+id/sv_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right" />
+    </LinearLayout>
+</LinearLayout>

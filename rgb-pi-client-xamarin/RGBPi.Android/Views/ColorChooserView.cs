@@ -47,6 +47,7 @@ namespace RGBPi.Android
 				sv.SetBackgroundColor (cd);
 				colorPicker.SetBackgroundColor (cd);
 			};
+
 		}
 	}
 }

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_timer_circle_outer"/>
+    <item android:drawable="@drawable/shape_timer_circle_middle"
+    	android:top="@dimen/timer_outline_width" android:right="@dimen/timer_outline_width" 
+    	android:bottom="@dimen/timer_outline_width" android:left="@dimen/timer_outline_width"/>
+	<item android:drawable="@drawable/shape_timer_circle_outer"
+    	android:top="@dimen/timer_ring_width" android:right="@dimen/timer_ring_width" 
+    	android:bottom="@dimen/timer_ring_width" android:left="@dimen/timer_ring_width"/>
+    <item android:drawable="@drawable/shape_timer_divide_line"
+    	android:top="@dimen/timer_dividing_line_padding" android:right="@dimen/timer_dividing_line_padding" 
+    	android:bottom="@dimen/timer_dividing_line_padding" android:left="@dimen/timer_dividing_line_padding"/>
+
+</layer-list>

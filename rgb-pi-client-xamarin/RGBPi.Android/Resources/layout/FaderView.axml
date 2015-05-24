@@ -8,10 +8,60 @@
     android:minWidth="25px"
     android:minHeight="25px"
     android:background="#44a4ac">
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Fader"
-        android:background="@color/transparent"
-        android:gravity="center" />
+        android:layout_height="0dp"
+        android:id="@+id/linearLayout1"
+        android:layout_weight="1">
+        <Mvx.MvxListView
+            android:id="@+id/list_colors"
+            android:background="@color/transparent"
+            style="@style/HostList"
+            android:descendantFocusability="beforeDescendants"
+            rgbpi:MvxBind="ItemsSource Colors"
+            rgbpi:MvxItemTemplate="@layout/fader_item"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sb_time"
+            android:max="1000"
+            android:progress="5"
+            android:textAlignment="center"
+            rgbpi:MvxBind="Progress Time" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:id="@+id/linearLayout2">
+        <ImageView
+            android:text="add"
+            android:id="@+id/btn_add"
+            android:src="@drawable/ic_add_box_white_36dp"
+            android:layout_width="@dimen/action_bar_icon_size"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|left" />
+        <ImageView
+            android:src="@drawable/ic_slideshow_white_36dp"
+            android:id="@+id/btn_start_fade"
+            android:layout_width="@dimen/action_bar_icon_size"
+            android:layout_height="@dimen/action_bar_icon_size"
+            android:layout_gravity="center"
+            android:background="@color/rgbpi_primary_dark_color"
+            rgbpi:MvxBind="Click StartFadeCommand"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/default_margin" />
+        <TextView
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1"
+            rgbpi:MvxBind="Text TimeText" />
+    </LinearLayout>
 </LinearLayout>

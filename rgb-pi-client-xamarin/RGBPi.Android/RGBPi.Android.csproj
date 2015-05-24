@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -41,6 +41,16 @@
     <AndroidSigningStorePass>rgbpiremote</AndroidSigningStorePass>
     <AndroidSigningKeyAlias>rgbpi</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>rgbpiremote</AndroidSigningKeyPass>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'WP8 Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\WP8 Debug\</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -88,6 +98,15 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows" />
+    <Reference Include="Cirrious.MvvmCross.Dialog.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Droid.Dialog.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Dialog.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="CrossUI.Core">
+      <HintPath>..\packages\MvvmCross.HotTuna.Droid.Dialog.3.5.0\lib\MonoAndroid\CrossUI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CrossUI.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Droid.Dialog.3.5.0\lib\MonoAndroid\CrossUI.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -113,6 +132,8 @@
     <Compile Include="Views\DimView.cs" />
     <Compile Include="Views\CommandsView.cs" />
     <Compile Include="Views\CommandBuilderView.cs" />
+    <Compile Include="Views\VerticalSeekBar.cs" />
+    <Compile Include="Services\Toaster.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -677,16 +698,17 @@
     <AndroidResource Include="Resources\drawable\ic_favorite_outline_white_36dp.png" />
     <AndroidResource Include="Resources\drawable\ic_favorite_white_36dp.png" />
     <AndroidResource Include="Resources\drawable\ic_arrow_up_white_36dp.png" />
+    <AndroidResource Include="Resources\layout\ColorDialogView.axml" />
+    <AndroidResource Include="Resources\layout\fader_item.xml" />
+    <AndroidResource Include="Resources\drawable\ic_arrow_drop_up_circle_white_36dp.png" />
+    <AndroidResource Include="Resources\layout\teststuff.xml" />
+    <AndroidResource Include="Resources\drawable-nodpi\shape_timer_layers.xml" />
+    <AndroidResource Include="Resources\drawable-nodpi\shape_timer_circle_outer.xml" />
+    <AndroidResource Include="Resources\drawable-nodpi\shape_timer_circle_middle.xml" />
+    <AndroidResource Include="Resources\drawable-nodpi\shape_timer_divide_line.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Resources\layout\" />
-    <Folder Include="Views\" />
-    <Folder Include="Views\HoloColorPicker\" />
-    <Folder Include="Services\" />
-    <Folder Include="Resources\color\" />
-    <Folder Include="Converters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\RGBPi.Core.csproj">
       <Project>{17ED7BF2-9070-4CD4-BD2A-30969C9AA05A}</Project>

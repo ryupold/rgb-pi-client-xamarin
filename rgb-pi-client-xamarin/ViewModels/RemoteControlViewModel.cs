@@ -8,16 +8,22 @@ namespace RGBPi.Core
 {
 	public abstract class RemoteControlViewModel : MvxViewModel
 	{
-		ISocket socket;
-		public EventHandler<Answer> OnResponse { get{ return socket.OnResponse; } set{ socket.OnResponse = value; }}
+		protected ISocket socket;
+		protected ISettings settings;
 
 		public RemoteControlViewModel ()
 		{
 			socket = Mvx.Resolve<ISocket> ();
+			settings = Mvx.Resolve<ISettings> ();
 		}
 
-		public void SendMessage(Message command){
-			socket.Send (command);
+		public void SendMessage(Message command, Action<Answer> answerCallback=null){
+			if (settings.ActiveHost != null) 
+			{
+				socket.Send (command, answerCallback);
+			} else {
+				Mvx.Resolve<IToaster> ().ToastString ("no active host. Go to settings and add one.");
+			}
 		}
 	}
 }

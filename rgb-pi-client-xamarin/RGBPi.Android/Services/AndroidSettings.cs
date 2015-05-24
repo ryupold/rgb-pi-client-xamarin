@@ -24,10 +24,15 @@ namespace RGBPi.Android
 		public Host ActiveHost {
 			get { 
 				if (_activeHost == null) {
-
-					string hostJSON = prefs.GetString ("active_host", string.Empty);
-					if (hostJSON != string.Empty) {
-						_activeHost = JsonConvert.DeserializeObject<Host> (hostJSON);
+					var hosts = GetHosts ();
+					if(hosts != null && hosts.Count > 0){
+						string hostJSON = prefs.GetString ("active_host", string.Empty);
+						if (hostJSON != string.Empty) {
+							Host activeH = JsonConvert.DeserializeObject<Host> (hostJSON);
+							if (hosts.Contains (activeH)) {
+								_activeHost = activeH;
+							}
+						}
 					}
 				}
 

@@ -23,6 +23,8 @@ namespace RGBPi.Android
 		, ScreenOrientation = ScreenOrientation.Portrait)]
 	public class MainView : MvxTabActivity
     {
+		private Dictionary<string, View> tabViews = new Dictionary<string, View> ();
+
 		public new MainViewModel ViewModel
 		{
 			get { return (MainViewModel) base.ViewModel; }
@@ -40,13 +42,26 @@ namespace RGBPi.Android
 			CreateDimTab ();
 			CreateCommandsTab ();
 			CreateCommandBuilderTab ();
+			TabHost.TabChanged += (sender, e) => {
+				foreach (var t in tabViews) {
+					ImageView high = t.Value.FindViewById<ImageView>(Resource.Id.tabsHighlight);
+
+					if(t.Key.Equals(e.TabId)){
+						high.Visibility = ViewStates.Visible;
+					}
+					else{
+						high.Visibility = ViewStates.Invisible;
+					}
+				}
+			};
+
 
 			//this is for testing purposes
 //			CreateCommandTestTab ();
 		}
 
 		private void CreateColorChooserTab(){
-			CreateTab(typeof(ColorChooserView), "cc", null, Resource.Drawable.ic_palette_white_36dp);
+			CreateTab(typeof(ColorChooserView), "cc", null, Resource.Drawable.ic_palette_white_36dp, true);
 			ColorChooserView ccv = (ColorChooserView)LocalActivityManager.GetActivity ("cc"); 
 			ViewModel.ColorChooser = ccv.ViewModel;
 			ccv.ColorChanged += (s, newColor) => {
@@ -83,7 +98,7 @@ namespace RGBPi.Android
 			CreateTab(typeof(CommandTestView), "ct", null, Resource.Drawable.icon_bw_invert);
 		}
 
-		private void CreateTab(Type activityType, string tag, string label, int drawableId )
+		private void CreateTab(Type activityType, string tag, string label, int drawableId, bool selected=false)
 		{
 			var intent = new Intent(this, activityType);
 
@@ -92,16 +107,21 @@ namespace RGBPi.Android
 			var spec = TabHost.NewTabSpec(tag);
 
 			//spec.SetIndicator(createTabView(this.ApplicationContext, drawableId));
-			spec.SetIndicator(createTabView(this.ApplicationContext, label, drawableId));
+			var tv = createTabView(this.ApplicationContext, label, drawableId, selected);
+			tabViews.Add (tag, tv);
+			spec.SetIndicator(tv);
 			spec.SetContent(intent);
 
 			TabHost.AddTab(spec);
 		}
 
-		private static View createTabView(Context context, string text, int resDrawableID) {
+		private static View createTabView(Context context, string text, int resDrawableID, bool selected=false) {
 			LinearLayout view = (LinearLayout)LayoutInflater.From(context).Inflate(RGBPi.Android.Resource.Layout.tabs_bg, null);
 			ImageView img = view.FindViewById<ImageView>(Resource.Id.tabsIcon);
 			TextView tv = view.FindViewById<TextView>(Resource.Id.tabsText);
+			ImageView high = view.FindViewById<ImageView>(Resource.Id.tabsHighlight);
+			if(!selected) 
+				high.Visibility = ViewStates.Invisible;
 
 			img.SetImageResource (resDrawableID);
 
