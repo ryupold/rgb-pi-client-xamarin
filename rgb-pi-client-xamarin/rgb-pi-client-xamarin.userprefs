@@ -1,12 +1,8 @@
 ﻿<Properties StartupItem="RGBPi.Android\RGBPi.Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus_5_API_21_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Resources\drawable-nodpi\shape_timer_divide_line.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RGBPi.Android\Views\ColorChooserView.cs">
     <Files>
-      <File FileName="RGBPi.Android\Resources\values\dimens.xml" Line="13" Column="43" />
-      <File FileName="RGBPi.Android\Resources\drawable-nodpi\shape_timer_layers.xml" Line="12" Column="106" />
-      <File FileName="RGBPi.Android\Resources\drawable-nodpi\shape_timer_circle_outer.xml" Line="6" Column="32" />
-      <File FileName="RGBPi.Android\Resources\drawable-nodpi\shape_timer_circle_middle.xml" Line="6" Column="27" />
-      <File FileName="RGBPi.Android\Resources\drawable-nodpi\shape_timer_divide_line.xml" Line="15" Column="9" />
+      <File FileName="RGBPi.Android\Views\ColorChooserView.cs" Line="35" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

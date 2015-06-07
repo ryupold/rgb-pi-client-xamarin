@@ -191,8 +191,5 @@ namespace RGB
         {
             copickDimColor.Visibility = (bool)cbDim.IsChecked ? System.Windows.Visibility.Collapsed : System.Windows.Visibility.Visible;
         }
-
-
     }
-
 }

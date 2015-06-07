@@ -52,7 +52,6 @@ namespace RGB.Services
 
                                     if (cmd.answerCallback != null)
                                         cmd.answerCallback(answer);
-
                                 }
                                 catch (Exception ex)
                                 {
@@ -64,7 +63,6 @@ namespace RGB.Services
                                 }
                             }
                         }
-
                     }
                     catch (Exception e)
                     {
